@@ -27,14 +27,21 @@ You are running step 03 of the PageKit method. **This step is the one that stops
 7. Update `working-log.md` with the chosen page and one-sentence-each rationale for rejected candidates.
 
 ## Hard requirement
-The decision MUST list candidates considered and rejected. Minimum candidates for a trust-heavy object:
+The decision MUST list at least three candidate first pages. Minimum candidates for a trust-heavy object:
 - homepage
 - category-explainer page
 - mechanism or ingredient-detail page
 - founder or brand-story page
 - use-case or specific-scenario page
 
-If only one candidate is named, the step has not done its job.
+Candidates must be peer first-page alternatives (same intent-commitment level as a homepage), NOT later-funnel pages. A pricing page, features page, docs page, integrations page, or comparison page is NOT a first-page alternative. If the rejected candidates are downstream pages, the step has not been done.
+
+**For each candidate — the chosen one and every rejected one — write one paragraph stating the case FOR the candidate BEFORE any reason to reject.** If you cannot write a credible case for a candidate, you have not actually considered it. Either think harder about what would make that candidate strong for this object, or drop it and replace it with one you can argue for.
+
+If any candidate is dismissed in one sentence, the step has not been done.
+
+## The Verdel pattern
+`runs/vegan-dog-food-verdel/first-page-decision.md` is the working example. Four labeled candidates (A: homepage, B: trust/safety landing, C: allergy landing, D: nutrition deep-dive), a paragraph-long case for each, a deliberate non-homepage choice with specific reasoning against the other three, plus a confidence basis. If the output you are producing does not match that shape, go back and rework it.
 
 ## Quality gate
 A strong first-page decision:
