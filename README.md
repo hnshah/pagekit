@@ -142,4 +142,8 @@ But the core system needs to hold first.
 
 ## License
 
-MIT. See `LICENSE`.
+MIT
+
+***
+
+Built by [`Hiten`](https://x.com/hnshah)
