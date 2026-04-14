@@ -50,7 +50,7 @@ Your deployment configuration lives in a file in your repository, versioned alon
 *[Verification flag: confirm supported runtimes and build options.]*
 You choose your runtime and build process. OpenClaw does not impose a default stack or require you to adapt your application to its environment.
 
-To see what you are running, or to move it somewhere else, you export your configuration and data in *[standard format — confirm: Docker Compose, plain YAML, other]*. The export is a single command that produces a standard format.
+To see what you are running, or to move it somewhere else, you export your configuration and data in *[standard format: confirm one of Docker Compose, plain YAML, or other]*. The export is a single command that produces a standard format.
 
 You can reproduce your OpenClaw environment locally, or on any other provider, from the files you already have.
 
@@ -68,7 +68,7 @@ You can reproduce your OpenClaw environment locally, or on any other provider, f
 
 *[Verification flag: replace the worked example below with real numbers from the actual pricing model before publishing. Do not publish placeholder figures.]*
 
-A typical app on OpenClaw — one web service, one database, 10 GB storage, moderate traffic — costs approximately $[X]/month. Here is what that is made of:
+A typical app on OpenClaw (one web service, one database, 10 GB storage, moderate traffic) costs approximately $[X]/month. Here is what that is made of:
 
 | Component | Cost |
 |---|---|
@@ -94,7 +94,7 @@ Outbound traffic is included up to *[confirm: traffic cap]*. Pricing is usage-ba
 
 **Body:**
 
-Your OpenClaw configuration is stored in *[format — confirm]* files in your repository. Your database can be exported as a standard *[Postgres dump / MySQL dump / other — confirm]* at any time. Your environment variables are yours to copy.
+Your OpenClaw configuration is stored in *[format: confirm]* files in your repository. Your database can be exported as a standard *[Postgres dump / MySQL dump / other: confirm]* at any time. Your environment variables are yours to copy.
 
 *[Verification flag: confirm the export command or mechanism and the realistic migration time estimate below.]*
 
@@ -148,29 +148,15 @@ Deploy your first app →
 
 ## Draft notes
 
-**What changed from the original draft:**
-- Hero: the opener no longer runs two parallel "You…" sentences back to back.
-- Section 2: replaced the "Not a PaaS with a different logo. Not a VPS with a tutorial." heading and the triple "is not a platform that…" body with a direct statement of what OpenClaw is, followed by a single paragraph naming what it is not.
-- Section 3: the heading "Your config. Your runtime. Your deployment." (rule-of-three) is replaced by "What you control." The body no longer carries "You read it, you edit it, you own it." or "One command. Standard format. No proprietary packaging." (both rule-of-three clusters). The content is the same.
-- Section 4: "What it actually costs." dropped the "actually." "No egress fees... No tier-forcing..." replaced with a single sentence that says what the pricing model is.
-- Section 5: "Not because we've made leaving easy as a marketing claim — because we've built the product around formats that work everywhere" and "We do this because we think you should be able to trust a platform without being trapped by it" were both editorial voice. Cut. The portability case now rests on the mechanism.
-- Section 7: heading "Deploy something real." was a marketing-punchy ender. Replaced with "Start here." CTA line unchanged.
-
-**What this draft does:**
-- Opens on the PaaS-to-cloud gap rather than a speed or reliability claim.
-- States what OpenClaw is before naming what it is not.
-- Gives pricing transparency its own section as a trust move.
-- Addresses portability directly with a specific mechanism.
+For the slop-pass audit trail (every flagged line and rewrite) see `slop-pass.md`.
+For the original pre-de-slop version see `homepage-draft-original.md`.
 
 **What this draft needs before publication:**
 - Section 3: all four product capability claims verified.
-- Section 4: real worked example with actual numbers.
+- Section 4: real worked example with real numbers.
 - Section 5: export command and migration-time estimate confirmed.
 - Section 6: real developer stories inserted.
 - Free tier terms and trial details confirmed for CTA.
 
-**The hardest section to publish honestly:**
-Section 5 (portability). It is the most important trust section for the post-Heroku reader and the one most at risk of sounding like a claim that does not hold up. If the portability mechanism is partial or in progress, the draft should say exactly that: "Here is what you can export today, and here is what we are building toward." Partial honesty here outperforms a full claim that proves narrower than expected.
-
 **Upstream recommendation:**
-Before publishing, conduct 5–10 developer interviews split between post-Heroku migrants and current PaaS users. The signal doc assumptions about the PaaS-to-cloud gap and lock-in anxiety should be tested against real developers before the copy locks. If interviews surface a different primary framing (cost, support quality, specific runtime support), the hero section will need revision.
+Before publishing, conduct 5 to 10 developer interviews split between post-Heroku migrants and current PaaS users. The signal doc assumptions about the PaaS-to-cloud gap and lock-in anxiety should be tested against real developers before the copy locks.

@@ -125,12 +125,8 @@ Try [Product name] →
 
 ## Draft notes
 
-**What changed from the original:**
-- Hero: "Your dog can thrive on this. Here's the nutrition behind it." — the "Here's the X" signposting and the two-beat cadence were cut. New headline is a category claim followed by a page-orienting line. "Made for owners who want their dog healthy and their conscience clear — in that order." — em-dash and editorial voice tell; rewritten as a plainer subhead without the rhetorical pivot.
-- Section 2: "Most dog food labels say 'complete and balanced.' The difference is in what's behind the claim." — quoted antithesis; rewritten to describe the claim without scare quotes. "Not held to a lower bar because it's plant-based." — editorial voice ending with an em-dash clause; cut. The last paragraph now makes the AAFCO equivalence factually without the rhetorical pivot.
-- Section 3: "This is the question most brands skip. We don't." — editorial voice narrating brand virtue; cut. "Most dogs transition within [X days] with a gradual mix-in" / "Most dogs adjust within two to four weeks" — unsourced quantitative ("most dogs"); softened to "usually several weeks."
-- Section 4: "Rendered byproducts. Unnamed meat meals. Ingredients that most owners, if they read the label carefully, would prefer their dog wasn't eating." — rule-of-three parallel fragments; compressed into one sentence. "[Product name] contains no animal-derived ingredients. Your dog eats well. Nothing suffers for it." — rule-of-three + "Nothing suffers for it." marketing-punchy ender; cut and replaced with a factual statement of what the switch does. "That's not a marketing position. It's just what the food is made of." — editorial voice narrating brand honesty; cut.
-- Section 6 (CTA): "Start with what's right for your dog." — marketing-punchy heading; replaced with "Try it for your dog."
+For the slop-pass audit trail (every flagged line and rewrite) see `slop-pass.md`.
+For the original pre-de-slop version see `homepage-draft-original.md`.
 
 **What this draft does differently from a values-first approach:**
 - Nutrition lands in section 1; values land in section 4.
@@ -139,9 +135,9 @@ Try [Product name] →
 **What this draft needs before publication:**
 - AAFCO status confirmed and inserted.
 - Protein sources, amino acid additions, and veterinary nutritionist involvement confirmed and inserted.
-- Palatability version selected based on what the brand actually offers.
+- Palatability version selected based on the brand's real offer.
 - Real owner stories inserted in section 5.
 - Product name inserted throughout.
 
 **Upstream recommendation:**
-Before publishing, run 3-5 owner interviews split between values-led and health-led visitors to test whether the nutrition-first order outperforms values-first for conversion.
+Before publishing, run 3 to 5 owner interviews split between values-led and health-led visitors to test whether the nutrition-first order outperforms values-first for conversion.

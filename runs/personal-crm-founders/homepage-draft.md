@@ -65,7 +65,7 @@ These relationships do not fit in a pipeline. They need a place where current st
 
 ## Section 5 — The maintenance question
 
-**Heading:** Will you actually use it?
+**Heading:** Will you keep using it?
 
 **Body:**
 
@@ -75,7 +75,7 @@ Most founders have a CRM graveyard: a spreadsheet that was current in January, a
 
 If you log consistently, the ball stops getting dropped on relationships that matter.
 
-*[Note: the honest framing here ("will not maintain itself") is intentional. It earns trust by not overpromising. If the product has automation that meaningfully reduces manual effort — email sync, calendar integration, auto-logging — this section should lead with that capability and recalibrate the maintenance claim accordingly.]*
+*[Note: the honest framing here ("will not maintain itself") is intentional. If the product has automation that meaningfully reduces manual effort (email sync, calendar integration, auto-logging), this section should lead with that capability and recalibrate the maintenance claim accordingly.]*
 
 ---
 
@@ -121,25 +121,15 @@ Get early access →
 
 ## Draft notes
 
-**What changed from the original:**
-- Hero: "You know who matters. You've lost track of where you are with them." was a two-sentence "You…You…" anaphora opener. Replaced with a single headline that names the same experience without the parallel cadence.
-- Section 2: "Deal stages. Pipeline views. Lead scoring." (rule-of-three opener) and the "Your relationship with X doesn't close. Your relationship with Y doesn't have a stage." (Your-Your anaphora) were cut. Replaced with a description of what a sales CRM models and why that shape does not fit. "most of them stop using it within a month" (unsourced quantitative) softened to "often stop within the first few weeks."
-- Section 3: "You're not filling out a pipeline form. You're making a note you'll actually want later." had "actually" and an X-not-Y structure. Replaced with a plain description. "Walk in with context instead of starting from scratch." (X-instead-of-Y ender) folded into the prior sentence.
-- Section 4: the four parallel sentence fragments ("The investor who… The advisor you… The customer who… The peer founder you…") are kept as one stylistic move because each fragment names a distinct real scenario the product serves, not cadence. The internal rule-of-three "see them, track them, and make sure they don't go quiet" is rewritten.
-- Section 5: "A spreadsheet that was current in January. A Notion database that made sense when they set it up. An app they logged three things into." — four-item parallel fragment structure kept because each item carries distinct content; collapsed into a single sentence with a colon to reduce the cadence effect. "No reconstruction. No scanning through emails trying to remember what you sent last week." (No-X-No-Y) cut and folded into the prior sentence. "That's the deal." (signposting) cut.
-
-**What this draft does well:**
-- Opens with the recognition framing before presenting the product.
-- Names the sales CRM mismatch without a feature comparison table.
-- Addresses the maintenance objection directly rather than ignoring it.
-- Keeps proof placeholders explicit rather than filling them with invented specifics.
+For the slop-pass audit trail (every flagged line and rewrite) see `slop-pass.md`.
+For the original pre-de-slop version see `homepage-draft-original.md`.
 
 **What this draft needs before publication:**
-- Mechanism section (Section 3) verified against actual product capabilities.
+- Mechanism section (Section 3) verified against real product capabilities.
 - Relationship type categories (Section 4) confirmed against product model.
 - Maintenance section (Section 5) updated if automation reduces manual effort.
 - Proof section (Section 6) filled with real founder scenarios and names.
 - Product name inserted throughout.
 
 **Upstream recommendation:**
-Run at least 3-5 founder interviews before publishing. The signal doc assumption that context loss is the primary pain should be tested against real founder language.
+Run at least 3 to 5 founder interviews before publishing. The signal doc assumption that context loss is the primary pain should be tested against real founder language.
