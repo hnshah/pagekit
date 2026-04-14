@@ -32,14 +32,18 @@ PageKit is for:
 Start here:
 - `START-HERE.md`
 
-### I just want prompts
+### I just want prompts (lightest entry, one step)
 Start here:
 - `quickstart/README.md`
 - `quickstart/start-with-prompts.md`
 
-### I want a full tool-specific path in one file
+### I want a full tool-specific path in one file (chat tools)
 Start here:
 - `guides/README.md`
+
+### I want to drive this agentically (Claude Code, Codex, Cowork)
+Start here:
+- `agentic/README.md`
 
 ### I want the full method
 Start here:
@@ -77,16 +81,24 @@ The whole point is to get the upstream structure right before asking AI to write
 ## Repo structure
 
 ```text
+AGENTS.md         neutral agent contract (Codex, Claude Code, Cowork)
+CLAUDE.md         Claude Code agent contract; full operational manual
 START-HERE.md     first-time entry doc
-quickstart/       low-friction prompt-first entry
-guides/           fully self-contained tool-specific paths
+README.md         this file
+pagekit.yaml      canonical method manifest (single source of truth)
+Makefile          discoverable wrappers around scripts/
+quickstart/       low-friction prompt-first entry (one step)
+guides/           fully self-contained tool-specific chat paths
+agentic/          third tier: Claude Code, Codex, Cowork agentic paths
 guided-runs/      step-by-step workflows
 frameworks/       the durable method docs
 templates/        copyable artifact templates
+prompts/          canonical prompts (one per step; do not duplicate)
 runs/             logged validation runs
 examples/         packaged examples and run summaries
 research/         planning docs for future rigor
-scripts/          tooling (slop-check regression script)
+scripts/          tooling (new-run, run-check, claim-check, slop-check, doctor)
+.claude/          Claude Code skills + subagents + SessionStart hook (also the Cowork plugin body)
 ```
 
 ## Current scope

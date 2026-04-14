@@ -31,13 +31,17 @@ The system is strongest when it helps you improve what the page is based on.
 
 ## Choose your path
 
-### If you want the fastest start
+### If you want the fastest start (one step, copy-paste)
 Go to:
 - `quickstart/README.md`
 
-### If you want a full tool-specific guide
+### If you want a full tool-specific chat guide
 Go to:
 - `guides/README.md`
+
+### If you want to drive PageKit agentically (Claude Code, Codex, Cowork)
+Go to:
+- `agentic/README.md`
 
 ### If you want the full method
 Go to:
