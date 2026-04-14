@@ -1,5 +1,41 @@
 # Scripts
 
+Tooling for the PageKit method. Every script here exits 0 on success, non-zero on failure, so the scripts work in hooks and CI without extra glue.
+
+## Quick reference
+
+| Script | Purpose |
+|---|---|
+| `new-run.sh <name>` | Scaffold a fully-logged run folder (`runs/<name>/`). |
+| `run-check.sh <path>` | Validate a run against the logging tiers defined in `frameworks/run-logging.md`. |
+| `claim-check.sh <draft> <proof-map> [--severity ...]` | Expand the canonical claim-check prompt for pasting. No LLM call. |
+| `slop-check.sh [paths...]` | Heuristic regression check for AI-slop patterns. |
+| `doctor.sh` | Pre-flight repo health check. Used by the SessionStart hook. |
+
+All are wrappable through `make` — see the `Makefile` at the repo root.
+
+---
+
+## new-run.sh
+
+Scaffolds `runs/<name>/` with the full fully-logged layout: `goal.md`, `models.md`, `working-log.md`, `sources/README.md`, `prompts/01–07-*.md` (copied from canonical `prompts/` with a top-of-file note), `outputs/NN-*-output.md` placeholders, per-step artifact placeholders, `evaluation.md` and `evaluator-pass.md` templates.
+
+Matches the `fully_logged` tier in `pagekit.yaml`. If the manifest changes, update this script.
+
+## run-check.sh
+
+Reads a run folder and classifies it as **fully-logged**, **summary-logged**, **artifact-only**, or **incomplete**. Lists missing files for the highest tier not met. Designed for agents to call at the end of a run to verify they actually did the logging work, not just the drafting.
+
+Exit 0 on fully-logged or summary-logged; exit 1 on artifact-only or incomplete.
+
+## claim-check.sh
+
+Template expansion only. Reads `prompts/07-claim-check.md`, substitutes `{{SEVERITY}}`, `{{DRAFT}}`, `{{PROOF_MAP}}`, writes to stdout. Paste the result into the model of your choice. Save the model's output as `claim-check.md` and the corrected draft as `first-page-draft-corrected.md` inside the run folder.
+
+## doctor.sh
+
+Verifies every file and directory referenced by `pagekit.yaml` exists; every script is executable; the slop-check runs clean against the tracked de-slopped drafts. Called by the SessionStart hook in `.claude/settings.json`.
+
 ## slop-check.sh
 
 A heuristic grep-level regression check for AI-slop patterns in PageKit drafts.
