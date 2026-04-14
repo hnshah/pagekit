@@ -77,6 +77,10 @@ Do not hard-code a fixed homepage section pattern.
 - keep quickstarts short and guides self-contained
 - keep examples honest and tied to real runs
 - use logged runs as evidence, not decoration
+- mechanize structural work via `scripts/` (new-run, run-check, claim-check, slop-check, doctor); do not hand-roll run folders
+- treat `pagekit.yaml` as the canonical method manifest; if it disagrees with a doc, update the doc
+- the SessionStart hook in `.claude/settings.json` runs `scripts/doctor.sh` to verify repo health on every session start
+- skills under `.claude/skills/pagekit*` orchestrate the method end-to-end; the `pagekit-claim-checker` subagent under `.claude/agents/` runs the read-only claim-check pass
 
 ## Good agent behavior in this repo
 Good work in PageKit:

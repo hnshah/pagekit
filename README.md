@@ -128,6 +128,9 @@ See `frameworks/run-logging.md` for the definition of "fully logged" vs "summary
 - `runs/personal-crm-founders/` — first page chose homepage
 - `runs/vegan-dog-food-fresh-run/` — first page chose homepage
 - `runs/openclaw-web-hosting/` — first page chose homepage
+- `runs/ai-pm-chat-interface/` — first page chose homepage
+
+Future runs should reach the fully-logged tier by default. `scripts/new-run.sh` scaffolds the layout; `scripts/run-check.sh` validates it. The `.claude/skills/pagekit/` orchestrator skill drives the entire chain end-to-end on Claude Code.
 
 **Synthetic self-tests**
 - `runs/high-trust-professional-tool-architecture-test/` — not a real object run
