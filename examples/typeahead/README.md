@@ -2,27 +2,21 @@
 
 *Coming soon.*
 
-This section is intentionally placeholder-only for now.
+Typeahead remains the planned flagship example.
+We intentionally did not lead with it.
 
-The plan is to build PageKit as a real system first, run it ourselves, evaluate the outputs and then publish examples created from that lived use.
+The first public examples should come from logged runs created through the PageKit process itself.
+That gives the system a cleaner standard and makes the example layer more trustworthy.
 
-That is a better standard than backfilling a public example too early.
+## Why this still matters
 
-## Why this matters
-
-A public worked example should come from the actual system in use.
-Not from private source links or a prematurely packaged case study.
-
-## Planned example sections
-
-- `signal-doc/`
-- `message-spine/`
-- `page-architecture/`
-- `proof-map/`
-- `page-drafts/`
-- `claim-check/`
+Typeahead is still the strongest eventual flagship proof object.
+But it should be packaged after the process and example standard are solid enough to support it well.
 
 ## Current status
 
-The method is being built first.
-The worked example follows after we run it ourselves and learn from the outputs.
+Use these examples first:
+- `examples/taskpilot-run-summary.md`
+- `examples/vegan-dog-food-run-summary.md`
+
+Typeahead remains the coming-soon deeper example.

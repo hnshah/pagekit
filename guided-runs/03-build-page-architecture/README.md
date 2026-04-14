@@ -23,7 +23,13 @@ A strong page architecture:
 - makes expansion easier
 - does not feel invented page by page
 
+## Important note
+
+This step defines the page system.
+It should not quietly decide that the first page must be a homepage.
+That decision belongs in the next step.
+
 ## Next
 
 Move to:
-- `guided-runs/04-map-proof-to-pages/README.md`
+- `guided-runs/03-decide-first-page/README.md`

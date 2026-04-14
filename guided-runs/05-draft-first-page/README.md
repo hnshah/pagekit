@@ -2,7 +2,7 @@
 
 ## Goal
 
-Draft one page from the system instead of improvising from scratch.
+Draft one page from the system, with the upstream work already in place.
 
 ## Output
 
@@ -17,15 +17,22 @@ Do not skip back to generic prompting.
 
 - signal doc
 - message spine
-- page architecture
+- first page decision
+- page argument shape
 - proof map
 
 ## Quality checks
 
 A strong draft:
-- clearly belongs to the target page type
+- clearly belongs to the chosen page type
 - reflects the right audience and proof burden
+- follows the approved argument shape
 - inherits the structure of the upstream work
+
+## Draft rule
+
+If the draft comes out abstract, generic or overclaimed, treat that as an upstream-source failure first.
+Before line-editing heavily, ask what source artifact is missing or too weak.
 
 ## What comes after
 

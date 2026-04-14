@@ -14,7 +14,7 @@ Before you begin, gather:
 
 ## The goal
 
-Do not ask the model to write a homepage first.
+Start upstream, before homepage writing.
 
 Your goal is to create these artifacts in order:
 1. signal doc
@@ -25,7 +25,7 @@ Your goal is to create these artifacts in order:
 
 ## Rule
 
-Do not move to the next artifact until the current one is strong enough.
+Finish each artifact before moving to the next one.
 
 ## First move
 
@@ -38,6 +38,5 @@ Then follow:
 ## Prompt-path philosophy
 
 Prompts are the front door.
-They are not the whole system.
 
-The quality comes from the artifact chain, not from one magic prompt.
+The quality comes from the full artifact chain, not a single prompt.

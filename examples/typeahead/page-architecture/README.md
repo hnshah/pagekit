@@ -20,7 +20,7 @@ Once this structure held, one insight could produce:
 - comparison pages
 - trust / feature pages
 
-That is the leverage layer.
+That is where the work starts to compound.
 
 ## Source artifacts
 

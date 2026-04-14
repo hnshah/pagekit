@@ -38,7 +38,15 @@ A strong signal doc:
 - no meaningful audience differences
 - premature positioning language
 
+## If the signal is still too weak
+
+Do not move forward just because the artifact exists.
+If the signal doc is still too category-level, create a sharper source artifact first.
+A common fix is a wedge-definition brief using:
+- `templates/wedge-definition-template.md`
+
 ## Next
 
 Move to:
 - `guided-runs/02-reduce-to-message-spine/README.md`
+only after the signal doc is strong enough to support a real reduction step.

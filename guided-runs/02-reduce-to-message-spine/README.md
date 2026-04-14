@@ -23,6 +23,15 @@ A strong message spine:
 - preserves the important audience and proof differences
 - feels grounded in the source signal
 
+## If the message spine still feels too abstract
+
+Do not move straight into drafting.
+If the message spine still sounds broad or category-default, add sharper source material first.
+Common fixes:
+- mechanism brief
+- proof brief
+- comparison brief
+
 ## Next
 
 Move to:

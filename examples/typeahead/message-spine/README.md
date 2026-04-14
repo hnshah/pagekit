@@ -6,12 +6,12 @@ This section will hold the reduced truths that organized the Typeahead site.
 
 The strongest recurring ideas were:
 - your writing stays local
-- privacy matters, but privacy alone is not the whole story
+- privacy matters, and privacy alone is not enough
 - the deeper value is context-aware help without shipping work away
 - different audiences need different proof and language
-- the site should explain workflow, not only features
+- the site should explain workflow as clearly as features
 
 ## Why this matters
 
 The message spine is what made later page decisions cleaner.
-Without it, the work would collapse back into generic AI website language.
+Without it, the work would drift back toward generic AI website language.

@@ -1,21 +1,20 @@
 # PageKit
 
-*A practical companion repo for building better pages with AI.*
+*A practical system for getting to better pages by strengthening the source materials that shape the copy.*
 
 PageKit helps you go from:
 - vague market understanding
-- vague website goals
-- generic AI page output
+- weak source material
+- generic page direction
 
 to:
-- a signal doc
-- a message spine
-- a page architecture
-- a proof map
-- a first page draft that belongs to a real system
+- a sharper signal doc
+- a clearer message spine
+- a stronger page architecture
+- a proof map with honest constraints
+- a page draft grounded in better inputs
 
-This repo is not a prompt dump.
-It is a guided, markdown-first system for getting from signal to pages.
+This repo gives you a guided, markdown-first way to improve the materials that drive page copy.
 
 ## Who this is for
 
@@ -28,23 +27,28 @@ PageKit is for:
 
 ## Choose your starting path
 
+### I am new here
+Start here:
+- `START-HERE.md`
+
 ### I just want prompts
 Start here:
+- `quickstart/README.md`
 - `quickstart/start-with-prompts.md`
 
 ### I want the full method
 Start here:
 - `guided-runs/01-build-signal-doc/README.md`
 
-### I want to see a worked example
+### I want to see worked examples
 Start here:
-- `examples/typeahead/README.md` *(coming soon)*
+- `examples/README.md`
 
 ## The artifact chain
 
 The canonical PageKit workflow is:
 
-**signal doc -> message spine -> page architecture -> proof map -> first page draft**
+**signal doc -> message spine -> first page decision -> page argument shape -> proof map -> first page draft**
 
 That order matters.
 The whole point is to get the upstream structure right before asking AI to write final pages.
@@ -52,9 +56,11 @@ The whole point is to get the upstream structure right before asking AI to write
 ## What makes this different
 
 - starts upstream, with signal
+- improves the source materials before chasing better copy
 - preserves audience differences
+- lets the object decide the page shape
 - maps proof to page jobs
-- treats AI as an accelerator, not a slot machine
+- keeps AI inside a real workflow
 - keeps intermediate artifacts visible and reusable
 
 ## Repo structure
@@ -64,7 +70,8 @@ quickstart/       low-friction prompt-first entry
 guided-runs/      step-by-step workflows
 frameworks/       the durable method docs
 templates/        copyable artifact templates
-examples/         worked examples, starting with a coming-soon Typeahead example
+runs/             fully logged validation runs
+examples/         packaged examples and run summaries
 ```
 
 ## Current scope
@@ -85,8 +92,12 @@ Later versions can add:
 - agent/skill-powered paths
 - deeper page-family generation
 
+The system should also keep getting better through fully logged runs that expose weak prompts, weak templates and weak process steps.
+
 But the core system needs to hold first.
+
+Right now, the repo includes fully logged validation runs so the process can be judged against real objects, not theory alone.
 
 ## Core principle
 
-**Good design does not rescue weak structure. It expresses strong structure.**
+**Better page copy usually starts with better source materials.**

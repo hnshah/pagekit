@@ -4,8 +4,7 @@ Typeahead became more convincing when each page carried the right proof burden.
 
 ## Core lesson
 
-A page does not feel specific because the headline is sharper.
-It feels specific because the proof matches the job.
+A page feels specific when the proof matches the job.
 
 ## Proof buckets that mattered
 
@@ -25,4 +24,4 @@ It feels specific because the proof matches the job.
 
 ## What this example is trying to prove
 
-The site got stronger because proof was assigned by page type and audience need, not added late as decoration.
+The site got stronger because proof was assigned by page type and audience need early, then carried through the drafting process.
