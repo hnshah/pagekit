@@ -9,11 +9,14 @@ A fully logged run must include:
 - goal
 - working log
 - models used
+- sources (the source briefs used as ground truth)
 - prompts (per step)
 - outputs (per step, raw)
-- final artifacts
+- final artifacts (signal doc, message spine, first-page decision, page argument shape, proof map, first page draft, claim check, plus the corrected draft if claim check rewrote any lines)
 - evaluation
-- evaluator pass (skeptical review after the run)
+- evaluator pass (skeptical, adversarial review after the run)
+
+All of these are required. An evaluator pass is not optional at this tier; a run without one is summary-logged.
 
 Use this level for runs meant as validation evidence or reusable examples.
 
@@ -38,6 +41,16 @@ Do not call a summary-logged run a validation run without flagging that distinct
 - raw output
 - short judgment
 - what changed before the next step
+
+## Inline verification flag convention
+
+When a draft makes a product-specific claim that has not been verified against source briefs or ground truth, the convention is to mark it inline with:
+
+```
+*[verification flag: confirm X against Y before publishing]*
+```
+
+This convention came out of real runs. It keeps first-pass drafts honest and makes the claim-check pass faster. A first-pass draft that ships without any verification flags on product-specific claims is suspect.
 
 ## Why this matters
 This is not overhead.

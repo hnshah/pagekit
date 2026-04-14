@@ -75,3 +75,4 @@ Weak use of PageKit:
 - forcing every object into the same homepage pattern
 - inventing proof
 - mistaking a cleaner prompt for a stronger process
+- shipping a draft full of AI-slop patterns ("Not X. Not Y." pairs, rule-of-three cadence, editorial voice, em-dash stacking, etc. — see `frameworks/anti-slop.md`)

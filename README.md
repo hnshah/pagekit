@@ -85,6 +85,7 @@ templates/        copyable artifact templates
 runs/             logged validation runs
 examples/         packaged examples and run summaries
 research/         planning docs for future rigor
+scripts/          tooling (slop-check regression script)
 ```
 
 ## Current scope
@@ -102,9 +103,23 @@ That keeps the system honest and usable.
 
 The repo includes validation runs so the process can be judged against real objects, not theory alone.
 
-- `runs/taskpilot-first-pass/` — fully logged: goal, sources, prompts, outputs, working log, evaluation, evaluator pass
-- `runs/vegan-dog-food-first-pass/` — partially logged: sources, final artifacts and evaluation, without per-step prompts and raw outputs
-- `runs/high-trust-professional-tool-architecture-test/` — a synthetic self-test of the first-page decision and argument shape steps, not a real object run
+See `frameworks/run-logging.md` for the definition of "fully logged" vs "summary logged."
+
+**Fully logged**
+- `runs/taskpilot-first-pass/` — goal, sources, prompts, outputs, working log, evaluation, evaluator pass. Chose homepage as first page.
+
+**Summary logged**
+- `runs/vegan-dog-food-first-pass/` — sources, final artifacts, evaluation. No per-step prompts or raw outputs.
+
+**Artifact-only runs** (below the summary-logged bar; final artifacts plus working log, no sources, no per-step prompts, no raw outputs, no evaluation, no evaluator pass, no claim check)
+- `runs/personal-crm-founders/` — first page chose homepage
+- `runs/vegan-dog-food-fresh-run/` — first page chose homepage
+- `runs/openclaw-web-hosting/` — first page chose homepage
+
+**Synthetic self-tests**
+- `runs/high-trust-professional-tool-architecture-test/` — not a real object run
+
+The three artifact-only runs ship with accompanying `homepage-draft-original.md` files that preserve the original pre-de-slop state, and `slop-pass.md` audit trails. See individual run folders.
 
 ## What comes later
 

@@ -41,11 +41,12 @@ Do not hard-code homepage-first assumptions unless the object clearly earns that
 Do not hard-code a fixed homepage section pattern.
 
 ## Quality rules
-- avoid AI slop
+- avoid AI slop. Specifically: no "Not X. Not Y." pairs, no three parallel short sentences in a row, no sentence-start anaphora, no editorial voice narrating brand restraint, no em-dash stacking, no "actually / testament / landscape / showcasing / truly" as intensifiers, no copula-avoidance (`serves as`, `boasts`), no signposting (`let's dive in`), no significance inflation (`pivotal moment`). See `frameworks/anti-slop.md` for the full list and examples.
 - avoid generic category-default wording
 - avoid overclaiming
 - avoid polishing weak inputs into prettier weak outputs
 - when copy is weak, ask which source artifact is too weak or missing
+- when copy carries AI-slop patterns, name the pattern from `frameworks/anti-slop.md` and rewrite
 
 ## Repo behavior guidelines
 - improve user-facing clarity when possible
@@ -66,3 +67,5 @@ Bad work in PageKit:
 - filling proof gaps with smooth language
 - treating the process as a prompt library only
 - writing docs that sound polished but do not improve usability
+- shipping drafts with AI-slop patterns
+- running the slop-check script (`scripts/slop-check.sh`) only after committing, or skipping it

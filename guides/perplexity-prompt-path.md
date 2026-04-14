@@ -191,12 +191,28 @@ Using the signal doc, message spine, first-page decision, page argument shape an
 Do not add sections that were not earned by the argument-shape step.
 Keep the product voice primary.
 
-Constraints:
+Proof and scope constraints:
 - clarity over hype
 - no fake proof
 - no inflated mechanism claims
 - avoid generic category language
-- avoid not-X-but-Y constructions
+
+Anti-slop constraints (hard rules):
+- no "Not X. Not Y." heading or sentence pairs
+- no "Not-X-but-Y" or "X-not-Y" rhetorical pivots unless they carry specific content
+- no three parallel short sentences used for cadence (rule-of-three clustering)
+- no sentence-start anaphora across three or more consecutive sentences
+- no editorial voice narrating brand restraint, virtue or honesty
+- no more than one em-dash per paragraph
+- no "actually", "additionally", "testament", "landscape", "showcasing", "genuinely", "truly" as intensifiers
+- no marketing-punchy one-liners as section enders
+- no scare-quoted antithesis
+- no "serves as / boasts / features / showcases / delivers / empowers" copula-avoidance
+- no signposting ("let's dive in", "here's the thing", "that's the deal")
+- no filler ("in order to", "due to the fact that")
+- no significance inflation ("pivotal moment", "critical juncture")
+
+When a product-specific claim has not been verified against the briefs, mark it inline with *[verification flag: ...]*.
 
 Artifacts:
 [PASTE HERE]
@@ -212,18 +228,21 @@ Artifacts:
 
 ### Prompt
 ```text
-Review the draft below as a skeptical claim check.
+Review the draft below as a skeptical claim check at [severity: light / normal / hard].
 
 For every claim that sounds stronger than the product or the proof map supports, flag it.
+Also flag any line that carries an AI-slop pattern: Not-X-Not-Y stacking, rule-of-three cadence, sentence-start anaphora, editorial voice narrating brand restraint, em-dash stacking, intensifier vocabulary (actually / testament / landscape / showcasing / truly / genuinely), marketing-punchy enders, scare-quoted antithesis, copula-avoidance (serves as / boasts / features / showcases / delivers / empowers), signposting (let's dive in / here's the thing / that's the deal), filler (in order to / due to the fact that), significance inflation (pivotal moment / critical juncture).
 
 For each flagged claim, give:
 1. the exact line
-2. the type (overclaim, vague, unsupported, outruns proof map)
+2. the type (overclaim / vague / unsupported / outruns proof map / editorial voice / unsourced quantitative modifier / clinical or regulatory drift / ai-slop tell)
 3. why it is weak
 4. a sharper, more accurate replacement or a recommendation to cut
 
 Do not reward defensiveness.
 A corrected claim should be more precise, not louder.
+
+At the end, list any slop pattern that showed up more than once so upstream constraints can absorb it.
 
 Draft:
 [PASTE HERE]
