@@ -132,3 +132,7 @@ But the core system needs to hold first.
 ## Core principle
 
 **Better page copy usually starts with better source materials.**
+
+## License
+
+MIT. See `LICENSE`.
