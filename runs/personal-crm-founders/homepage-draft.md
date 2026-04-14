@@ -1,23 +1,23 @@
 # Homepage Draft — Personal CRM for Startup Founders
 
-*Draft status: first pass. Proof placeholders marked. Mechanism claims flagged for product verification before publication.*
+*Draft status: first pass, post slop-pass. Proof placeholders marked. Mechanism claims flagged for product verification before publication.*
 
 ---
 
 ## Section 1 — Recognition (hero)
 
 **Headline:**
-You know who matters. You've lost track of where you are with them.
+The relationships matter. Keeping track of where you are with each of them is the part that slips.
 
 **Sub-headline:**
-[Product name] is a relationship tracker for founders — built around current state, not pipeline stages.
+[Product name] is a relationship tracker for founders, built around current state rather than pipeline stages.
 
 **CTA:**
 Get early access →
 
 ---
 
-*Note: The headline is a direct test of the recognition principle. It should produce an immediate "yes, that's it" from a founder who has dropped the ball on an investor follow-up, gone cold with an advisor, or walked into a meeting without any context. If it doesn't do that, go back to the signal doc.*
+*Note: the headline should produce an immediate "yes, that's it" from a founder who has dropped an investor follow-up, gone cold with an advisor, or walked into a meeting without any context. If it doesn't do that, go back to the signal doc.*
 
 ---
 
@@ -26,9 +26,10 @@ Get early access →
 **Heading:** Sales CRMs are built for a different job.
 
 **Body:**
-Deal stages. Pipeline views. Lead scoring. Those tools are designed for moving contacts toward a close. But your relationship with your lead investor doesn't close. Your relationship with your advisor doesn't have a stage. When founders try to track their important relationships in a sales CRM, they're fighting a tool that was designed for something else — and most of them stop using it within a month.
 
-[Product name] doesn't model your contacts as leads. It tracks where you are with each person, and makes sure that matters before it becomes a problem.
+A sales CRM models a pipeline: leads, stages, and a close at the end. A founder's relationships do not have that shape. An investor relationship has no close. An advisor relationship has no stage. Founders who try to use a sales CRM for these relationships often stop within the first few weeks because the model does not fit.
+
+[Product name] does not treat your contacts as leads. It tracks where you are with each person and surfaces the relationships that are drifting before they go dormant.
 
 ---
 
@@ -38,43 +39,43 @@ Deal stages. Pipeline views. Lead scoring. Those tools are designed for moving c
 
 **Body:**
 
-After a meeting, log what happened in under a minute. Who you spoke with, what was said, what the next step is. You're not filling out a pipeline form. You're making a note you'll actually want later.
+*[Verification flag: confirm the behaviors below against actual product capabilities before publication. If email or calendar sync is available, name it here. If the product is manual-only, say so rather than letting the reader assume automation.]*
 
-[Product name] shows you how long it's been since you last spoke with each person — and flags the ones that are getting cold before the relationship goes dormant.
+Log what happened after a meeting in under a minute: who was there, what was said, and what the next step is. The format is a note, not a pipeline form.
 
-Before a call, pull up the history: who made the introduction, what you talked about last time, what you said you'd follow up on. Walk in with context instead of starting from scratch.
+[Product name] shows how long it has been since you last spoke with each person and flags the relationships that are drifting before they go dormant.
 
-*[Verification flag: the behaviors above — quick log, recency view, pre-call context — should be confirmed against actual product capabilities before publication. If email or calendar sync is available, name it here specifically. If the product is manual-only, say so directly rather than letting the reader assume automation.]*
+Before a call, pull up the history: who made the introduction, the last conversation, and any follow-up you had promised. You arrive with context instead of reconstructing it from email.
 
 ---
 
 ## Section 4 — Relationship type fit
 
-**Heading:** Built for the relationships founders actually manage.
+**Heading:** Built for the relationships founders manage.
 
 **Body:**
 
-The investor who's been warm for three months but hasn't seen your latest update. The advisor you spoke to in January and meant to reconnect with in March. The customer who told you something important about the product and you want to remember when you're next in front of a design decision. The peer founder you should probably send something to before you need a favor.
+The investor who has been warm for three months but has not seen the latest update. The advisor you spoke to in January and meant to reconnect with in March. The customer who told you something important about the product that you want to remember when you are next in front of a design decision. The peer founder you owe an intro to.
 
-These don't belong in a pipeline. They belong somewhere you can see them, track them, and make sure they don't go quiet when you're heads down building.
+These relationships do not fit in a pipeline. They need a place where current state is visible so they do not go quiet while you are heads-down building.
 
-*[Verification flag: if the product has named categories for investor, advisor, customer, and peer relationships — confirm and name them. If categories are user-defined, say that instead.]*
+*[Verification flag: if the product has named categories for investor, advisor, customer, and peer relationships, confirm and name them. If categories are user-defined, say that instead.]*
 
 ---
 
 ## Section 5 — The maintenance question
 
-**Heading:** Will you actually use it?
+**Heading:** Will you keep using it?
 
 **Body:**
 
-Every founder has a CRM graveyard. A spreadsheet that was current in January. A Notion database that made sense when they set it up. An app they logged three things into.
+Most founders have a CRM graveyard: a spreadsheet that was current in January, a Notion database that made sense when they set it up, an app they logged three things into.
 
-[Product name] won't maintain itself. You need to log interactions — it works best when you do that once after a meeting, not once a month when you remember. What it gives you in return: every time you open it, you know exactly where you are with each person. No reconstruction. No scanning through emails trying to remember what you sent last week.
+[Product name] will not maintain itself. It works best when you log interactions right after a meeting rather than once a month when you remember. What you get back: every time you open it, you know where you are with each person without scanning through email to reconstruct it.
 
-If you log consistently, you'll stop dropping the ball on relationships that matter. That's the deal.
+If you log consistently, the ball stops getting dropped on relationships that matter.
 
-*[Note: the honest framing here ("won't maintain itself") is intentional. It earns trust by not overpromising. If the product has automation that meaningfully reduces manual effort — email sync, calendar integration, auto-logging — this section should lead with that capability and recalibrate the maintenance claim accordingly.]*
+*[Note: the honest framing here ("will not maintain itself") is intentional. If the product has automation that meaningfully reduces manual effort (email sync, calendar integration, auto-logging), this section should lead with that capability and recalibrate the maintenance claim accordingly.]*
 
 ---
 
@@ -106,10 +107,10 @@ If you log consistently, you'll stop dropping the ball on relationships that mat
 
 ## Section 7 — CTA
 
-**Heading:** Stop losing track of the people who matter.
+**Heading:** Keep track of the people who matter.
 
 **Body:**
-[Product name] is in early access. Founders building in [relevant sector / generally] are using it to stay current with the relationships their company depends on.
+[Product name] is in early access. Founders are using it to stay current with the relationships their company depends on.
 
 **CTA:**
 Get early access →
@@ -120,19 +121,15 @@ Get early access →
 
 ## Draft notes
 
-**What this draft does well:**
-- Opens with the recognition framing before presenting the product
-- Names the sales CRM mismatch without a feature comparison table
-- Addresses the maintenance objection directly rather than ignoring it
-- Keeps proof placeholders explicit rather than filling them with invented specifics
-- Avoids generic productivity language throughout
+For the slop-pass audit trail (every flagged line and rewrite) see `slop-pass.md`.
+For the original pre-de-slop version see `homepage-draft-original.md`.
 
 **What this draft needs before publication:**
-- Mechanism section (Section 3) verified against actual product capabilities
-- Relationship type categories (Section 4) confirmed against product model
-- Maintenance section (Section 5) updated if automation reduces manual effort
-- Proof section (Section 6) filled with real founder scenarios and names
-- Product name inserted throughout
+- Mechanism section (Section 3) verified against real product capabilities.
+- Relationship type categories (Section 4) confirmed against product model.
+- Maintenance section (Section 5) updated if automation reduces manual effort.
+- Proof section (Section 6) filled with real founder scenarios and names.
+- Product name inserted throughout.
 
 **Upstream recommendation:**
-Run at least 3-5 founder interviews before publishing. The signal doc assumption that context loss is the primary pain — not contact volume or relationship count — should be tested against real founder language. If interviews surface a different primary framing, the hero section will need revision.
+Run at least 3 to 5 founder interviews before publishing. The signal doc assumption that context loss is the primary pain should be tested against real founder language.

@@ -44,6 +44,16 @@ Good output:
 - sharpens the category language
 - still behaves like source work, not final copy
 
+## What good output does not sound like
+Downstream drafts should not carry these AI-slop patterns (see `frameworks/anti-slop.md`):
+- "Not X. Not Y." heading pairs
+- three parallel short sentences in a row for cadence
+- "Your…Your…Your" or "Not…Not…Not" sentence-start anaphora
+- editorial voice narrating the brand's own restraint
+- em-dash stacking
+- "actually" as intensifier
+- marketing-punchy one-liners as section enders
+
 ## What to do next
 Put the result into your signal-doc file, then move to:
 - `guided-runs/02-reduce-to-message-spine/README.md`

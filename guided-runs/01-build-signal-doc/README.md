@@ -37,6 +37,7 @@ A strong signal doc:
 - too little source language
 - no meaningful audience differences
 - premature positioning language
+- abstract object. If the run is on a fictional product for training or testing, commit to concrete fictional facts (brand name, specific feature list, specific pricing shape, specific credentials). Drafts on an abstract object produce `[Product name]` placeholders everywhere and cannot be claim-checked meaningfully. Real objects pull facts from reality; fictional objects must invent them up front.
 
 ## If the signal is still too weak
 
