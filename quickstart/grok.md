@@ -6,15 +6,19 @@ Use this if you want to start PageKit inside Grok.
 ## What you need first
 - a plain-language product description
 - your first audience hypothesis
-- the page you want to create first
+
+## Start with this artifact
+Begin with a signal doc.
+Do not decide which page you are building yet.
 
 ## Prompt to run first
 Copy/paste this into Grok:
 
 ```text
-I want to build a homepage through the PageKit process.
+I want to build a web page through the PageKit process.
 
-Do not write homepage copy yet.
+Do not write page copy yet.
+Do not assume which page we are building.
 Help me build a signal doc first.
 
 Using the product description below, produce a signal doc with these sections:
@@ -39,7 +43,12 @@ Good output:
 - avoids category-default sludge
 
 ## What to do next
-Put the result into your signal-doc file, then move to the message-spine step.
+Put the result into your signal-doc file, then move to:
+- `guided-runs/02-reduce-to-message-spine/README.md`
+
+## Want the full tool-specific path?
+If you want the full chain inside Grok in one place, use:
+- `guides/grok-prompt-path.md`
 
 ## Link note
 If reliable prompt-link support is confirmed later, add it here.

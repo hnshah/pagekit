@@ -20,8 +20,9 @@ What is the deeper tension?
 
 ## What this is farther from
 
-## Homepage implication
-What should the homepage optimize for?
+## First-page implication
+What should the first page optimize for?
+Do not assume this page is a homepage.
 
 ## Claims we still cannot make
 List the claims that would be fake, inflated or premature.

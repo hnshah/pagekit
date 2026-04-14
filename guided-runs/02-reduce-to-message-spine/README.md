@@ -35,4 +35,4 @@ Common fixes:
 ## Next
 
 Move to:
-- `guided-runs/03-build-page-architecture/README.md`
+- `guided-runs/03-decide-first-page/README.md`
