@@ -1,0 +1,39 @@
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+.zed/
+
+# Backup / scratch
+*.bak
+*.orig
+/tmp/
+/scratch/
+
+# Environment files
+.env
+.env.*
+!.env.example
+.envrc
+
+# Local Claude overrides (the tracked .claude/ skills bundle is kept;
+# only local per-user overrides are ignored)
+.claude/settings.local.json
+
+# Verification scratch produced by scripts/new-run.sh during doctor/test runs
+runs/_verify/
+runs/_verification_run/
+
+# Node / Python artifacts (in case any tooling gets added later)
+node_modules/
+__pycache__/
+*.pyc
+.venv/

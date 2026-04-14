@@ -49,8 +49,7 @@ Go to:
 
 ### If you want proof that the system is real
 Go to:
-- `examples/README.md`
-- `runs/`
+- `runs/` — logged validation runs
 
 ## The core method
 The stable part of PageKit is the process:

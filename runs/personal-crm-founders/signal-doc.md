@@ -1,82 +1,62 @@
-# Signal Doc — Personal CRM for Startup Founders
+# Signal Doc — Me CRM
 
-## Product
-A personal relationship management tool designed for startup founders. Helps founders keep track of where they are with the people that matter to their company — investors, advisors, key customers, potential hires, journalists, and peer founders — without the overhead of a sales CRM.
+## What the product appears to be
 
-## Source basis
-No primary interviews or support transcripts available for this run. Signal draws from:
-- Publicly observable founder discussion in YC communities, Twitter/X, indie hacker forums
-- Reviews of competing personal CRM products (Clay, Folk, Monica, Affinity)
-- Patterns in how founders describe relationship management failures in retrospectives
-- Common language used when founders recommend contact tracking workarounds to each other
+A relationship-state tracker for startup founders. The core unit is not a contact record but a relationship state card: where a founder currently stands with a specific person — when they last talked, what was said, what follow-up is owed, and when to reach back out. Designed for the 50–100 relationships that most determine a founder's company trajectory, not for a sales database of thousands.
 
-Limitation: this is pattern-level signal, not verified from direct interviews. Claims in downstream artifacts should stay at the level of what is repeatedly observed, not what has been individually confirmed.
+No pipeline, no deals, no lead scoring. Intentionally a different thing from a sales CRM.
 
-## Repeated patterns
+## Target audiences
 
-### Pains
-- Founders forget where they left things with someone — not who the person is, but what the current state of the relationship is
-- Key relationships go cold because follow-up falls through the cracks, especially during high-output periods (fundraising, product launches)
-- Founders have contacts scattered across email, LinkedIn, Notion pages, phone contacts, and CRM exports — no single place that shows the current state
-- Sales CRMs exist for a different job (pipeline management, deal stages) and feel wrong to use for investor relationships, advisor check-ins, or friendly customer calls
-- Founders accumulate "relationship debt" — people they meant to stay in touch with but didn't, and now feel awkward reaching out cold again
-- During fundraising, founders lose track of which investors they've spoken to, what was said, what the next step was, and who else in the firm they should talk to
-- When onboarding or hiring, founders can't easily see which relationships in their network are adjacent to a role
+**Primary:** Early-stage startup founders, seed to Series A. High-stakes relationship portfolios managed largely alone or with one co-founder. The relationships matter enormously; the volume is manageable but large enough that memory and email threads fail.
 
-### Desires
-- Know at a glance where they are with each important person right now
-- Get reminded about people before the relationship goes cold, not after
-- See the history of a relationship without digging through email
-- Have a lightweight way to log what happened without full CRM data entry
-- Handle multiple relationship types (investors, customers, advisors, potential hires) in one place rather than separate systems
-- Be able to answer "who should I reach out to this week?" without constructing that from scratch
+**Secondary:** Solo operators and indie founders maintaining a professional network without a sales-process reason to use a sales CRM.
 
-### Objections
-- "I tried this before and stopped using it because data entry was too painful"
-- "I already have a system in Notion / a spreadsheet / my inbox"
-- "This is another thing I have to maintain"
-- "I'm not sure it's worth it for the number of people I actually track"
+## Recurring pains
 
-### Trust blockers
-- Maintenance burden: will this stay useful or become a graveyard of old contacts?
-- Fit: is this actually different from a sales CRM, or is it the same tool with different marketing?
-- Relevance: does it understand the types of relationships founders have, or will it try to turn everything into a pipeline?
-- Integration: will this know about my existing relationships, or do I start from scratch?
+- **Going dark**: A founder realizes they haven't spoken to an important investor in months. They meant to send an update. It never happened.
+- **Context scatter**: Before reaching out to an advisor, a founder must hunt through email to reconstruct what was discussed last time and what was promised.
+- **Follow-up debt**: A mental pile of "I should reach out to X" that grows and ages without an external prompt.
+- **Wrong-tool friction**: Sales CRMs are built for deal pipelines. Founders shoehorn relationship management into tools designed for a different job.
+- **Spreadsheet decay**: Founder-built trackers are accurate for a month, then abandoned when deliberate update effort disappears under pressure.
 
-### Buying triggers
-- Just dropped the ball with a key investor and realized they had no system
-- Starting a fundraise and need to get organized before outreach begins
-- Realized they haven't talked to a key advisor in 6 months and don't know why
-- Getting a warm intro and realizing they have no context on the person they're meeting
-- Seeing another founder mention their setup and feeling the gap
+## Desired outcomes
 
-## Audience distinctions
+- Know immediately, for any relationship, where things stand: last contact, what was discussed, what is owed, when to reconnect.
+- No relationship goes dark without a prompt — catch the drift before it becomes a gap.
+- Reach out to someone with context already loaded, not reconstructed from inbox search.
+- Shared relational context between co-founders: both have the same picture with key investors and advisors.
 
-### Pre-seed / early-stage founders
-- Primary relationship types: investors (leads, angels, funds), advisors, potential co-founders, key early customers
-- The pain is most acute around fundraising preparation — knowing which conversations are warm vs cold
-- Lower contact volume overall, but higher stakes per relationship
-- More likely to be running everything solo without a chief of staff or EA
+## Trust questions and buying resistance
 
-### Post-seed founders
-- Relationship portfolio expands: investors remain, but customer relationships, hiring relationships, and journalist relationships gain weight
-- Some have begun delegating parts of relationship tracking but still carry the personal relationship layer themselves
-- More likely to have tried a CRM and found it wrong for the job
+- **Data privacy**: Gmail import raises the question immediately. SOC 2 in progress, not certified — a real gap for security-conscious founders.
+- **Fragility / lock-in**: "What if you shut down?" Data export always available — the honest answer.
+- **Maintenance doubt**: "I already have too many tools. Will I actually keep this updated?" Some founders will recognize the problem and still doubt their own follow-through on any system.
+- **Pricing**: $19/month is accessible but not trivial. Free tier (25 relationships) is the right skeptic on-ramp.
 
-### Solo founders
-- Carry the entire relationship management burden alone
-- More likely to acknowledge the problem directly — no team to partially compensate for it
-- Higher motivation to find something that works but also higher skepticism of maintenance overhead
+## Native phrases worth keeping
 
-## Candidate truths
-1. The core problem is context loss, not contact volume. Founders aren't overwhelmed by the number of people — they lose track of where they are with each person.
-2. Sales CRMs are built for a different job. They model pipelines and deal stages, not multi-directional ongoing relationships. A founder using HubSpot for their investor relationships is fighting the tool.
-3. Relationship debt compounds. The longer a relationship sits untouched, the harder it is to re-engage. The tool's value is in catching this before the window closes.
-4. Founders want a system that shows current state, not just contact history. The useful question is "where are we right now?" not "how did we meet?"
+- "gone dark" — the failure mode of a high-stakes relationship going quiet
+- "where you are with someone" — the specific state Me CRM tracks, not identity but relational position
+- "follow-up debt" — the accumulating pile of owed outreach
+- "the 50 relationships that matter" — natural scope framing
+- "context fade" — what happens between a meeting and the next conversation
+- "relationship health" — used in the weekly digest; specific enough to keep
+- "went cold" — another native phrase for relational drift
 
-## Open questions
-- How much automation is possible (email sync, calendar sync) vs requiring manual logging? This matters a lot for whether the maintenance objection can be answered honestly.
-- Is the right first audience pre-seed founders (higher pain acuity, lower volume) or post-seed founders (larger portfolio, higher willingness to pay)?
-- What is the honest mechanism? Does this product work because of reminders, because of smart categorization, because of context surfacing, or some combination?
-- Are there founder-specific categories built in, or does the user configure their own relationship types?
-- What proof exists? Are there named founders who use it, or is this still pre-testimonial?
+## Generic language to avoid
+
+- "Stay connected" — too vague
+- "Manage your network" — LinkedIn register
+- "Build stronger relationships" — could be on any CRM product
+- "Never miss a follow-up again" — deadline-management framing; understates what is actually lost
+- "Relationship intelligence" — enterprise-sales register, wrong audience
+- "The CRM for founders" — category default, does not name the specific gap
+- "Founder-first design" — means nothing specific
+
+## What still feels unknown
+
+- How founders discover this product (acquisition path would inform whether the first page does recognition work or conversion work)
+- Whether "200 on the waitlist" reads as validation or as small
+- Typical time-to-value: how quickly a new user finds the product genuinely useful versus experiencing another-tool fatigue
+- Whether the team plan has a meaningfully different first message from the solo plan

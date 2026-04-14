@@ -1,58 +1,46 @@
-# Message Spine — Personal CRM for Startup Founders
+# Message Spine — Me CRM
 
-## Core truths
+## Core truth
 
-**Truth 1: The problem is context loss, not contact chaos.**
-Founders don't need help remembering who their important contacts are. They lose track of where they are with each person — what was said last, what the next step was, how warm or cold the relationship currently is. A tool that helps founders remember names has the wrong job. A tool that surfaces current relationship state has the right one.
+The problem is not too many contacts — it's that the relationships that matter most accumulate unanswered state: when did we last talk, what did I promise, what's the next step? Me CRM tracks that state for the 50–100 relationships that actually drive the company, without the overhead of a sales tool built for a different job.
 
-**Truth 2: Sales CRMs are built for a different job and it shows.**
-Deal stages, pipeline views, and lead scoring are designed for sales teams moving contacts through a funnel toward a close. Founder relationships don't work that way. An investor relationship doesn't have a close. An advisor relationship doesn't have a stage. A product that forces founder relationships into sales CRM logic will feel wrong and get abandoned.
+## Target audience
 
-**Truth 3: Relationship debt compounds silently.**
-The cost of letting a relationship go cold is invisible until it matters. Founders don't notice the relationship has gone dormant until they need a warm intro, a reference, or a candid conversation — and then the re-engagement feels awkward and the window may have narrowed. The value of the tool is catching this before it becomes a problem, not after.
+Early-stage startup founders (seed to Series A) who manage high-stakes relationship portfolios largely alone. These are founders who have already felt the specific failure mode: realizing they've gone dark on an investor, or reaching out to an advisor without knowing where they left things.
 
-## Audience distinctions worth preserving
+## Sharp pain statement
 
-**Pre-seed founders** have a fundraising-shaped relationship portfolio. Their primary use case is knowing the current state of investor conversations — who's warm, who's waiting, who they haven't followed up with yet. The tool needs to earn trust with this use case first.
+You know you should follow up. You don't remember what you said last time, what you promised, or how long it's been. You search your inbox, find three threads, and still don't have the full picture. You send a vague message or you put it off again.
 
-**Post-seed founders** have a broader portfolio: investors remain, but customers, potential hires, journalists, and advisors all have real relationship maintenance needs. This audience is more likely to have tried a CRM and found it wrong for the job — so the distinction from sales CRMs matters more explicitly to them.
+## Desired shift
 
-This distinction affects how the homepage frames its examples and proof. Both audiences belong here; neither should be excluded by the copy.
+A founder with Me CRM can look at any important relationship and immediately know: last contact, what was discussed, what they owe, and when to reach back out. The pile of "I should follow up" has an external home. Relationships don't go dark without a prompt.
 
-## Native language to keep
+## Strongest language to preserve
 
-From signal:
-- "where we left things"
-- "dropped the ball"
-- "fell through the cracks"
-- "went cold"
-- "relationship debt"
-- "stay top of mind"
-- "context at a glance"
-- "who should I reach out to this week"
-- "warm vs cold"
+- "gone dark" — names the failure mode
+- "where you are with someone" — the specific state Me CRM tracks
+- "follow-up debt" — the accumulated pile
+- "the 50 relationships that matter" — distinguishes from sales CRM volume
+- "context fade" — what happens between conversations when details blur
 
-Tensions to preserve:
-- The tension between "I know who matters" and "I've lost track of where I am with them" — this is the signal. Don't smooth it out.
-- The tension between wanting a system and not wanting another tool to maintain — the maintenance objection is real and should be named, not ignored.
+## Page-level message implications
 
-Language to drop:
-- "streamline your network"
-- "optimize relationship management"
-- "build meaningful connections"
-- "your most valuable asset"
-- "relationship intelligence"
-- "contact enrichment"
+Three jobs in order:
+1. **Recognition**: the founder who has experienced this problem must see it named accurately before they care about the product. Start with the failure, not the feature.
+2. **Product distinction**: Me CRM is not another CRM. "No pipeline, no deals, no lead scoring" is a concrete distinction that matters more than any feature list.
+3. **Maintenance doubt**: the skeptical concern ("will I actually keep this updated?") is real and should be addressed directly — not smoothed over.
 
-## Claims to test later
-- "Founders lose more relationships to context loss than to intent" — likely true directionally, unverified
-- The claim that this is meaningfully lighter to maintain than a sales CRM depends on how much of the logging is automated — this needs honest qualification
-- Any claim about time saved or relationship outcomes would need founder data to support
+## Key trust question to answer
 
-## What this should change downstream
+"Is this something I will actually use, or will it be another tool I set up and abandon?"
 
-**Page choices:** Homepage first. The recognition job (this is the right problem framing) has to happen before a features page or a how-it-works page can do anything useful.
+Not a data-privacy question first. A usage-pattern question. The founder's deeper concern is that the problem is real but their own behavior is the bottleneck. The page must address adoption doubt directly.
 
-**Proof choices:** Proof should be relationship-type specific — show an investor relationship example, show an advisor relationship example, show a customer relationship example. Generic "I stay organized" testimonials will underperform. No invented specifics.
+## Weak directions to avoid
 
-**Language choices:** Lead with the context-loss framing, not the contact-management framing. Use "where you are with each person" as the organizing phrase. Avoid anything that sounds like productivity optimization.
+- Starting with features before recognition
+- Leading with the founder origin story before the user's problem (origin earns trust; it does not create need)
+- Using "CRM" as the primary category label in the hero (positions next to Salesforce, wrong comparison)
+- Soft language ("stay connected," "keep relationships warm") that doesn't name the specific failure
+- Pricing-forward page: price follows trust; the founder hasn't committed to the problem being worth solving yet

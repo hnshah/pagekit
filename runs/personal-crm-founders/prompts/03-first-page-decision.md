@@ -1,3 +1,11 @@
+<!--
+This file starts as a copy of prompts/03-first-page-decision.md (the canonical prompt for this step).
+When you run the step:
+1. Substitute the required inputs into the prompt.
+2. Save the version you actually sent to the model here.
+3. Save the raw output to outputs/03-first-page-decision-output.md.
+-->
+
 ---
 step: "03"
 name: first-page-decision

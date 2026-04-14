@@ -128,22 +128,13 @@ echo
 
 echo "Slop regression against tracked drafts:"
 if [ -x scripts/slop-check.sh ]; then
-  # Run against the three de-slopped drafts only (per scripts/README.md rationale).
-  targets=(
-    "runs/openclaw-web-hosting/homepage-draft.md"
-    "runs/personal-crm-founders/homepage-draft.md"
-    "runs/vegan-dog-food-fresh-run/homepage-draft.md"
-  )
-  existing=()
-  for t in "${targets[@]}"; do [ -f "$t" ] && existing+=("$t"); done
-  if [ "${#existing[@]}" -gt 0 ]; then
-    if bash scripts/slop-check.sh "${existing[@]}" >/dev/null 2>&1; then
-      ok "slop-check on de-slopped drafts (clean)"
-    else
-      warn "slop-check flagged a pattern on a de-slopped draft (see: bash scripts/slop-check.sh ${existing[*]})"
-    fi
+  # Default-target scan: every homepage-draft / first-page-draft /
+  # first-page-draft-corrected under runs/. If runs/ is empty or the
+  # drafts are all clean, this is clean.
+  if bash scripts/slop-check.sh >/dev/null 2>&1; then
+    ok "slop-check on tracked drafts (clean)"
   else
-    warn "no de-slopped drafts found to check"
+    warn "slop-check flagged a pattern on a tracked draft (see: bash scripts/slop-check.sh)"
   fi
 else
   miss "scripts/slop-check.sh not executable"

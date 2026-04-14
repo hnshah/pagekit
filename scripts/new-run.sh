@@ -130,7 +130,7 @@ Recommended for trust-heavy objects:
 - \`05-proof-brief.md\`
 - \`06-comparison-brief.md\`
 
-For templates see \`templates/wedge-definition-template.md\` and the pattern established in \`runs/taskpilot-first-pass/sources/\`.
+For templates see \`templates/wedge-definition-template.md\` and the pattern established in \`runs/vegan-dog-food-verdel/sources/\`.
 EOF
 
 # ----- prompts/ placeholders ----------------------------------------------
