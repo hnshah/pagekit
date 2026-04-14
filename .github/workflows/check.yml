@@ -1,0 +1,23 @@
+name: PageKit checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  checks:
+    name: doctor + slop-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Make scripts executable
+        run: chmod +x scripts/*.sh
+
+      - name: Run doctor
+        run: bash scripts/doctor.sh
+
+      - name: Run slop-check (default scan)
+        run: bash scripts/slop-check.sh

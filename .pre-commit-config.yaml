@@ -1,0 +1,33 @@
+# Pre-commit configuration for PageKit.
+#
+# Install locally:
+#   pip install pre-commit
+#   pre-commit install
+#
+# What runs on every commit:
+#   - slop-check.sh against tracked drafts (catches the mechanical AI-slop
+#     tells before the PR stage)
+#   - doctor.sh (the same pre-flight that the SessionStart hook runs)
+#
+# Slower / semantic checks (claim-check prompt expansion, run-check) are
+# not wired here because they need arguments. Invoke them manually from
+# the run folder.
+
+repos:
+  - repo: local
+    hooks:
+      - id: pagekit-slop-check
+        name: PageKit slop-check (default scan)
+        entry: bash scripts/slop-check.sh
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]
+
+      - id: pagekit-doctor
+        name: PageKit doctor
+        entry: bash scripts/doctor.sh
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]

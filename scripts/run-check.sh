@@ -4,14 +4,16 @@
 # Usage:
 #   scripts/run-check.sh <run-path>
 #
-# Classifies the run as fully-logged, summary-logged, artifact-only, or
-# incomplete, per frameworks/run-logging.md. Lists missing files for the
-# highest tier not met.
+# Tiers (ascending):
+#   INCOMPLETE       no core artifacts
+#   ARTIFACT-ONLY    core artifacts but missing logging scaffolding
+#   SUMMARY LOGGED   goal + working-log + models + evaluation + all 6 artifacts
+#   FULLY LOGGED     + sources/, prompts/NN-*.md, outputs/NN-*-output.md, evaluator-pass.md
+#   PUBLISHABLE      + claim-check.md, and slop-check clean on the drafts
 #
 # Exit code:
-#   0  fully-logged
-#   0  summary-logged (also treated as valid)
-#   1  artifact-only or incomplete
+#   0  SUMMARY LOGGED, FULLY LOGGED, or PUBLISHABLE
+#   1  ARTIFACT-ONLY or INCOMPLETE
 
 set -u
 
@@ -112,8 +114,68 @@ done
 echo "run-check: $RUN"
 echo
 
+# PUBLISHABLE tier check: FULLY LOGGED + claim-check.md filled in (not a
+# placeholder) + slop-check clean on the relevant drafts.
+#
+# The scaffold from new-run.sh seeds every required file with a bracketed
+# `*[Filled in by step NN ...]*` placeholder. PUBLISHABLE requires those
+# placeholders to be replaced with real content in claim-check.md and in
+# the final artifact most sensitive to content: first-page-draft.md.
+check_publishable() {
+  local run="$1"
+  local missing_pub=()
+
+  # claim-check.md required AND not still the scaffolded placeholder.
+  if [ ! -f "$run/claim-check.md" ]; then
+    missing_pub+=("missing file: claim-check.md")
+  elif grep -q "Filled in by step 07" "$run/claim-check.md" 2>/dev/null; then
+    missing_pub+=("claim-check.md still carries the scaffold placeholder — not yet filled in")
+  fi
+
+  # first-page-draft.md required AND not still the scaffolded placeholder.
+  if [ ! -f "$run/first-page-draft.md" ]; then
+    missing_pub+=("missing file: first-page-draft.md")
+  elif grep -q "Filled in by step 06" "$run/first-page-draft.md" 2>/dev/null; then
+    missing_pub+=("first-page-draft.md still carries the scaffold placeholder — not yet filled in")
+  fi
+
+  # slop-check must come back clean on the draft and the corrected draft if
+  # it exists. If scripts/slop-check.sh is missing, we treat that as a
+  # repo-health problem, not a run problem.
+  local slop_script
+  slop_script="$(cd "$(dirname "$0")" && pwd)/slop-check.sh"
+  if [ -x "$slop_script" ]; then
+    local slop_targets=()
+    [ -f "$run/first-page-draft.md" ] && slop_targets+=("$run/first-page-draft.md")
+    [ -f "$run/first-page-draft-corrected.md" ] && slop_targets+=("$run/first-page-draft-corrected.md")
+    if [ "${#slop_targets[@]}" -gt 0 ]; then
+      if ! bash "$slop_script" "${slop_targets[@]}" >/dev/null 2>&1; then
+        missing_pub+=("slop-check flagged at least one pattern on the draft(s)")
+      fi
+    fi
+  fi
+
+  printf '%s\n' "${missing_pub[@]}"
+}
+
 if [ "${#missing_fully[@]}" -eq 0 ]; then
+  # Already fully-logged. Try to upgrade to PUBLISHABLE.
+  missing_pub=()
+  while IFS= read -r line; do
+    [ -n "$line" ] && missing_pub+=("$line")
+  done < <(check_publishable "$RUN")
+
+  if [ "${#missing_pub[@]}" -eq 0 ]; then
+    echo "tier: PUBLISHABLE"
+    exit 0
+  fi
+
   echo "tier: FULLY LOGGED"
+  echo
+  echo "This run does not meet PUBLISHABLE. Missing for publishable:"
+  for m in "${missing_pub[@]}"; do
+    echo "  - $m"
+  done
   exit 0
 fi
 
