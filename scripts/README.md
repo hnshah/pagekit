@@ -66,7 +66,7 @@ The semantic patterns: editorial voice narrating brand restraint, unsourced quan
 scripts/slop-check.sh
 
 # Check specific files or directories
-scripts/slop-check.sh runs/openclaw-web-hosting/homepage-draft.md
+scripts/slop-check.sh runs/vegan-dog-food-verdel/first-page-draft-corrected.md
 scripts/slop-check.sh runs/
 ```
 
@@ -92,15 +92,3 @@ If the script fires on a draft, the fix is usually:
 
 This is a heuristic. It will have false positives (rule-of-three will flag legitimate short-sentence passages; the `actually` check will flag legitimate uses of the word). It will also miss patterns that require semantic understanding. Treat the output as "lines worth looking at," not "lines that must change."
 
-### Pre-existing slop in historical runs
-
-Running the default scan will surface slop in older logged runs that predate the anti-slop framework. For example, `runs/taskpilot-first-pass/homepage-draft.md` and `runs/vegan-dog-food-first-pass/homepage-draft.md` carry patterns the script correctly flags, but those drafts are preserved as evidence of what the process produced at the time. Rewriting them retroactively would falsify the record. The honest behaviour is to leave them as-is and accept that a default scan will not exit 0 until the historical runs are either retired or re-logged under the new rules.
-
-If you only want to validate the current, actively-maintained drafts, pass them explicitly:
-
-```sh
-scripts/slop-check.sh \
-  runs/openclaw-web-hosting/homepage-draft.md \
-  runs/personal-crm-founders/homepage-draft.md \
-  runs/vegan-dog-food-fresh-run/homepage-draft.md
-```

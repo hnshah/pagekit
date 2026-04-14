@@ -49,10 +49,6 @@ Start here:
 Start here:
 - `guided-runs/01-build-signal-doc/README.md`
 
-### I want to see worked examples
-Start here:
-- `examples/README.md`
-
 ## The artifact chain
 
 The canonical PageKit workflow is:
@@ -95,8 +91,6 @@ frameworks/       the durable method docs
 templates/        copyable artifact templates
 prompts/          canonical prompts (one per step; do not duplicate)
 runs/             logged validation runs
-examples/         packaged examples and run summaries
-research/         planning docs for future rigor
 scripts/          tooling (new-run, run-check, claim-check, slop-check, doctor)
 .claude/          Claude Code skills + subagents + SessionStart hook (also the Cowork plugin body)
 ```
@@ -119,23 +113,9 @@ The repo includes validation runs so the process can be judged against real obje
 See `frameworks/run-logging.md` for the definition of "fully logged" vs "summary logged."
 
 **Fully logged**
-- `runs/taskpilot-first-pass/` — goal, sources, prompts, outputs, working log, evaluation, evaluator pass. Chose homepage as first page.
-
-**Summary logged**
-- `runs/vegan-dog-food-first-pass/` — sources, final artifacts, evaluation. No per-step prompts or raw outputs.
-
-**Artifact-only runs** (below the summary-logged bar; final artifacts plus working log, no sources, no per-step prompts, no raw outputs, no evaluation, no evaluator pass, no claim check)
-- `runs/personal-crm-founders/` — first page chose homepage
-- `runs/vegan-dog-food-fresh-run/` — first page chose homepage
-- `runs/openclaw-web-hosting/` — first page chose homepage
-- `runs/ai-pm-chat-interface/` — first page chose homepage
+- `runs/vegan-dog-food-verdel/` — fully-logged run on a fictional plant-based dog food brand. Chose a non-homepage first page (a trust/safety landing page). First run produced on the agentic foundation; its evaluator-pass surfaced the punch list that became the anti-slop and step-03 tightening PRs.
 
 Future runs should reach the fully-logged tier by default. `scripts/new-run.sh` scaffolds the layout; `scripts/run-check.sh` validates it. The `.claude/skills/pagekit/` orchestrator skill drives the entire chain end-to-end on Claude Code.
-
-**Synthetic self-tests**
-- `runs/high-trust-professional-tool-architecture-test/` — not a real object run
-
-The three artifact-only runs ship with accompanying `homepage-draft-original.md` files that preserve the original pre-de-slop state, and `slop-pass.md` audit trails. See individual run folders.
 
 ## What comes later
 
