@@ -57,6 +57,28 @@ This is not overhead.
 This is how PageKit turns a run into reusable evidence.
 Without this layer, examples become hard to trust and hard to learn from.
 
+## Mechanized run creation
+
+Use the scripts. Hand-rolling a run folder is the most common place fully-logged tier slips.
+
+```sh
+scripts/new-run.sh <run-name>      # scaffold a fully-logged folder
+scripts/run-check.sh runs/<name>   # validate the folder against this framework
+```
+
+Or via make:
+
+```sh
+make new-run NAME=<run-name>
+make run-check RUN=<run-name>
+```
+
+`scripts/new-run.sh` matches the fully_logged tier in `pagekit.yaml`. If this framework changes, update both.
+
+`scripts/run-check.sh` exits 0 if the run is fully-logged or summary-logged, exits 1 if artifact-only or incomplete. Wire it into your end-of-run checklist.
+
 ## Related
 - `frameworks/anti-slop.md` — hard no-go patterns for drafts produced by any run
 - `scripts/slop-check.sh` — regression check a run's draft should pass
+- `scripts/new-run.sh`, `scripts/run-check.sh` — mechanized scaffold and validation
+- `pagekit.yaml` — the manifest the scripts read from
