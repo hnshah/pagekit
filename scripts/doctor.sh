@@ -110,6 +110,7 @@ echo
 
 echo "Scripts:"
 check_exec "scripts/new-run.sh"
+check_exec "scripts/new-source-brief.sh"
 check_exec "scripts/run-check.sh"
 check_exec "scripts/claim-check.sh"
 check_exec "scripts/slop-check.sh"
@@ -119,10 +120,11 @@ echo
 
 echo "Claude Code bundle:"
 check_file ".claude/skills/pagekit/SKILL.md"
-for s in signal-doc message-spine first-page-decision page-argument-shape proof-map first-page-draft claim-check new-run run-check slop-check; do
+for s in signal-doc message-spine first-page-decision page-argument-shape proof-map first-page-draft claim-check evaluator-pass new-run run-check slop-check; do
   check_file ".claude/skills/pagekit-$s/SKILL.md"
 done
 check_file ".claude/agents/pagekit-claim-checker.md"
+check_file ".claude/agents/pagekit-evaluator-pass.md"
 check_file ".claude/settings.json"
 echo
 

@@ -1,21 +1,28 @@
 # PageKit
 
-*A practical system for getting to better pages by strengthening the source materials that shape the copy.*
+**Better page copy usually starts with better source materials.**
 
-PageKit helps you go from:
+PageKit is a method for producing web pages that do not sound AI-written. It works by strengthening the inputs (signal, spine, first-page decision, page-argument shape, proof map) before asking any model to draft the page. An anti-slop layer and an optional claim-check step keep the draft honest.
+
+The repo ships the method, the canonical prompts, a Claude Code skills bundle, a Codex `AGENTS.md` contract, a Claude Cowork plugin body, and scripts that mechanize the structural work. Everything an agent needs to run PageKit end-to-end is here.
+
+**See what a run looks like**: [`runs/vegan-dog-food-verdel/`](runs/vegan-dog-food-verdel/) is the canonical worked example. Fully-logged, non-homepage first page, claim-checked at hard severity, with evaluator pass.
+
+## What PageKit helps you go from
+
 - vague market understanding
 - weak source material
 - generic page direction
+- AI-slop drafts
 
-to:
+## … to
+
 - a sharper signal doc
 - a clearer message spine
 - a deliberate first-page decision
 - a page argument shape that fits the object
 - a proof map with honest constraints
-- a page draft grounded in better inputs
-
-This repo gives you a guided, markdown-first way to improve the materials that drive page copy.
+- a page draft grounded in better inputs that does not read as machine-written
 
 ## Who this is for
 
