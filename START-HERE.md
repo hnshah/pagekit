@@ -13,15 +13,19 @@ It helps you move from:
 to:
 - a sharper signal doc
 - a clearer message spine
-- a stronger page decision
-- a better page argument shape
+- a deliberate first-page decision
+- a page argument shape that fits the object
+- a proof map with honest constraints
 - a proof-aware page draft
 
 ## What PageKit is not
 PageKit is not:
-- a one-prompt homepage generator
-- a guarantee of final 11/10 copy from thin inputs
+- a one-prompt page generator
+- a guarantee of final copy from thin inputs
 - a fixed homepage template
+
+PageKit does not assume the first page is a homepage.
+That is a decision the method forces you to make on purpose.
 
 The system is strongest when it helps you improve what the page is based on.
 
@@ -52,6 +56,7 @@ The stable part of PageKit is the process:
 4. design the page's argument shape
 5. map proof and proof limits
 6. draft the page from the full chain
+7. optional: run a claim check for durability
 
 ## The main rule
 If the copy gets generic, do not just keep editing the copy.

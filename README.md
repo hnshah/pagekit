@@ -10,7 +10,8 @@ PageKit helps you go from:
 to:
 - a sharper signal doc
 - a clearer message spine
-- a stronger page architecture
+- a deliberate first-page decision
+- a page argument shape that fits the object
 - a proof map with honest constraints
 - a page draft grounded in better inputs
 
@@ -36,6 +37,10 @@ Start here:
 - `quickstart/README.md`
 - `quickstart/start-with-prompts.md`
 
+### I want a full tool-specific path in one file
+Start here:
+- `guides/README.md`
+
 ### I want the full method
 Start here:
 - `guided-runs/01-build-signal-doc/README.md`
@@ -48,7 +53,11 @@ Start here:
 
 The canonical PageKit workflow is:
 
-**signal doc -> message spine -> first page decision -> page argument shape -> proof map -> first page draft**
+**signal doc -> message spine -> first-page decision -> page argument shape -> proof map -> first page draft**
+
+An optional durability pass follows:
+
+**claim check**
 
 That order matters.
 The whole point is to get the upstream structure right before asking AI to write final pages.
@@ -59,44 +68,55 @@ The whole point is to get the upstream structure right before asking AI to write
 - improves the source materials before chasing better copy
 - preserves audience differences
 - lets the object decide the page shape
-- maps proof to page jobs
+- does not default to homepage
+- maps proof to specific argument moves
 - keeps AI inside a real workflow
 - keeps intermediate artifacts visible and reusable
 
 ## Repo structure
 
 ```text
+START-HERE.md     first-time entry doc
 quickstart/       low-friction prompt-first entry
+guides/           fully self-contained tool-specific paths
 guided-runs/      step-by-step workflows
 frameworks/       the durable method docs
 templates/        copyable artifact templates
-runs/             fully logged validation runs
+runs/             logged validation runs
 examples/         packaged examples and run summaries
+research/         planning docs for future rigor
 ```
 
 ## Current scope
 
 PageKit v0.1 is intentionally narrow.
-It focuses on one core website workflow:
+It focuses on one core workflow:
 
-**signal -> spine -> architecture -> proof -> first draft**
+**signal -> spine -> first-page decision -> argument shape -> proof map -> first page draft**
+
+With an optional claim-check pass on top.
 
 That keeps the system honest and usable.
+
+## Logged runs
+
+The repo includes validation runs so the process can be judged against real objects, not theory alone.
+
+- `runs/taskpilot-first-pass/` — fully logged: goal, sources, prompts, outputs, working log, evaluation, evaluator pass
+- `runs/vegan-dog-food-first-pass/` — partially logged: sources, final artifacts and evaluation, without per-step prompts and raw outputs
+- `runs/high-trust-professional-tool-architecture-test/` — a synthetic self-test of the first-page decision and argument shape steps, not a real object run
 
 ## What comes later
 
 Later versions can add:
-- more execution paths
-- worked examples created from real runs of the system
-- claim-checking and exhibit packaging
+- more non-homepage real-object runs
+- exhibit packaging
 - agent/skill-powered paths
 - deeper page-family generation
 
 The system should also keep getting better through fully logged runs that expose weak prompts, weak templates and weak process steps.
 
 But the core system needs to hold first.
-
-Right now, the repo includes fully logged validation runs so the process can be judged against real objects, not theory alone.
 
 ## Core principle
 

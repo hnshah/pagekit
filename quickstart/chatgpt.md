@@ -6,18 +6,19 @@ Use this if you want to start PageKit inside ChatGPT.
 ## What you need first
 - a plain-language product description
 - your first audience hypothesis
-- the page you want to create first
 
 ## Start with this artifact
 Begin with a signal doc.
+Do not decide which page you are building yet.
 
 ## Prompt to run first
 Copy/paste this into ChatGPT:
 
 ```text
-I want to build a homepage through the PageKit process.
+I want to build a web page through the PageKit process.
 
-Do not write homepage copy yet.
+Do not write page copy yet.
+Do not assume which page we are building.
 Help me build a signal doc first.
 
 Using the product description below, produce a signal doc with these sections:
@@ -42,13 +43,17 @@ Good output:
 - gives you sharper language than the category default
 
 Bad output:
-- sounds like homepage copy too early
+- sounds like finished page copy too early
 - feels generic
 - hides what is still unknown
 
 ## What to do next
 Put the result into your signal-doc file, then move to:
 - `guided-runs/02-reduce-to-message-spine/README.md`
+
+## Want the full tool-specific path?
+If you want the full chain inside ChatGPT in one place, use:
+- `guides/chatgpt-prompt-path.md`
 
 ## Link note
 If ChatGPT launch-link parameters are stable enough later, add them here.

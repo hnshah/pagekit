@@ -18,10 +18,11 @@ Use it as the baseline path.
 Run these in order:
 1. signal doc
 2. message spine
-3. first page decision
+3. first-page decision
 4. page argument shape
 5. proof map
 6. first page draft
+7. claim check (optional durability pass)
 
 Do not skip ahead.
 If an artifact is weak, fix it before moving on.
@@ -30,9 +31,10 @@ If an artifact is weak, fix it before moving on.
 
 ### Prompt
 ```text
-I want to build a homepage through the PageKit process.
+I want to build a web page through the PageKit process.
 
-Do not write homepage copy yet.
+Do not write page copy yet.
+Do not assume which page we are building.
 Help me build a signal doc first.
 
 Using the product description below, produce a signal doc with these sections:
@@ -65,9 +67,10 @@ Create a wedge-definition brief before moving on.
 
 ### Prompt
 ```text
-Using the signal doc below, reduce it into a message spine for a homepage.
+Using the signal doc below, reduce it into a message spine.
 
-Do not write the homepage yet.
+Do not decide which page we are building yet.
+Do not write page copy yet.
 Do not invent proof.
 
 Give me:
@@ -76,7 +79,7 @@ Give me:
 3. sharp pain statement
 4. desired shift or outcome
 5. strongest language to preserve
-6. homepage message implications
+6. page-level message implications
 7. key trust question to answer
 8. weak directions to avoid
 
@@ -159,16 +162,16 @@ First-page decision:
 
 ### Prompt
 ```text
-Using the current PageKit artifacts, define the homepage proof map.
+Using the current PageKit artifacts, define the proof map for the first page.
 
-Do not write homepage copy yet.
+Do not write page copy yet.
 Map:
 1. what the page can honestly claim now
 2. what it does not yet have proof for
 3. safe credibility moves
 4. risky or inflated moves to avoid
-5. what the hero can say safely
-6. what the trust section can say safely
+5. where proof lands in the approved argument shape
+6. what each approved section can say safely
 
 Artifacts:
 [PASTE HERE]
@@ -209,6 +212,37 @@ Artifacts:
 Do not jump straight to line edits.
 Ask what source artifact is still too weak.
 That is usually where the real improvement lives.
+
+---
+
+## Step 7 — Claim check (optional durability pass)
+
+### Prompt
+```text
+Review the draft below as a skeptical claim check.
+
+For every claim that sounds stronger than the product or the proof map supports, flag it.
+
+For each flagged claim, give:
+1. the exact line
+2. the type (overclaim, vague, unsupported, outruns proof map)
+3. why it is weak
+4. a sharper, more accurate replacement or a recommendation to cut
+
+Do not reward defensiveness.
+A corrected claim should be more precise, not louder.
+
+Draft:
+[PASTE HERE]
+
+Proof map:
+[PASTE HERE]
+```
+
+### Good output looks like
+- names specific lines, not general impressions
+- separates overclaim, vague, unsupported and proof-map-outrun
+- proposes replacements that are more precise than the originals
 
 ---
 

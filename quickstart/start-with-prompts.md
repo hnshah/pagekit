@@ -14,18 +14,23 @@ Before you begin, gather:
 
 ## The goal
 
-Start upstream, before homepage writing.
+Start upstream, before any page copy.
 
 Your goal is to create these artifacts in order:
 1. signal doc
 2. message spine
-3. page architecture
-4. proof map
-5. first page draft
+3. first-page decision
+4. page argument shape
+5. proof map
+6. first page draft
+7. claim check (optional durability pass)
+
+Do not assume which page you are building until step 3.
 
 ## Rule
 
 Finish each artifact before moving to the next one.
+If an artifact is weak, fix the upstream source before advancing.
 
 ## First move
 

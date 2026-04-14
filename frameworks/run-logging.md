@@ -2,15 +2,34 @@
 
 Every serious PageKit run should log the work as it happens.
 
-## Required files
+## Two logging levels
+
+### Fully logged
+A fully logged run must include:
 - goal
 - working log
 - models used
-- prompts
-- outputs
+- prompts (per step)
+- outputs (per step, raw)
+- final artifacts
+- evaluation
+- evaluator pass (skeptical review after the run)
+
+Use this level for runs meant as validation evidence or reusable examples.
+
+### Summary logged
+A summary-logged run includes:
+- goal
+- working log
+- models used
+- final artifacts
 - evaluation
 
-## For every step, capture
+It does not preserve the per-step prompts and raw outputs.
+It is cheaper to produce but less inspectable.
+Do not call a summary-logged run a validation run without flagging that distinction.
+
+## For every step, capture (when fully logging)
 - what step this is
 - objective
 - model used
