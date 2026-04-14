@@ -239,6 +239,10 @@ Fully logged per \`frameworks/run-logging.md\`.
 ## Where outputs drifted generic
 - *[Fill in]*
 
+## Publication readiness checklist
+What is still missing before this page can publish:
+- *[Name specific gaps: missing testimonials, unconfirmed claims, sections that need real data, etc.]*
+
 ## Added rigor layer
 Evaluator pass included.
 

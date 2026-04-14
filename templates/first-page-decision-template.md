@@ -4,6 +4,9 @@
 
 ## Why this page first
 
+## Confidence basis for this decision
+Data / signal / hypothesis — state which and why.
+
 ## Page job
 What should this page help the visitor understand, believe or do?
 

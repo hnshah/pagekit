@@ -29,7 +29,7 @@ The formulation was reviewed by Dr. Sarah Kim, DACVN (a board-certified veterina
 
 **Body:**
 
-The FDA's ongoing investigation into canine dilated cardiomyopathy has focused on grain-free, legume-heavy diets. Verdel's formulation is grain-inclusive — oats and brown rice are in the recipe. It is not grain-free.
+The FDA's ongoing investigation into canine dilated cardiomyopathy has focused on grain-free, legume-heavy diets. Verdel's formulation is grain-inclusive: oats and brown rice are in the recipe. It is not grain-free.
 
 The DCM research is still active. Verdel states what the formulation contains.
 
@@ -41,7 +41,7 @@ The DCM research is still active. Verdel states what the formulation contains.
 
 **Body:**
 
-Dr. Sarah Kim holds the DACVN credential — Diplomate of the American College of Veterinary Nutrition, the board certification in veterinary nutrition. She reviewed Verdel's formulation before launch.
+Dr. Sarah Kim holds the DACVN credential (Diplomate of the American College of Veterinary Nutrition, the board certification in veterinary nutrition). She reviewed Verdel's formulation before launch.
 
 This is a formulation review, not a feeding trial. Verdel is sold as meeting AAFCO nutrient profiles, not as a diet validated through a feeding trial.
 
@@ -53,7 +53,7 @@ This is a formulation review, not a feeding trial. Verdel is sold as meeting AAF
 
 **Body:**
 
-Every box includes a printed transition guide — a 10-day gradual mix-in that helps dogs switch from a different food. For dogs that do not adjust: 30-day money-back guarantee, no return of the product required. The refund covers the first bag.
+Every box includes a printed transition guide: a 10-day gradual mix-in that helps dogs switch from a different food. For dogs that do not adjust: 30-day money-back guarantee, no return of the product required. The refund covers the first bag.
 
 ---
 
@@ -63,7 +63,7 @@ Every box includes a printed transition guide — a 10-day gradual mix-in that h
 
 **Body:**
 
-Dogs with confirmed or suspected sensitivities to chicken, beef, or other common animal proteins sometimes do well on a diet with novel protein sources. Verdel uses peas, lentils, and chickpeas — proteins not present in most conventional kibble.
+Dogs with confirmed or suspected sensitivities to chicken, beef, or other common animal proteins sometimes do well on a diet with novel protein sources. Verdel uses peas, lentils, and chickpeas. These proteins are not present in most conventional kibble.
 
 This is not a veterinary recommendation. Owners who suspect food allergies should work with their vet to confirm the sensitivity and evaluate whether an elimination diet is appropriate.
 
@@ -74,7 +74,7 @@ This is not a veterinary recommendation. Owners who suspect food allergies shoul
 **Heading:** Try Verdel.
 
 **Body:**
-22 lb bag — $59. Free shipping on orders of $40 and above. Ships within 2 business days.
+22 lb bag: $59. Free shipping on orders of $40 and above. Ships within 2 business days.
 
 **CTA:**
 Order Verdel →

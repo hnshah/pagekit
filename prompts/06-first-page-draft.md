@@ -49,7 +49,7 @@ Anti-slop constraints (hard rules — see frameworks/anti-slop.md):
 - no three parallel short sentences used for cadence (rule-of-three clustering)
 - no sentence-start anaphora across three or more consecutive sentences
 - no editorial voice narrating brand restraint, virtue or honesty
-- no more than one em-dash per paragraph
+- no em-dashes in body copy (use a colon, comma, or parentheses instead)
 - no "actually", "additionally", "testament", "landscape", "showcasing", "genuinely", "truly" as intensifiers
 - no marketing-punchy one-liners as section enders
 - no scare-quoted antithesis

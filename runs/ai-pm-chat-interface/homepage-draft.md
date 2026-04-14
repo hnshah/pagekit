@@ -67,11 +67,11 @@ The chat interface is where this happens because that is where the information a
 
 The AI will sometimes interpret a conversational message as a task when it was not intended as one. When that happens, dismissing the mistaken item takes one click, and it does not affect anything else on the board.
 
-When the AI misses a task that the team intended to track, a team member adds it manually — the same way they would have before, except it is the exception rather than the routine.
+When the AI misses a task that the team intended to track, a team member adds it manually, the same way they would have before. It is the exception rather than the routine.
 
 *[If the product has a pattern-learning mechanism from corrections: "The AI adjusts based on corrections, so the same type of message is less likely to produce a wrong result again." Confirm whether this is true before including it.]*
 
-The goal is not a board maintained without any human input. The goal is a board where human input is the exception and the AI handling is the rule — which is the reverse of how most PM tools work.
+The goal is not a board maintained without any human input. The goal is a board where human input is the exception and the AI handling is the rule. That is the reverse of how most PM tools work.
 
 ---
 
