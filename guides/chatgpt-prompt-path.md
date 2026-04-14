@@ -3,270 +3,125 @@
 ## What this guide is
 A fully self-contained PageKit guide for running the whole process inside ChatGPT.
 
+Every prompt referenced below lives canonically in `prompts/`. **Do not copy the prompt text into this file.** Edit the source prompt and this guide picks up the change automatically.
+
 ## Best use of ChatGPT here
-ChatGPT is a strong default path when you want a clean, simple and comparable prompt workflow.
-Use it as the baseline path.
+ChatGPT is the default baseline path. Clean, simple, comparable across runs. Good for people who want the method without tool-specific tricks.
 
 ## What to gather before you start
 - a plain-language product description
 - your first audience hypothesis
 - any customer language you already have
 - competitors or alternatives if relevant
-- the page you want to create first
+- the page you want to create first (optional — step 03 decides)
 
 ## The artifact chain
-Run these in order:
-1. signal doc
-2. message spine
-3. first-page decision
-4. page argument shape
-5. proof map
-6. first page draft
-7. claim check (optional durability pass)
+Run these in order. Prompt for each step is linked; paste it into ChatGPT with the required inputs substituted.
 
-Do not skip ahead.
-If an artifact is weak, fix it before moving on.
+1. [Signal doc](../prompts/01-signal-doc.md)
+2. [Message spine](../prompts/02-message-spine.md)
+3. [First-page decision](../prompts/03-first-page-decision.md)
+4. [Page argument shape](../prompts/04-page-argument-shape.md)
+5. [Proof map](../prompts/05-proof-map.md)
+6. [First page draft](../prompts/06-first-page-draft.md)
+7. [Claim check](../prompts/07-claim-check.md) — optional durability pass
+
+**Do not skip ahead.** If an artifact is weak, fix the upstream source before moving on.
 
 ## Step 1 — Signal doc
 
-### Prompt
-```text
-I want to build a web page through the PageKit process.
+Prompt: [`prompts/01-signal-doc.md`](../prompts/01-signal-doc.md).
 
-Do not write page copy yet.
-Do not assume which page we are building.
-Help me build a signal doc first.
-
-Using the product description below, produce a signal doc with these sections:
-1. what the product appears to be
-2. likely target audience(s)
-3. recurring pains or friction
-4. desired outcomes
-5. trust questions or buying resistance
-6. native phrases worth keeping
-7. generic language to avoid
-8. what still feels unknown
-9. weak claims to avoid early
-
-Product description:
-[PASTE HERE]
-```
-
-### Good output looks like
+**Good output looks like**
 - separates observation from assumption
 - gives you sharper language than the category default
 - exposes what is still unknown
 
-### If the output is weak
-If it feels generic or category-level, stop.
-Create a wedge-definition brief before moving on.
+**If the output is weak**
+Stop. Create a wedge-definition brief (`templates/wedge-definition-template.md`) before moving on.
 
 ---
 
 ## Step 2 — Message spine
 
-### Prompt
-```text
-Using the signal doc below, reduce it into a message spine.
+Prompt: [`prompts/02-message-spine.md`](../prompts/02-message-spine.md).
 
-Do not decide which page we are building yet.
-Do not write page copy yet.
-Do not invent proof.
-
-Give me:
-1. core truth
-2. target audience
-3. sharp pain statement
-4. desired shift or outcome
-5. strongest language to preserve
-6. page-level message implications
-7. key trust question to answer
-8. weak directions to avoid
-
-Signal doc:
-[PASTE HERE]
-```
-
-### Good output looks like
-- gives the page a clear center of gravity
+**Good output looks like**
+- names the two to four truths strong enough to organize pages
 - sharpens the pain
-- avoids generic category language
+- does not yet decide which page to build
 
-### If the output is weak
-If it still feels too abstract, add stronger source material first:
-- mechanism brief
-- proof brief
-- comparison brief
+**If the output is weak**
+Add sharper source material first: mechanism brief, proof brief, or comparison brief.
 
 ---
 
-## Step 3 — First page decision
+## Step 3 — First-page decision
 
-### Prompt
-```text
-Using the message spine below, decide what page should exist first.
+Prompt: [`prompts/03-first-page-decision.md`](../prompts/03-first-page-decision.md).
 
-Do not assume homepage by default.
-
-Define:
-1. the best first page candidate
-2. why this page first
-3. the page's job
-4. visitor state on arrival
-5. main trust burden
-6. main proof burden
-7. what this rules out for now
-
-Message spine:
-[PASTE HERE]
-```
-
-### Good output looks like
+**Good output looks like**
 - chooses the first page on purpose
-- explains why this page is stronger than the obvious default
+- explains why this page beats the obvious default
+- lists candidates considered and rejected
 - makes trust and proof burden explicit
 
 ---
 
 ## Step 4 — Page argument shape
 
-### Prompt
-```text
-Using the first-page decision below, design the page's argument shape.
+Prompt: [`prompts/04-page-argument-shape.md`](../prompts/04-page-argument-shape.md).
 
-Do not draft the page yet.
-Do not assume a standard homepage structure.
-
-Define:
-1. what the visitor needs to understand first
-2. what must be earned next
-3. what order the argument should follow
-4. what sections actually belong on this page
-5. what sections would be unnecessary or harmful
-6. where trust should land
-7. where proof should land
-8. drafting constraints
-
-First-page decision:
-[PASTE HERE]
-```
-
-### Good output looks like
-- determines the page shape from the object
-- avoids default section habits
-- gives the draft step a clearer and more honest structure
+**Good output looks like**
+- structure comes from the object, not category habit
+- names sections the page does not need, not only sections it does
+- carries the anti-slop drafting constraints forward to step 6
 
 ---
 
 ## Step 5 — Proof map
 
-### Prompt
-```text
-Using the current PageKit artifacts, define the proof map for the first page.
+Prompt: [`prompts/05-proof-map.md`](../prompts/05-proof-map.md).
 
-Do not write page copy yet.
-Map:
-1. what the page can honestly claim now
-2. what it does not yet have proof for
-3. safe credibility moves
-4. risky or inflated moves to avoid
-5. where proof lands in the approved argument shape
-6. what each approved section can say safely
-
-Artifacts:
-[PASTE HERE]
-```
-
-### Good output looks like
+**Good output looks like**
 - protects against overclaiming
-- makes the draft safer and more honest
+- surfaces the gap between available and needed proof
+- maps proof to specific argument moves, not to the page in general
 
 ---
 
 ## Step 6 — First page draft
 
-### Prompt
-```text
-Using the signal doc, message spine, first-page decision, page argument shape and proof map below, draft the page.
+Prompt: [`prompts/06-first-page-draft.md`](../prompts/06-first-page-draft.md).
 
-Do not add sections that were not earned by the argument-shape step.
-Let the structure follow the approved page shape.
-
-Proof and scope constraints:
-- clarity over hype
-- no fake proof
-- no inflated mechanism claims
-- avoid generic category language
-
-Anti-slop constraints (hard rules):
-- no "Not X. Not Y." heading or sentence pairs
-- no "Not-X-but-Y" or "X-not-Y" rhetorical pivots unless they carry specific content
-- no three parallel short sentences used for cadence (rule-of-three clustering)
-- no sentence-start anaphora across three or more consecutive sentences
-- no editorial voice narrating brand restraint, virtue or honesty
-- no more than one em-dash per paragraph
-- no "actually", "additionally", "testament", "landscape", "showcasing", "genuinely", "truly" as intensifiers
-- no marketing-punchy one-liners as section enders
-- no scare-quoted antithesis
-- no "serves as / boasts / features / showcases / delivers / empowers" copula-avoidance
-- no signposting ("let's dive in", "here's the thing", "that's the deal")
-- no filler ("in order to", "due to the fact that")
-- no significance inflation ("pivotal moment", "critical juncture")
-
-When a product-specific claim has not been verified against the briefs, mark it inline with *[verification flag: ...]*.
-
-Artifacts:
-[PASTE HERE]
-```
-
-### Good output looks like
-- clearly inherits from the upstream work
-- feels sharper than category-default copy
+**Good output looks like**
+- inherits from the upstream work
 - stays honest about proof and mechanism
+- reads like a person wrote it, not a machine (see `frameworks/anti-slop.md`)
+- uses `*[verification flag: ...]*` for unverified product-specific claims
 
-### If the draft is weak
-Do not jump straight to line edits.
-Ask what source artifact is still too weak.
-That is usually where the real improvement lives.
+**If the draft is weak**
+Do not jump to line edits. Ask what upstream artifact is still too weak. That is where the real improvement lives.
 
 ---
 
 ## Step 7 — Claim check (optional durability pass)
 
-### Prompt
-```text
-Review the draft below as a skeptical claim check at [severity: light / normal / hard].
+Prompt: [`prompts/07-claim-check.md`](../prompts/07-claim-check.md).
 
-For every claim that sounds stronger than the product or the proof map supports, flag it.
-Also flag any line that carries an AI-slop pattern: Not-X-Not-Y stacking, rule-of-three cadence, sentence-start anaphora, editorial voice narrating brand restraint, em-dash stacking, intensifier vocabulary (actually / testament / landscape / showcasing / truly / genuinely), marketing-punchy enders, scare-quoted antithesis, copula-avoidance (serves as / boasts / features / showcases / delivers / empowers), signposting (let's dive in / here's the thing / that's the deal), filler (in order to / due to the fact that), significance inflation (pivotal moment / critical juncture).
-
-For each flagged claim, give:
-1. the exact line
-2. the type (overclaim / vague / unsupported / outruns proof map / editorial voice / unsourced quantitative modifier / clinical or regulatory drift / ai-slop tell)
-3. why it is weak
-4. a sharper, more accurate replacement or a recommendation to cut
-
-Do not reward defensiveness.
-A corrected claim should be more precise, not louder.
-
-At the end, list any slop pattern that showed up more than once so upstream constraints can absorb it.
-
-Draft:
-[PASTE HERE]
-
-Proof map:
-[PASTE HERE]
-```
-
-### Good output looks like
+**Good output looks like**
 - names specific lines, not general impressions
-- separates overclaim, vague, unsupported and proof-map-outrun
+- separates claim types cleanly (overclaim / vague / unsupported / outrun proof map / editorial voice / unsourced quantitative / clinical drift / ai-slop tell)
 - proposes replacements that are more precise than the originals
+- names recurring patterns so upstream constraints can absorb them
+
+**Scripted expansion**
+From the repo: `scripts/claim-check.sh <draft-path> <proof-map-path> --severity hard`. Writes the expanded prompt to stdout for pasting into ChatGPT.
 
 ---
 
 ## Core differences vs other tools
-- better as a clean baseline than as a research-heavy tool
-- good for comparable runs
-- less specialized than Perplexity on source enrichment
-- less naturally long-context iterative than Claude
+- best as a clean baseline
+- strong for comparable runs across models
+- not as research-native as Perplexity
+- not as naturally long-context iterative as Claude

@@ -23,6 +23,30 @@ The stable process is:
 5. proof map
 6. first page draft
 
+Optional durability pass: 7. claim check.
+
+The canonical manifest is `pagekit.yaml`. Canonical prompts are `prompts/01-signal-doc.md` through `prompts/07-claim-check.md`. **Edit the canonical prompts, never duplicate.** Guides, skills and scripts all read from those files.
+
+## Running PageKit end-to-end as an agent
+
+If you are an agent being asked to run PageKit on object X, do this exact sequence:
+
+1. **Read `pagekit.yaml`.** It lists every step, artifact, framework, template, guided-run, and canonical prompt path. This is the source of truth.
+2. **Scaffold a run folder** with `scripts/new-run.sh <run-name>` (or `make new-run NAME=<run-name>`). This creates `runs/<run-name>/` with all required files for the fully-logged tier.
+3. **Fill `runs/<run-name>/goal.md` and `sources/`** with the object's ground truth. For fictional training objects, commit to concrete facts up front — no `[Product name]` placeholders in source briefs.
+4. **Work through steps 01 through 06 in order.** For each step:
+   - Save the prompt used as `runs/<run-name>/prompts/NN-<step>.md` (copy from `prompts/NN-*.md` and substitute inputs).
+   - Save the raw model output as `runs/<run-name>/outputs/NN-<step>-output.md`.
+   - Distill the output into the canonical artifact: `signal-doc.md`, `message-spine.md`, `first-page-decision.md`, `page-argument-shape.md`, `proof-map.md`, `first-page-draft.md`.
+   - Record what changed in `working-log.md`.
+   - Do not advance if the step's quality bar is not met. Go back upstream and fix source material.
+5. **Run `scripts/slop-check.sh runs/<run-name>/first-page-draft.md`.** Resolve every flagged pattern before continuing.
+6. **Run step 07 (claim check) at the severity you intend:** `scripts/claim-check.sh runs/<run-name>/first-page-draft.md runs/<run-name>/proof-map.md --severity hard`. Paste the expanded prompt, save `claim-check.md` and `first-page-draft-corrected.md`.
+7. **Write `evaluation.md` and `evaluator-pass.md`** per `frameworks/run-logging.md`. The evaluator pass is adversarial; do not skip it at the fully-logged tier.
+8. **Validate with `scripts/run-check.sh runs/<run-name>`** (or `make run-check RUN=<run-name>`). Fix anything it flags.
+
+If you are inside Claude Code, the `.claude/skills/pagekit/` skill orchestrates steps 2 through 8 for you. Invoke with `/pagekit` or describe the job ("run PageKit on X") and the skill will auto-load.
+
 ## What must stay stable
 - source material comes before copy
 - weak drafts should trigger upstream repair first
