@@ -60,5 +60,6 @@ If the decision cannot explain why this page beats the obvious default, the sign
 - upstream: signal doc, message spine, source briefs
 - downstream: page argument shape, proof map, first page draft
 
-The page argument shape step inherits this decision.
+The page argument shape step inherits this decision. That step is also where the anti-slop drafting constraints get attached (see `frameworks/anti-slop.md`). A wrong first-page decision at this step propagates through every downstream step including the slop-prevention layer.
+
 If the first page is wrong, every downstream step drifts.

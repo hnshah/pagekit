@@ -56,3 +56,7 @@ This convention came out of real runs. It keeps first-pass drafts honest and mak
 This is not overhead.
 This is how PageKit turns a run into reusable evidence.
 Without this layer, examples become hard to trust and hard to learn from.
+
+## Related
+- `frameworks/anti-slop.md` — hard no-go patterns for drafts produced by any run
+- `scripts/slop-check.sh` — regression check a run's draft should pass

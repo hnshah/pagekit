@@ -72,6 +72,7 @@ The whole point is to get the upstream structure right before asking AI to write
 - maps proof to specific argument moves
 - keeps AI inside a real workflow
 - keeps intermediate artifacts visible and reusable
+- treats AI-slop patterns as hard no-go rules (`frameworks/anti-slop.md`) with a regression script (`scripts/slop-check.sh`)
 
 ## Repo structure
 
