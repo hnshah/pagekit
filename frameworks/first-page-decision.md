@@ -42,6 +42,27 @@ At minimum, a trust-heavy object should have considered:
 
 Naming rejected candidates makes the decision auditable. It also prevents the step from appearing to choose a non-homepage by default, which would be the mirror-image mistake of always choosing homepage.
 
+### First-page alternatives vs later-funnel pages
+
+A pricing page, a features page, a docs page, an integrations page, a comparison page are NOT first-page alternatives. They are later-funnel pages — they assume the visitor has already decided to evaluate the product and is going deeper. Dismissing them as first-page candidates ("a pricing page comes later, so homepage wins") is not a first-page decision; it is a ranking of homepage-vs-subpages, which answers the wrong question.
+
+First-page alternatives sit at the same intent-commitment level as a homepage. They are pages a visitor could plausibly land on first, via organic search, direct link, or paid ad, without having committed to evaluate the product yet. Examples of real first-page alternatives:
+
+- audience-specific landing pages (for a specific buyer, profession, or use case)
+- trust-and-safety landing pages (for trust-heavy objects where the gating question is "is this safe/responsible?")
+- mechanism or ingredient-detail pages (when the mechanism IS the reason to believe)
+- category explainers (when the category itself is unfamiliar)
+- founder or brand-story pages (rarely the right first page, but legitimate for some B2C objects)
+- use-case or specific-scenario pages (for products where one use case dominates the buyer's intent)
+
+If the rejected candidates are all downstream pages, the step has not been done. Go back and propose alternatives at the same level as a homepage.
+
+### The affirmative-case requirement
+
+For every candidate — the chosen one AND every rejected one — write one paragraph stating the case FOR the candidate before any reason to reject it. A one-sentence dismissal is not a rejection; it is a non-consideration. If you cannot write a credible case for a candidate, either (a) think harder about what would make that candidate strong for this specific object, or (b) drop the candidate and replace it with one you can argue for.
+
+This is how the method avoids the "list and dismiss" anti-pattern. The four pre-Verdel artifact-only runs in this repo all fell into that trap. The Verdel run (`runs/vegan-dog-food-verdel/first-page-decision.md`) is the working example of the step done right.
+
 ## Principle
 
 The object decides the page shape.
