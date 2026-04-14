@@ -102,8 +102,9 @@ That keeps the system honest and usable.
 
 The repo includes validation runs so the process can be judged against real objects, not theory alone.
 
-- `runs/taskpilot-first-pass/` — fully logged: goal, sources, prompts, outputs, working log, evaluation, evaluator pass
-- `runs/vegan-dog-food-first-pass/` — partially logged: sources, final artifacts and evaluation, without per-step prompts and raw outputs
+- `runs/taskpilot-first-pass/` — fully logged: goal, sources, prompts, outputs, working log, evaluation, evaluator pass. Homepage first page.
+- `runs/vegan-dog-food-second-pass/` — fully logged. First non-homepage first page in the repo (a nutritional-adequacy page). First real exercise of the claim-check step, run at hard severity.
+- `runs/vegan-dog-food-first-pass/` — summary logged only. Superseded by the second pass, kept for before/after comparison.
 - `runs/high-trust-professional-tool-architecture-test/` — a synthetic self-test of the first-page decision and argument shape steps, not a real object run
 
 ## What comes later
