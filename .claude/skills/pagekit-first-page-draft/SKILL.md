@@ -44,3 +44,15 @@ A strong draft:
 - passes `scripts/slop-check.sh` clean before being handed to step 07
 
 If the draft is weak: stop, ask what upstream artifact is too thin. Rarely fix at the draft level — fix at the source.
+
+## Next
+**The draft is not the deliverable. The logged run is.** After the draft is clean, do not stop. Continue the chain:
+
+1. Invoke **`pagekit-slop-check`** on the draft. Resolve any flags.
+2. Invoke **`pagekit-claim-check`** (step 07) at a severity you choose and log. This produces `claim-check.md` and, if any line was rewritten, `first-page-draft-corrected.md`.
+3. Write `evaluation.md` — the run's own honest read of what worked and what stayed thin.
+4. Invoke **`pagekit-evaluator-pass`** to produce `evaluator-pass.md` — the adversarial second read.
+5. Fill in `working-log.md` across every step (not the scaffold `*[Fill in]*` placeholders).
+6. Invoke **`pagekit-run-check`** — it must return `tier: FULLY LOGGED` or `tier: PUBLISHABLE`.
+
+Only once run-check reports FULLY LOGGED (or PUBLISHABLE) is the run done. Stopping at this step leaves the run at ARTIFACT-ONLY, which does not count.

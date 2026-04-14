@@ -36,3 +36,6 @@ A strong page argument shape:
 
 ## Anti-slop
 The shape's drafting-constraints section is where slop prevention starts. If those constraints are missing or watered down, every step downstream is weaker.
+
+## Next
+After the shape is in place, invoke **`pagekit-proof-map`** (step 05). Do not stop here.

@@ -75,6 +75,13 @@ EOF
 
 # ----- working-log.md -----------------------------------------------------
 cat > "$RUN_DIR/working-log.md" <<EOF
+<!--
+DO NOT DELETE. This file is required for the fully-logged tier per
+frameworks/run-logging.md. Fill in the entries as you work through the
+steps; do not leave the \`*[Fill in]*\` placeholders intact at the end.
+The orchestrator skill's "Are you done?" self-check requires real log
+entries across every step, not just the scaffold.
+-->
 # Working Log
 
 Chronological notes. Each entry marks a step transition or a mid-step decision.
@@ -212,6 +219,13 @@ cat > "$RUN_DIR/first-page-draft.md" <<EOF
 EOF
 
 cat > "$RUN_DIR/claim-check.md" <<EOF
+<!--
+DO NOT DELETE. This file is required for the PUBLISHABLE tier per
+frameworks/run-logging.md. Fill it in when you run step 07 (claim-check).
+Use the \`pagekit-claim-check\` skill — it delegates to the
+\`pagekit-claim-checker\` subagent which will replace this placeholder
+content with the real audit.
+-->
 # Claim Check
 
 ## Severity
@@ -222,6 +236,13 @@ EOF
 
 # ----- evaluation.md -----------------------------------------------------
 cat > "$RUN_DIR/evaluation.md" <<EOF
+<!--
+DO NOT DELETE. This file is required for the fully-logged tier per
+frameworks/run-logging.md. Fill it in after step 07. This is the run's
+own honest read of what worked, what stayed thin, where outputs drifted
+generic. The adversarial voice goes in evaluator-pass.md (written
+afterward via the pagekit-evaluator-pass skill).
+-->
 # Evaluation
 
 ## Logging level
@@ -252,6 +273,13 @@ EOF
 
 # ----- evaluator-pass.md -------------------------------------------------
 cat > "$RUN_DIR/evaluator-pass.md" <<EOF
+<!--
+DO NOT DELETE. This file is required for the fully-logged tier per
+frameworks/run-logging.md. It carries the adversarial second read of
+the run. Produce it by invoking the \`pagekit-evaluator-pass\` skill,
+which delegates to the \`pagekit-evaluator-pass\` subagent and replaces
+this placeholder with real content.
+-->
 # Evaluator Pass
 
 Skeptical second read of the run. Not the same voice as \`evaluation.md\`; this pass is deliberately adversarial.
