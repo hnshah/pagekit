@@ -32,11 +32,11 @@ Try [Product name] →
 
 "Complete and balanced" is a specific claim tied to a nutrient-profile standard. What varies between brands is what sits behind the claim.
 
-[Product name] uses [primary protein sources — e.g., peas, lentils, nutritional yeast] as its protein foundation. Plant proteins differ from animal proteins in their amino acid profiles, so the formulation adds [taurine / L-carnitine / specific amino acid additions] to meet dogs' full requirements rather than only macronutrient totals.
+[Product name] uses [primary protein sources: e.g., peas, lentils, nutritional yeast] as its protein foundation. Plant proteins differ from animal proteins in their amino acid profiles, so the formulation adds [taurine / L-carnitine / specific amino acid additions] to meet dogs' full requirements rather than only macronutrient totals.
 
 The recipe was developed [with / reviewed by] a board-certified veterinary nutritionist. *[If the relationship exists, name the credential and role. If it does not, remove this paragraph entirely.]*
 
-It meets AAFCO nutritional profiles for [life stage — adult maintenance / all life stages]. That is the same nutrient-profile standard used by conventional adult dog food.
+It meets AAFCO nutritional profiles for [life stage: adult maintenance / all life stages]. That is the same nutrient-profile standard used by conventional adult dog food.
 
 ---
 
@@ -73,7 +73,7 @@ Transitioning dogs from meat-based food takes time, usually several weeks with a
 
 **Body:**
 
-Conventional dog food is often made from rendered byproducts and unnamed meat meals — the parts of factory-farmed animals that are not sold elsewhere. Many owners, if they read the label carefully, would prefer their dog was not eating that.
+Conventional dog food is often made from rendered byproducts and unnamed meat meals: the parts of factory-farmed animals that are not sold elsewhere. Many owners, if they read the label carefully, would prefer their dog was not eating that.
 
 [Product name] contains no animal-derived ingredients. For values-led owners, the switch removes the dissonance of feeding their dog factory-farmed meat while holding values that oppose it.
 

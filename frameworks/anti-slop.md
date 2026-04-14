@@ -64,13 +64,13 @@ A page earns trust by showing the work. A page that announces it is showing the 
 
 Rule: no lines that narrate brand discipline, brand virtue or brand honesty. If a sentence could be removed without losing any concrete information, remove it.
 
-### 5. Em-dash stacking
+### 5. Em-dashes in body copy
 
 Em-dashes used as rhetorical beats rather than genuine parentheticals:
 > OpenClaw is developer hosting with real control — without the DevOps tax.
 > Made for owners who want their dog healthy and their conscience clear — in that order.
 
-Rule: one em-dash per paragraph, maximum. If the sentence needs a genuine aside, a comma or parentheses usually work. Two em-dashes in a paragraph is almost always a cadence tell.
+Rule: no em-dashes in body copy. If the sentence needs a genuine aside, use a colon, a comma, or parentheses. Em-dashes pattern-match as AI cadence regardless of how many appear per paragraph.
 
 ### 6. Intensifier vocabulary
 

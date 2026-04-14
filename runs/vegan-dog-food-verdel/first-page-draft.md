@@ -15,7 +15,7 @@ Is Verdel safe for my dog?
 
 **Body:**
 
-Verdel meets AAFCO complete-and-balanced nutritional profiles for adult maintenance. That is the same standard used by conventional adult dog food — not a reduced bar for plant-based products.
+Verdel meets AAFCO complete-and-balanced nutritional profiles for adult maintenance. That is the same standard used by conventional adult dog food, not a reduced bar for plant-based products.
 
 The protein comes from peas, lentils, chickpeas, and nutritional yeast. Plant proteins differ from animal proteins in amino acid ratios: they do not supply taurine or L-carnitine in the quantities adult dogs require. Verdel adds both, along with algae-derived DHA, to meet the full nutritional profile. The oats and brown rice in the formula provide the grain base.
 
@@ -41,7 +41,7 @@ The DCM research is still active. What Verdel can say is what the formulation co
 
 **Body:**
 
-Dr. Sarah Kim holds the DACVN credential — Diplomate of the American College of Veterinary Nutrition, the board certification in veterinary nutrition. She reviewed Verdel's formulation before launch, covering the amino acid profile, macro ratios, and alignment with AAFCO adult maintenance profiles.
+Dr. Sarah Kim holds the DACVN credential (Diplomate of the American College of Veterinary Nutrition, the board certification in veterinary nutrition). She reviewed Verdel's formulation before launch, covering the amino acid profile, macro ratios, and alignment with AAFCO adult maintenance profiles.
 
 This is a formulation review, not a feeding trial. Verdel is sold as meeting AAFCO nutrient profiles, not as a diet validated through a feeding trial. That is the honest scope of the claim.
 
@@ -53,7 +53,7 @@ This is a formulation review, not a feeding trial. Verdel is sold as meeting AAF
 
 **Body:**
 
-Every box includes a printed transition guide — a 10-day gradual mix-in that reduces palatability resistance for most dogs switching from a different food. Most dogs adjust within the transition period.
+Every box includes a printed transition guide: a 10-day gradual mix-in that reduces palatability resistance for most dogs switching from a different food. Most dogs adjust within the transition period.
 
 For those that do not: 30-day money-back guarantee, no return of the product required. The refund covers the first bag.
 
@@ -65,7 +65,7 @@ For those that do not: 30-day money-back guarantee, no return of the product req
 
 **Body:**
 
-Dogs with confirmed or suspected sensitivities to chicken, beef, or other common animal proteins sometimes do well on a diet with novel protein sources. Verdel uses peas, lentils, and chickpeas — proteins not present in most conventional kibble.
+Dogs with confirmed or suspected sensitivities to chicken, beef, or other common animal proteins sometimes do well on a diet with novel protein sources. Verdel uses peas, lentils, and chickpeas. These proteins are not present in most conventional kibble.
 
 This is not a veterinary recommendation. Owners who suspect food allergies should work with their vet to confirm the sensitivity and evaluate whether an elimination diet is appropriate.
 
@@ -76,7 +76,7 @@ This is not a veterinary recommendation. Owners who suspect food allergies shoul
 **Heading:** Try Verdel.
 
 **Body:**
-22 lb bag — $59. Free shipping on orders of $40 and above. Ships within 2 business days.
+22 lb bag: $59. Free shipping on orders of $40 and above. Ships within 2 business days.
 
 **CTA:**
 Order Verdel →

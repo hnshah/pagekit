@@ -27,6 +27,7 @@ Copy this block into the draft step. See `frameworks/anti-slop.md` for the full 
 - no unsourced quantitative modifiers (`most`, `usually`, `typically`, `often`, `many`) unless the source briefs support them
 - no external-credential descriptions beyond what the source briefs support
 - no clinical, legal or regulatory-adjacent phrasing without source backing
+- no outrun mechanism or evidence-base claims (do not claim the evidence base supports X when the brief does not reference that evidence)
 - no sections not approved by this shape
 
 ### Anti-slop constraints (hard rules)
@@ -35,7 +36,7 @@ Copy this block into the draft step. See `frameworks/anti-slop.md` for the full 
 - no three parallel short sentences used for cadence (rule-of-three clustering)
 - no sentence-start anaphora across three or more consecutive sentences
 - no editorial voice narrating brand restraint, virtue or honesty
-- no more than one em-dash per paragraph
+- no em-dashes in body copy (use a colon, comma, or parentheses instead)
 - no `actually`, `additionally`, `testament`, `landscape`, `showcasing`, `genuinely`, `truly` as intensifiers
 - no marketing-punchy one-liners as section enders
 - no scare-quoted antithesis

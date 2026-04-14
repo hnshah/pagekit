@@ -65,29 +65,22 @@ check_not_x_not_y_sentences() {
       done
 }
 
-check_em_dash_stacking() {
+check_em_dash() {
   local file="$1"
   awk -v F="$file" '
+    # Skip markdown headings (structural, not body copy)
+    /^#{1,6}[[:space:]]/ { next }
     # Skip markdown table lines (both data rows and separators).
     /^[[:space:]]*\|/ { next }
     /^[[:space:]]*[-|: ]+$/ { next }
-    # Also skip indented list items whose content is only table-style.
-    {
-      n = 0
-      s = $0
-      while (match(s, /—/)) {
-        n++
-        s = substr(s, RSTART + RLENGTH)
-      }
-      # Count ASCII -- occurrences separately, excluding markdown table dashes
-      t = $0
-      m = 0
-      while (match(t, /[^|-]--[^|-]/)) {
-        m++
-        t = substr(t, RSTART + RLENGTH)
-      }
-      total = n + m
-      if (total >= 2) printf "%d\tem-dash-stacking\t%s\n", NR, $0
+    # Skip bold structural labels (story/example/case labels, not body prose)
+    /^[[:space:]]*\*\*[^*]/ { next }
+    # Skip draft notes, verification flags, placeholder notes
+    /^[[:space:]]*\*\[/ { next }
+    /^[[:space:]]*\*[Dd]raft/ { next }
+    # Flag any line containing an em-dash (no em-dashes in body copy)
+    /—/ {
+      printf "%d\tem-dash-in-copy\t%s\n", NR, $0
     }
   ' "$file" | while IFS=$'\t' read -r line pattern snippet; do
     report "$file" "$line" "$pattern" "$snippet"
@@ -224,7 +217,7 @@ scan_file() {
   esac
   check_not_x_not_y_headings "$f"
   check_not_x_not_y_sentences "$f"
-  check_em_dash_stacking "$f"
+  check_em_dash "$f"
   check_actually "$f"
   check_copula_avoidance "$f"
   check_signposting "$f"
