@@ -44,3 +44,11 @@ A strong claim-check pass:
 - separates claim types (overclaim / vague / unsupported / outrun proof map / editorial voice / unsourced quantitative / clinical drift / ai-slop tell)
 - proposes replacements that are sharper and more accurate than the originals — not simply softer
 - ends with a recurring-patterns summary so upstream constraints can absorb them
+
+## Next
+Do not stop at claim-check. Continue:
+
+1. Write `runs/<name>/evaluation.md` — the run's own honest read of what worked, what stayed thin, where outputs drifted generic.
+2. Invoke **`pagekit-evaluator-pass`** to produce the adversarial second read.
+3. Ensure `runs/<name>/working-log.md` has real entries per step (replace all scaffold `*[Fill in]*` placeholders).
+4. Invoke **`pagekit-run-check`** — it must return `tier: FULLY LOGGED` or `tier: PUBLISHABLE` before the run is done.

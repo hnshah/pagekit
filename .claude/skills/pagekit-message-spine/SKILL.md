@@ -35,3 +35,6 @@ If the spine sounds like the signal doc rephrased, the reduction did not happen.
 
 ## Anti-slop
 Watch for "comprehensive solution," "powerful platform," and other category-default phrases sneaking into the spine. The spine should be in the product's own voice as much as possible.
+
+## Next
+After the spine is in place, invoke **`pagekit-first-page-decision`** (step 03). Do not stop here.

@@ -35,3 +35,6 @@ If the doc is too generic or too category-level, **do not advance to step 02.** 
 
 ## Anti-slop
 Signal docs themselves rarely produce slop, but if the output uses confident-sounding empty words ("comprehensive," "deeply understands," "transforms"), strip them. Real signal is specific.
+
+## Next
+After this step's artifact is in place, invoke **`pagekit-message-spine`** (step 02). Do not stop here. The signal doc is not the deliverable; the draft is, and the chain must run to completion (see the orchestrator's self-check).

@@ -56,3 +56,6 @@ If the chosen page is "homepage," the rationale must explain why homepage actual
 ## When to escalate to the user
 - The decision is genuinely close between two candidates: surface both, ask for input.
 - Mechanism / proof / comparison briefs are missing for a trust-heavy object: ask for them before deciding.
+
+## Next
+After the decision is in place, invoke **`pagekit-page-argument-shape`** (step 04). Do not stop here.

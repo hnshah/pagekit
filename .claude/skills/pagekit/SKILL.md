@@ -77,11 +77,34 @@ Tell the user:
 
 ## Hard rules (do not violate)
 
+- **Do not declare the run done until `scripts/run-check.sh runs/<name>` returns `tier: FULLY LOGGED` (or `PUBLISHABLE`).** This is the only completion signal. Step 06 producing a nice-looking draft is NOT completion. If run-check reports ARTIFACT-ONLY or SUMMARY LOGGED, the run is incomplete and you must keep working.
 - **Do not default to homepage.** Step 03 must consider alternatives.
 - **Do not invent proof.** Use `*[verification flag: ...]*` for unverified product-specific claims.
 - **Do not skip slop-check before the claim-check step.** The script catches the obvious cases; the claim-check catches the rest.
 - **Do not skip the evaluator pass** at the fully-logged tier.
 - **Do not edit the canonical prompts** in `prompts/` to fit a single run. They are shared.
+- **Do not delete or leave blank the scaffolded placeholder files** (`claim-check.md`, `evaluation.md`, `evaluator-pass.md`, `working-log.md`). They are structural; fill them in or commit them as-is until filled.
+
+## Are you done? Self-check
+
+Before handing the run back to the user, walk this checklist. Every item must be YES. If any is NO, you are not done — go finish that item.
+
+- [ ] `runs/<name>/signal-doc.md` is filled with real content (not the scaffold placeholder)
+- [ ] `runs/<name>/message-spine.md` is filled
+- [ ] `runs/<name>/first-page-decision.md` is filled AND lists candidates considered with a paragraph case FOR each
+- [ ] `runs/<name>/page-argument-shape.md` is filled
+- [ ] `runs/<name>/proof-map.md` is filled
+- [ ] `runs/<name>/first-page-draft.md` is filled
+- [ ] `runs/<name>/outputs/NN-*-output.md` exists for every step 01 through 07
+- [ ] `runs/<name>/claim-check.md` is filled (not the `*[Filled in by step 07]*` placeholder)
+- [ ] `runs/<name>/first-page-draft-corrected.md` exists if claim-check flagged any line
+- [ ] `runs/<name>/working-log.md` has real entries per step (not the scaffold `*[Fill in]*` placeholders)
+- [ ] `runs/<name>/evaluation.md` is filled
+- [ ] `runs/<name>/evaluator-pass.md` is filled (use the `pagekit-evaluator-pass` skill/subagent)
+- [ ] `bash scripts/slop-check.sh runs/<name>/first-page-draft.md` exits 0 clean
+- [ ] `bash scripts/run-check.sh runs/<name>` returns `tier: FULLY LOGGED` or `tier: PUBLISHABLE`
+
+Only after every box is checked do you report completion to the user.
 
 ## When to ask the user
 
