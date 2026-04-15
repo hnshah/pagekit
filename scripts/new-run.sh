@@ -248,6 +248,13 @@ afterward via the pagekit-evaluator-pass skill).
 ## Logging level
 Fully logged per \`frameworks/run-logging.md\`.
 
+## Source quality
+- **Real** (founder interviews, existing customer language, usage data, published materials)
+- **Training fiction** (committed fictional product facts, no interviews, no usage data)
+- **Mixed** (some real source material, some invented for scaffolding)
+
+Pick one. Surface it here rather than burying it in \`sources/01-source-capture.md\`. A reader scanning the evaluation should know immediately whether the run was built on real or invented material. Runs produce different kinds of evidence; the evaluation should be honest about which kind.
+
 ## What worked
 - *[Fill in]*
 
@@ -259,6 +266,14 @@ Fully logged per \`frameworks/run-logging.md\`.
 
 ## Where outputs drifted generic
 - *[Fill in]*
+
+## Weak section to source-gap mapping
+For each section flagged as weak (in "What stayed thin" or "Where outputs drifted generic"): name the specific source material that would fix it. A section flagged weak without a source-gap named is a section that reads as "we know it's weak and chose to ship it." Examples:
+- **Section 2 (category-default language)** → a named founder interview quote about the specific moment this tool fails
+- **Section 4 (outcome claim)** → usage data or a case study; until then the section should end on mechanism, not result
+- **Section 5 (trust floor)** → at least one real testimonial with attribution
+
+*[Fill in per weak section, or state "no weak sections named" if the run has none.]*
 
 ## Publication readiness checklist
 What is still missing before this page can publish:

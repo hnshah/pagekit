@@ -49,10 +49,15 @@ For each flagged claim, give:
 1. the exact line
 2. the type (overclaim / vague / unsupported / outruns proof map / editorial voice / unsourced quantitative modifier / clinical or regulatory drift / ai-slop tell)
 3. why it is weak
-4. a sharper, more accurate replacement or a recommendation to cut
+4. a correction, labeled with one of these dispositions:
+   - **rewrite** — a sharper, more accurate replacement that lands inside the proof map and reads cleaner
+   - **remove (wrong)** — cut the line; the claim is not supportable at any severity
+   - **remove pending verification** — cut the line from the corrected draft AND flag it in the audit as "potentially restorable if <X> is confirmed in the briefs." A dropped claim and a disqualified claim are different things; the audit must preserve the distinction so a reviewer can decide whether to restore on verification.
 
 Do not reward defensiveness.
 A corrected claim should be more precise, not louder.
+
+The corrected draft must be clean on its own terms: no inline annotation markers (`*[Rewritten: ...]*`, `*[Was: ...]*`) in body copy, and no new em-dashes introduced by the rewrites. The audit is where rewrite provenance lives; the corrected draft is publish-ready copy.
 
 At the end, list any slop pattern that showed up more than once so upstream constraints (frameworks/anti-slop.md or page-argument-shape drafting constraints) can absorb it.
 

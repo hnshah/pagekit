@@ -35,7 +35,13 @@ What specifically makes this claim brittle, misleading, undefended, or machine-c
 - not a proof issue (slop tell only)
 
 ### Proposed correction
-A sharper, more accurate replacement, or a decision to cut.
+One of these three dispositions, labeled explicitly:
+
+- **rewrite** — a sharper, more accurate replacement that sits inside the proof map and reads cleaner. Precision over intensity.
+- **remove (wrong)** — cut the line. The claim is not supportable at any severity. State why the claim is disqualified.
+- **remove pending verification** — cut the line from the corrected draft; note here as "potentially restorable if <X> is confirmed in the briefs." A dropped claim and a disqualified claim are different things; preserve the distinction.
+
+Do NOT include `*[Rewritten: ...]*` or any other inline annotation markers in the corrected draft. The audit is where rewrite provenance lives; the corrected draft is publish-ready copy.
 
 ---
 
