@@ -11,11 +11,11 @@ You are invoking the adversarial evaluator pass on a completed run.
 
 - After the run's `evaluation.md` is written.
 - Before declaring the run fully-logged (the fully-logged tier requires `evaluator-pass.md`).
-- When a reviewer asks "is this run actually as good as the evaluation says?"
+- When a reviewer asks "is this run as good as the evaluation says?"
 
 ## Read first
-- `frameworks/run-logging.md` — where the evaluator pass fits in the run-logging tier
-- `.claude/agents/pagekit-evaluator-pass.md` — the subagent you will delegate to
+- `../pagekit/references/run-logging.md` — where the evaluator pass fits in the run-logging tier
+- `agents/pagekit-evaluator-pass.md` — the subagent you will delegate to
 
 ## Inputs
 - path to the run folder (e.g., `runs/kind-bowl-real/`)

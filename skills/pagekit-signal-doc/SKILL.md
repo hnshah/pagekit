@@ -8,20 +8,21 @@ description: Build a PageKit signal doc from a product description and any sourc
 You are running step 01 of the PageKit method.
 
 ## Read first
-- `prompts/01-signal-doc.md` — the canonical prompt for this step
-- `frameworks/signal-doc.md` — what makes a signal doc strong
-- `templates/signal-doc-template.md` — the artifact shape
+- `./references/prompt.md` — the canonical prompt for this step
+- `./references/framework.md` — what makes a signal doc strong
+- `./references/template.md` — the artifact shape
+- `./references/wedge-definition-template.md` — use when the first signal pass is too category-level
 
 ## Inputs
 - A product description and any source briefs in `runs/<run-name>/sources/` (especially `02-product-brief.md`).
 
 ## Procedure
-1. Load `prompts/01-signal-doc.md`.
+1. Load `./references/prompt.md`.
 2. Substitute the product description and source briefs in place of `[PASTE HERE]`.
 3. If invoked inside a fully-logged run, save the substituted prompt to `runs/<run-name>/prompts/01-signal-doc.md`.
 4. Prompt the model with the substituted prompt.
 5. Save the raw response to `runs/<run-name>/outputs/01-signal-doc-output.md`.
-6. Distill the response into `runs/<run-name>/signal-doc.md` per `templates/signal-doc-template.md`.
+6. Distill the response into `runs/<run-name>/signal-doc.md` per `./references/template.md`.
 7. Append a short note to `runs/<run-name>/working-log.md`.
 
 ## Quality gate
@@ -31,10 +32,10 @@ A strong signal doc:
 - exposes what is still unknown
 - distinguishes audiences where it matters
 
-If the doc is too generic or too category-level, **do not advance to step 02.** Create a wedge-definition brief (`templates/wedge-definition-template.md`) or a sharper product brief, then rerun this step.
+If the doc is too generic or too category-level, **do not advance to step 02.** Create a wedge-definition brief (`./references/wedge-definition-template.md`) or a sharper product brief, then rerun this step.
 
 ## Anti-slop
-Signal docs themselves rarely produce slop, but if the output uses confident-sounding empty words ("comprehensive," "deeply understands," "transforms"), strip them. Real signal is specific.
+Signal docs themselves rarely produce slop, but if the output uses confident-sounding empty words ("comprehensive," "deeply understands," "transforms"), strip them. Real signal is specific. See `../pagekit/references/anti-slop.md` for the full catalog.
 
 ## Next
 After this step's artifact is in place, invoke **`pagekit-message-spine`** (step 02). Do not stop here. The signal doc is not the deliverable; the draft is, and the chain must run to completion (see the orchestrator's self-check).

@@ -1,11 +1,14 @@
 ---
 name: pagekit-slop-check
-description: Run the heuristic AI-slop regression check on PageKit drafts. Wraps scripts/slop-check.sh. Use before and after the claim-check step, and any time you want to sanity-check a draft for the mechanically detectable slop patterns from frameworks/anti-slop.md.
+description: Run the heuristic AI-slop regression check on PageKit drafts. Wraps scripts/slop-check.sh. Use before and after the claim-check step, and any time you want to sanity-check a draft for the mechanically detectable slop patterns.
 ---
 
 # PageKit — Slop Check
 
-Wraps `scripts/slop-check.sh`. Heuristic regression check covering the mechanically detectable subset of `frameworks/anti-slop.md`: Not-X-Not-Y headings and sentences, em-dash stacking, "actually" intensifier, copula avoidance, signposting, filler, significance inflation, anaphora, rule-of-three short-sentence clustering, intensifier vocabulary, quoted antithesis.
+Wraps `scripts/slop-check.sh`. Heuristic regression check covering the mechanically detectable subset of `../pagekit/references/anti-slop.md`: Not-X-Not-Y headings and sentences, em-dash stacking, "actually" intensifier, copula avoidance, signposting, filler, significance inflation, anaphora, rule-of-three short-sentence clustering, intensifier vocabulary, quoted antithesis.
+
+## Read first
+- `../pagekit/references/anti-slop.md` — the authoritative pattern catalog
 
 ## Procedure
 1. Run: `bash scripts/slop-check.sh [paths...]`. With no args, scans every `homepage-draft.md` / `first-page-draft.md` / `first-page-draft-corrected.md` under `runs/`.

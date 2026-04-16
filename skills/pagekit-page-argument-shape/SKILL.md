@@ -8,22 +8,22 @@ description: Design the page argument shape — what sections the chosen first p
 You are running step 04 of the PageKit method.
 
 ## Read first
-- `prompts/04-page-argument-shape.md`
-- `frameworks/page-argument-shape.md`
-- `templates/page-argument-shape-template.md`
-- `frameworks/anti-slop.md` — the drafting constraints the shape produces must include the anti-slop rules
+- `./references/prompt.md`
+- `./references/framework.md`
+- `./references/template.md`
+- `../pagekit/references/anti-slop.md` — the drafting constraints the shape produces must include the anti-slop rules
 
 ## Inputs
 - `runs/<run-name>/first-page-decision.md`
 - `runs/<run-name>/message-spine.md` (for context)
 
 ## Procedure
-1. Load `prompts/04-page-argument-shape.md`.
+1. Load `./references/prompt.md`.
 2. Substitute the first-page decision.
 3. Save the substituted prompt to `runs/<run-name>/prompts/04-page-argument-shape.md`.
 4. Prompt the model.
 5. Save the raw response to `runs/<run-name>/outputs/04-page-argument-shape-output.md`.
-6. Distill into `runs/<run-name>/page-argument-shape.md`. **Make sure the drafting-constraints section includes the anti-slop block** from `templates/page-argument-shape-template.md`.
+6. Distill into `runs/<run-name>/page-argument-shape.md`. **Make sure the drafting-constraints section includes the anti-slop block** from `./references/template.md`.
 7. Update `working-log.md`.
 
 ## Quality gate

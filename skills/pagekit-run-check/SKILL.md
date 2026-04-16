@@ -5,7 +5,7 @@ description: Validate a PageKit run folder against the logging tiers (fully-logg
 
 # PageKit — Validate a Run
 
-Wraps `scripts/run-check.sh`. Reads a run folder and classifies it per `frameworks/run-logging.md`. Lists missing files for the next tier up.
+Wraps `scripts/run-check.sh`. Reads a run folder and classifies it per `../pagekit/references/run-logging.md`. Lists missing files for the next tier up.
 
 ## Procedure
 1. Run: `bash scripts/run-check.sh runs/<run-name>`.

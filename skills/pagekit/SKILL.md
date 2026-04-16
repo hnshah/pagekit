@@ -5,14 +5,14 @@ description: Run the full PageKit method end-to-end on an object. Use when the u
 
 # PageKit Orchestrator Skill
 
-You are running the full PageKit method end-to-end. The method, the manifest, the canonical prompts, the scripts and the rules all live in this repo. Use them.
+You are running the full PageKit method end-to-end. The method, the canonical prompts, the scripts and the rules all live in this plugin. Use them.
 
 ## Read first
 
-1. `pagekit.yaml` — the canonical method manifest. Steps, artifacts, frameworks, templates, prompts, paths.
-2. `AGENTS.md` and `CLAUDE.md` — agent contract and operational rules.
-3. `frameworks/anti-slop.md` — hard no-go patterns for the draft.
-4. `frameworks/run-logging.md` — what counts as fully-logged.
+1. `./references/method.md` — the method at a glance: steps, artifacts, order.
+2. `./references/anti-slop.md` — hard no-go patterns for the draft.
+3. `./references/run-logging.md` — what counts as fully-logged.
+4. `AGENTS.md` and `CLAUDE.md` at the repo root — agent contract and operational rules.
 
 ## Procedure
 
@@ -39,13 +39,13 @@ Fill `runs/<run-name>/sources/`:
 
 For each step:
 1. Invoke the per-step skill: `pagekit-signal-doc`, `pagekit-message-spine`, `pagekit-first-page-decision`, `pagekit-page-argument-shape`, `pagekit-proof-map`, `pagekit-first-page-draft`.
-2. The per-step skill loads its canonical prompt from `prompts/NN-*.md`, substitutes the run's inputs, prompts the model.
+2. The per-step skill loads its canonical prompt from its own `references/prompt.md`, substitutes the run's inputs, prompts the model.
 3. Save the prompt actually used (with substitutions) to `runs/<run-name>/prompts/NN-*.md`.
 4. Save the raw output to `runs/<run-name>/outputs/NN-*-output.md`.
 5. Distill the output into the canonical artifact in the run root (`signal-doc.md`, `message-spine.md`, etc.).
 6. Update `runs/<run-name>/working-log.md` with what changed and any decisions made.
 
-**Quality gate at every step:** if the artifact does not meet the quality bar in the corresponding `frameworks/*.md`, stop and fix upstream source material before advancing. Do not paper over weakness with downstream effort.
+**Quality gate at every step:** if the artifact does not meet the quality bar in the corresponding `references/framework.md` for that skill, stop and fix upstream source material before advancing. Do not paper over weakness with downstream effort.
 
 **Step 03 (first-page decision) is special.** Do not default to homepage. List candidates considered and rejected. The object decides the first page.
 
@@ -82,7 +82,7 @@ Tell the user:
 - **Do not invent proof.** Use `*[verification flag: ...]*` for unverified product-specific claims.
 - **Do not skip slop-check before the claim-check step.** The script catches the obvious cases; the claim-check catches the rest.
 - **Do not skip the evaluator pass** at the fully-logged tier.
-- **Do not edit the canonical prompts** in `prompts/` to fit a single run. They are shared.
+- **Do not edit the canonical prompts** in any skill's `references/prompt.md` to fit a single run. They are shared.
 - **Do not delete or leave blank the scaffolded placeholder files** (`claim-check.md`, `evaluation.md`, `evaluator-pass.md`, `working-log.md`). They are structural; fill them in or commit them as-is until filled.
 
 ## Are you done? Self-check
@@ -114,6 +114,12 @@ Only after every box is checked do you report completion to the user.
 
 ## When to delegate
 
-Use the `pagekit-claim-checker` subagent (`.claude/agents/pagekit-claim-checker.md`) for the claim-check step. It is read-only and has a tighter focus, which keeps the main session uncluttered.
+Use the `pagekit-claim-checker` subagent (`agents/pagekit-claim-checker.md`) for the claim-check step. It is read-only and has a tighter focus, which keeps the main session uncluttered.
 
 For tooling steps, invoke the corresponding skill rather than calling the script directly so the rationale is logged in the conversation.
+
+## Related
+
+- Per-step skills: `pagekit-signal-doc`, `pagekit-message-spine`, `pagekit-first-page-decision`, `pagekit-page-argument-shape`, `pagekit-proof-map`, `pagekit-first-page-draft`, `pagekit-claim-check`
+- Tooling: `pagekit-new-run`, `pagekit-run-check`, `pagekit-slop-check`, `pagekit-evaluator-pass`
+- Subagents: `pagekit-claim-checker` (step 07), `pagekit-evaluator-pass` (adversarial read)

@@ -25,8 +25,8 @@ Expect these inputs inside the run folder:
 
 ## Read first
 
-- `frameworks/run-logging.md` — what the evaluator pass is for and where it fits
-- `frameworks/anti-slop.md` — the patterns that matter
+- `skills/pagekit/references/run-logging.md` — what the evaluator pass is for and where it fits
+- `skills/pagekit/references/anti-slop.md` — the patterns that matter
 - The existing `evaluation.md` — to know what the run claims
 
 ## Procedure

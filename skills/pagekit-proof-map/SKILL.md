@@ -8,9 +8,9 @@ description: Map proof to the chosen first page section by section. Step 05 of t
 You are running step 05 of the PageKit method.
 
 ## Read first
-- `prompts/05-proof-map.md`
-- `frameworks/proof-map.md`
-- `templates/proof-map-template.md`
+- `./references/prompt.md`
+- `./references/framework.md`
+- `./references/template.md`
 
 ## Inputs
 - `runs/<run-name>/first-page-decision.md`
@@ -18,7 +18,7 @@ You are running step 05 of the PageKit method.
 - `runs/<run-name>/sources/05-proof-brief.md` (if it exists)
 
 ## Procedure
-1. Load `prompts/05-proof-map.md`.
+1. Load `./references/prompt.md`.
 2. Substitute the artifacts above.
 3. Save the substituted prompt to `runs/<run-name>/prompts/05-proof-map.md`.
 4. Prompt the model.
@@ -36,7 +36,7 @@ A strong proof map:
 If the proof map is "we have testimonials" and not much more, the upstream proof brief is too thin. Add specifics or accept a narrower draft.
 
 ## Hard rule
-Do not invent proof. If the page wants to say something that the proof map cannot support, the draft step will mark it with `*[verification flag: ...]*` — this map is where those gaps are surfaced first.
+Do not invent proof. If the page wants to say something that the proof map cannot support, the draft step will mark it with `*[verification flag: ...]*`. This map is where those gaps are surfaced first.
 
 ## Next
 After the proof map is in place, invoke **`pagekit-first-page-draft`** (step 06). Do not stop here.

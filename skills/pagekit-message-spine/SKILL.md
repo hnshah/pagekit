@@ -8,15 +8,15 @@ description: Reduce a PageKit signal doc into a message spine. Step 02 of the Pa
 You are running step 02 of the PageKit method.
 
 ## Read first
-- `prompts/02-message-spine.md`
-- `frameworks/message-spine.md`
-- `templates/message-spine-template.md`
+- `./references/prompt.md`
+- `./references/framework.md` — what makes a strong message spine
+- `./references/template.md`
 
 ## Inputs
 - `runs/<run-name>/signal-doc.md` from step 01.
 
 ## Procedure
-1. Load `prompts/02-message-spine.md`.
+1. Load `./references/prompt.md`.
 2. Substitute the signal-doc contents.
 3. Save the substituted prompt to `runs/<run-name>/prompts/02-message-spine.md`.
 4. Prompt the model.
@@ -34,7 +34,7 @@ A strong message spine:
 If the spine sounds like the signal doc rephrased, the reduction did not happen. Push back, or strengthen source briefs and rerun step 01 first.
 
 ## Anti-slop
-Watch for "comprehensive solution," "powerful platform," and other category-default phrases sneaking into the spine. The spine should be in the product's own voice as much as possible.
+Watch for "comprehensive solution," "powerful platform," and other category-default phrases sneaking into the spine. The spine should be in the product's own voice as much as possible. See `../pagekit/references/anti-slop.md`.
 
 ## Next
 After the spine is in place, invoke **`pagekit-first-page-decision`** (step 03). Do not stop here.

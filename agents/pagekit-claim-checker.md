@@ -25,14 +25,14 @@ The orchestrator (or the user) gives you:
 
 ## Read first
 
-- `frameworks/claim-checking.md` — flag types, severity calibration, principle.
-- `frameworks/anti-slop.md` — the slop pattern catalog.
-- `prompts/07-claim-check.md` — the canonical prompt body.
-- `templates/claim-check-template.md` — the audit shape.
+- `skills/pagekit-claim-check/references/framework.md` — flag types, severity calibration, principle.
+- `skills/pagekit/references/anti-slop.md` — the slop pattern catalog.
+- `skills/pagekit-claim-check/references/prompt.md` — the canonical prompt body.
+- `skills/pagekit-claim-check/references/template.md` — the audit shape.
 
 ## Procedure
 
-1. Use `scripts/claim-check.sh <draft> <proof-map> --severity <severity>` to produce the expanded prompt body. (You can also load `prompts/07-claim-check.md` directly and substitute manually.)
+1. Use `scripts/claim-check.sh <draft> <proof-map> --severity <severity>` to produce the expanded prompt body. (You can also load `skills/pagekit-claim-check/references/prompt.md` directly and substitute manually.)
 2. Run the claim check yourself: walk the draft line by line. For each potentially-weak line, identify its type from this enum:
    - **overclaim** — stronger than the product reality
    - **vague claim** — sounds concrete, resists checking
@@ -41,19 +41,19 @@ The orchestrator (or the user) gives you:
    - **editorial voice** — brand narrating its own restraint, virtue or honesty
    - **unsourced quantitative modifier** — `most / usually / typically / often / many` without source
    - **clinical or regulatory drift** — clinical / legal / regulatory advice not supported by briefs
-   - **ai-slop tell** — any pattern from `frameworks/anti-slop.md`
+   - **ai-slop tell** — any pattern from `skills/pagekit/references/anti-slop.md`
 3. For each flagged line, produce a correction with one of these three dispositions, labeled explicitly in the audit:
    - **rewrite** — a sharper, more accurate replacement that sits inside the proof map and reads cleaner. Precision over intensity. If a rewrite feels smaller, that is usually correct.
    - **remove (wrong)** — cut the line. The claim is not supportable at any severity. The audit should state why the claim is disqualified (not merely unsupported).
    - **remove pending verification** — cut the line from the corrected draft AND explicitly flag it in the audit as "potentially restorable if <X> is confirmed in the briefs." The dispositions `remove (wrong)` and `remove pending verification` must not be collapsed into a silent drop; a reviewer needs to know whether the line is disqualified or held back.
-4. Tally recurring patterns at the end. If a pattern fires more than once, name it as a candidate for upstream absorption into `frameworks/anti-slop.md` or `templates/page-argument-shape-template.md`.
+4. Tally recurring patterns at the end. If a pattern fires more than once, name it as a candidate for upstream absorption into `skills/pagekit/references/anti-slop.md` or `skills/pagekit-page-argument-shape/references/template.md`.
 5. Produce the corrected draft. Do not rewrite lines that were not flagged. Preserve verification flags.
 
    **Hard rules for the corrected draft (these are not optional):**
    - No inline annotation markers in body copy. `*[Rewritten: ...]*`, `*[Was: ...]*`, `*[Replaced: ...]*`, or any similar provenance marker belongs in the audit (`claim-check.md`), NOT in the corrected draft. The corrected draft is publish-ready copy.
-   - No new em-dashes introduced by rewrites. Per `frameworks/anti-slop.md`, body copy has zero em-dashes. Rewrites that need a pause should use a comma, colon, or parentheses. Before saving the corrected draft, scan your own rewrites for `—` or `--` and replace.
+   - No new em-dashes introduced by rewrites. Per the anti-slop reference, body copy has zero em-dashes. Rewrites that need a pause should use a comma, colon, or parentheses. Before saving the corrected draft, scan your own rewrites for em-dashes or double-hyphens and replace.
    - Before saving, mentally run `scripts/slop-check.sh` against the corrected draft. If a rewrite reintroduces any flagged pattern (em-dashes, intensifiers, copula-avoidance, etc.), fix it before saving.
-6. Save the audit to `runs/<run-name>/claim-check.md` per `templates/claim-check-template.md`.
+6. Save the audit to `runs/<run-name>/claim-check.md` per `skills/pagekit-claim-check/references/template.md`.
 7. Save the corrected draft to `runs/<run-name>/first-page-draft-corrected.md` (only if any line was rewritten or removed with "remove pending verification" disposition).
 
 ## Severity calibration
