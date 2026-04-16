@@ -39,7 +39,7 @@ cat > "$RUN_DIR/goal.md" <<EOF
 ## Success conditions
 
 We finish this run with:
-- a fully logged run per \`frameworks/run-logging.md\` (fully logged tier)
+- a fully logged run per \`skills/pagekit/references/run-logging.md\` (fully logged tier)
 - a signal doc, message spine, first-page decision, page argument shape, proof map, first page draft
 - a claim-check pass with severity recorded
 - an honest evaluation naming what stayed thin
@@ -77,8 +77,8 @@ EOF
 cat > "$RUN_DIR/working-log.md" <<EOF
 <!--
 DO NOT DELETE. This file is required for the fully-logged tier per
-frameworks/run-logging.md. Fill in the entries as you work through the
-steps; do not leave the \`*[Fill in]*\` placeholders intact at the end.
+skills/pagekit/references/run-logging.md. Fill in the entries as you work
+through the steps; do not leave the \`*[Fill in]*\` placeholders intact at the end.
 The orchestrator skill's "Are you done?" self-check requires real log
 entries across every step, not just the scaffold.
 -->
@@ -137,25 +137,45 @@ Recommended for trust-heavy objects:
 - \`05-proof-brief.md\`
 - \`06-comparison-brief.md\`
 
-For templates see \`templates/wedge-definition-template.md\` and the pattern established in \`runs/vegan-dog-food-verdel/sources/\`.
+For templates see \`skills/pagekit-signal-doc/references/wedge-definition-template.md\` and the pattern established in \`examples/vegan-dog-food-verdel/sources/\`.
 EOF
 
 # ----- prompts/ placeholders ----------------------------------------------
 # Copy the canonical prompts into the run with a note at the top.
+# Canonical prompts live under skills/pagekit-<step>/references/prompt.md.
+# During the migration, fall back to the legacy prompts/<file>.md location.
 CANONICAL_PROMPTS=(
-  "01-signal-doc.md"
-  "02-message-spine.md"
-  "03-first-page-decision.md"
-  "04-page-argument-shape.md"
-  "05-proof-map.md"
-  "06-first-page-draft.md"
-  "07-claim-check.md"
+  "01-signal-doc.md:signal-doc"
+  "02-message-spine.md:message-spine"
+  "03-first-page-decision.md:first-page-decision"
+  "04-page-argument-shape.md:page-argument-shape"
+  "05-proof-map.md:proof-map"
+  "06-first-page-draft.md:first-page-draft"
+  "07-claim-check.md:claim-check"
 )
-for p in "${CANONICAL_PROMPTS[@]}"; do
+resolve_canonical_prompt() {
+  local step="$1"
+  local file="$2"
+  local new="$REPO_ROOT/skills/pagekit-$step/references/prompt.md"
+  local old="$REPO_ROOT/prompts/$file"
+  if [ -f "$new" ]; then
+    echo "$new"
+  elif [ -f "$old" ]; then
+    echo "$old"
+  else
+    echo "ERROR: canonical prompt not found at $new or $old" >&2
+    exit 1
+  fi
+}
+for entry in "${CANONICAL_PROMPTS[@]}"; do
+  p="${entry%%:*}"
+  step="${entry##*:}"
   dst="$RUN_DIR/prompts/$p"
+  src="$(resolve_canonical_prompt "$step" "$p")"
   cat > "$dst" <<EOF
 <!--
-This file starts as a copy of prompts/$p (the canonical prompt for this step).
+This file starts as a copy of the canonical prompt for this step
+(skills/pagekit-$step/references/prompt.md).
 When you run the step:
 1. Substitute the required inputs into the prompt.
 2. Save the version you actually sent to the model here.
@@ -163,7 +183,7 @@ When you run the step:
 -->
 
 EOF
-  cat "$REPO_ROOT/prompts/$p" >> "$dst"
+  cat "$src" >> "$dst"
 done
 
 # ----- outputs/ placeholders ----------------------------------------------
@@ -185,43 +205,43 @@ done
 cat > "$RUN_DIR/signal-doc.md" <<EOF
 # Signal Doc
 
-*[Filled in by step 01. See \`frameworks/signal-doc.md\` and \`templates/signal-doc-template.md\`.]*
+*[Filled in by step 01. See \`skills/pagekit-signal-doc/references/framework.md\` and \`skills/pagekit-signal-doc/references/template.md\`.]*
 EOF
 
 cat > "$RUN_DIR/message-spine.md" <<EOF
 # Message Spine
 
-*[Filled in by step 02. See \`frameworks/message-spine.md\` and \`templates/message-spine-template.md\`.]*
+*[Filled in by step 02. See \`skills/pagekit-message-spine/references/framework.md\` and \`skills/pagekit-message-spine/references/template.md\`.]*
 EOF
 
 cat > "$RUN_DIR/first-page-decision.md" <<EOF
 # First-Page Decision
 
-*[Filled in by step 03. Do not assume homepage. List candidates considered and rejected. See \`frameworks/first-page-decision.md\` and \`templates/first-page-decision-template.md\`.]*
+*[Filled in by step 03. Do not assume homepage. List candidates considered and rejected. See \`skills/pagekit-first-page-decision/references/framework.md\` and \`skills/pagekit-first-page-decision/references/template.md\`.]*
 EOF
 
 cat > "$RUN_DIR/page-argument-shape.md" <<EOF
 # Page Argument Shape
 
-*[Filled in by step 04. Structure comes from the object, not category habit. Include drafting constraints, including anti-slop rules. See \`frameworks/page-argument-shape.md\` and \`templates/page-argument-shape-template.md\`.]*
+*[Filled in by step 04. Structure comes from the object, not category habit. Include drafting constraints, including anti-slop rules. See \`skills/pagekit-page-argument-shape/references/framework.md\` and \`skills/pagekit-page-argument-shape/references/template.md\`.]*
 EOF
 
 cat > "$RUN_DIR/proof-map.md" <<EOF
 # Proof Map
 
-*[Filled in by step 05. Commit to what can be said; name what cannot. See \`frameworks/proof-map.md\` and \`templates/proof-map-template.md\`.]*
+*[Filled in by step 05. Commit to what can be said; name what cannot. See \`skills/pagekit-proof-map/references/framework.md\` and \`skills/pagekit-proof-map/references/template.md\`.]*
 EOF
 
 cat > "$RUN_DIR/first-page-draft.md" <<EOF
 # First Page Draft
 
-*[Filled in by step 06. Respect the anti-slop rules in \`frameworks/anti-slop.md\`. Mark unverified product-specific claims with \`*[verification flag: ...]*\`. See \`frameworks/page-argument-shape.md\` for drafting constraints.]*
+*[Filled in by step 06. Respect the anti-slop rules in \`skills/pagekit/references/anti-slop.md\`. Mark unverified product-specific claims with \`*[verification flag: ...]*\`. See \`skills/pagekit-page-argument-shape/references/framework.md\` for drafting constraints.]*
 EOF
 
 cat > "$RUN_DIR/claim-check.md" <<EOF
 <!--
 DO NOT DELETE. This file is required for the PUBLISHABLE tier per
-frameworks/run-logging.md. Fill it in when you run step 07 (claim-check).
+skills/pagekit/references/run-logging.md. Fill it in when you run step 07 (claim-check).
 Use the \`pagekit-claim-check\` skill — it delegates to the
 \`pagekit-claim-checker\` subagent which will replace this placeholder
 content with the real audit.
@@ -231,14 +251,14 @@ content with the real audit.
 ## Severity
 *[light / normal / hard — record the choice and why]*
 
-*[Filled in by step 07. See \`frameworks/claim-checking.md\` and \`templates/claim-check-template.md\`. If any line is rewritten, also save \`first-page-draft-corrected.md\`.]*
+*[Filled in by step 07. See \`skills/pagekit-claim-check/references/framework.md\` and \`skills/pagekit-claim-check/references/template.md\`. If any line is rewritten, also save \`first-page-draft-corrected.md\`.]*
 EOF
 
 # ----- evaluation.md -----------------------------------------------------
 cat > "$RUN_DIR/evaluation.md" <<EOF
 <!--
 DO NOT DELETE. This file is required for the fully-logged tier per
-frameworks/run-logging.md. Fill it in after step 07. This is the run's
+skills/pagekit/references/run-logging.md. Fill it in after step 07. This is the run's
 own honest read of what worked, what stayed thin, where outputs drifted
 generic. The adversarial voice goes in evaluator-pass.md (written
 afterward via the pagekit-evaluator-pass skill).
@@ -246,7 +266,7 @@ afterward via the pagekit-evaluator-pass skill).
 # Evaluation
 
 ## Logging level
-Fully logged per \`frameworks/run-logging.md\`.
+Fully logged per \`skills/pagekit/references/run-logging.md\`.
 
 ## Source quality
 - **Real** (founder interviews, existing customer language, usage data, published materials)
@@ -290,7 +310,7 @@ EOF
 cat > "$RUN_DIR/evaluator-pass.md" <<EOF
 <!--
 DO NOT DELETE. This file is required for the fully-logged tier per
-frameworks/run-logging.md. It carries the adversarial second read of
+skills/pagekit/references/run-logging.md. It carries the adversarial second read of
 the run. Produce it by invoking the \`pagekit-evaluator-pass\` skill,
 which delegates to the \`pagekit-evaluator-pass\` subagent and replaces
 this placeholder with real content.

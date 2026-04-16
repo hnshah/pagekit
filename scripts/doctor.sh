@@ -118,7 +118,7 @@ check_exec "scripts/doctor.sh"
 check_file "scripts/README.md"
 echo
 
-echo "Claude Code bundle:"
+echo "Claude Code bundle (legacy .claude/ locations — removed in a later commit):"
 check_file ".claude/skills/pagekit/SKILL.md"
 for s in signal-doc message-spine first-page-decision page-argument-shape proof-map first-page-draft claim-check evaluator-pass new-run run-check slop-check; do
   check_file ".claude/skills/pagekit-$s/SKILL.md"
@@ -126,6 +126,40 @@ done
 check_file ".claude/agents/pagekit-claim-checker.md"
 check_file ".claude/agents/pagekit-evaluator-pass.md"
 check_file ".claude/settings.json"
+echo
+
+echo "Plugin manifest:"
+check_file ".claude-plugin/plugin.json"
+check_file ".claude-plugin/marketplace.json"
+echo
+
+echo "Skills (top-level plugin layout):"
+check_file "skills/pagekit/SKILL.md"
+for s in signal-doc message-spine first-page-decision page-argument-shape proof-map first-page-draft claim-check evaluator-pass new-run run-check slop-check; do
+  check_file "skills/pagekit-$s/SKILL.md"
+done
+echo
+
+echo "Shared orchestrator references:"
+for r in anti-slop run-logging method; do
+  check_file "skills/pagekit/references/$r.md"
+done
+echo
+
+echo "Per-skill references (framework, template, prompt):"
+# first-page-draft has its own prompt but inherits framework/template from
+# upstream page-argument-shape and proof-map; it is intentionally lighter.
+for s in signal-doc message-spine first-page-decision page-argument-shape proof-map claim-check; do
+  check_file "skills/pagekit-$s/references/framework.md"
+  check_file "skills/pagekit-$s/references/template.md"
+  check_file "skills/pagekit-$s/references/prompt.md"
+done
+check_file "skills/pagekit-first-page-draft/references/prompt.md"
+echo
+
+echo "Subagents:"
+check_file "agents/pagekit-claim-checker.md"
+check_file "agents/pagekit-evaluator-pass.md"
 echo
 
 echo "Slop regression against tracked drafts:"

@@ -54,8 +54,17 @@ esac
 [ -f "$PROOF" ] || { echo "error: proof map not found: $PROOF" >&2; exit 2; }
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-PROMPT_FILE="$REPO_ROOT/prompts/07-claim-check.md"
-[ -f "$PROMPT_FILE" ] || { echo "error: prompts/07-claim-check.md not found" >&2; exit 1; }
+# Prefer the skill-bundled canonical prompt; fall back to legacy prompts/ during migration.
+PROMPT_FILE_NEW="$REPO_ROOT/skills/pagekit-claim-check/references/prompt.md"
+PROMPT_FILE_OLD="$REPO_ROOT/prompts/07-claim-check.md"
+if [ -f "$PROMPT_FILE_NEW" ]; then
+  PROMPT_FILE="$PROMPT_FILE_NEW"
+elif [ -f "$PROMPT_FILE_OLD" ]; then
+  PROMPT_FILE="$PROMPT_FILE_OLD"
+else
+  echo "error: canonical claim-check prompt not found at $PROMPT_FILE_NEW or $PROMPT_FILE_OLD" >&2
+  exit 1
+fi
 
 # Extract the body of the ```text fenced block from the prompt file.
 # The canonical prompt has exactly one ```text block.
