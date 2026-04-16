@@ -1,0 +1,36 @@
+{
+  "name": "pagekit",
+  "owner": {
+    "name": "Hiten Shah"
+  },
+  "metadata": {
+    "description": "PageKit: skills for making web pages that are contextually relevant to your audience and what your product does.",
+    "version": "0.3.0"
+  },
+  "plugins": [
+    {
+      "name": "pagekit",
+      "source": {
+        "source": "github",
+        "repo": "hnshah/pagekit"
+      },
+      "description": "Skills, subagents, and scripts for the PageKit method: signal doc, message spine, first-page decision, page argument shape, proof map, first-page draft, claim check.",
+      "version": "0.3.0",
+      "author": {
+        "name": "Hiten Shah"
+      },
+      "homepage": "https://github.com/hnshah/pagekit",
+      "repository": "https://github.com/hnshah/pagekit",
+      "license": "MIT",
+      "keywords": [
+        "pagekit",
+        "content-strategy",
+        "copywriting",
+        "landing-pages",
+        "claim-check",
+        "anti-slop"
+      ],
+      "category": "productivity"
+    }
+  ]
+}
