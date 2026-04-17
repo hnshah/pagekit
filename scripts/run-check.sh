@@ -29,7 +29,7 @@ if [ ! -d "$RUN" ]; then
   exit 2
 fi
 
-# Expected files per tier (kept in sync with pagekit.yaml's run_logging section).
+# Expected files per tier (kept in sync with skills/pagekit/references/run-logging.md).
 FULLY_LOGGED_FILES=(
   "goal.md"
   "working-log.md"
@@ -155,7 +155,9 @@ check_publishable() {
     fi
   fi
 
-  printf '%s\n' "${missing_pub[@]}"
+  if [ "${#missing_pub[@]}" -gt 0 ]; then
+    printf '%s\n' "${missing_pub[@]}"
+  fi
 }
 
 if [ "${#missing_fully[@]}" -eq 0 ]; then

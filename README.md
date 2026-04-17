@@ -1,149 +1,87 @@
 # PageKit
 
-**Better page copy usually starts with better source materials.**
+**Skills for making web pages that are contextually relevant to your audience and what your product does.**
 
-PageKit is a method for producing web pages that do not sound AI-written. It works by strengthening the inputs (signal, spine, first-page decision, page-argument shape, proof map) before asking any model to draft the page. An anti-slop layer and an optional claim-check step keep the draft honest.
+PageKit ships as a Claude Code plugin. One install, fourteen skills (twelve method skills + two subagents), and the full 7-step chain runs end-to-end: signal doc → message spine → first-page decision → page argument shape → proof map → first-page draft → claim check. An anti-slop regression script catches mechanical slop patterns; the claim-check subagent catches the rest.
 
-The repo ships the method, the canonical prompts, a Claude Code skills bundle, a Codex `AGENTS.md` contract, a Claude Cowork plugin body, and scripts that mechanize the structural work. Everything an agent needs to run PageKit end-to-end is here.
+If you do not use Claude Code, there is a chat-paste path in [`prompt-paste/`](prompt-paste/).
 
-**See what a run looks like**: [`runs/vegan-dog-food-verdel/`](runs/vegan-dog-food-verdel/) is the canonical worked example. Fully-logged, non-homepage first page, claim-checked at hard severity, with evaluator pass.
+## Install
 
-## What PageKit helps you go from
+Inside Claude Code:
 
-- vague market understanding
-- weak source material
-- generic page direction
-- AI-slop drafts
+```text
+/plugin marketplace add hnshah/pagekit
+/plugin install pagekit@pagekit
+```
 
-## … to
+That is the whole installation. All fourteen skills register automatically.
 
-- a sharper signal doc
-- a clearer message spine
-- a deliberate first-page decision
-- a page argument shape that fits the object
-- a proof map with honest constraints
-- a page draft grounded in better inputs that does not read as machine-written
+## Use it
 
-## Who this is for
+Ask Claude Code to run PageKit on any object:
 
-PageKit is for:
-- founders
-- marketers
-- product marketers
-- operators
-- AI-native teams who want faster website work without generic output
+```text
+Run PageKit on <product or idea>.
+```
 
-## Choose your starting path
+The orchestrator skill (`pagekit`) walks you through the seven steps, scaffolds a fully-logged `runs/<name>/` folder, and invokes each step skill in turn.
 
-### I am new here
-Start here:
-- `START-HERE.md`
+To run one step on its own, invoke the step skill directly:
 
-### I just want prompts (lightest entry, one step)
-Start here:
-- `quickstart/README.md`
-- `quickstart/start-with-prompts.md`
+```text
+Use pagekit-signal-doc on <product>.
+```
 
-### I want a full tool-specific path in one file (chat tools)
-Start here:
-- `guides/README.md`
+## The skills
 
-### I want to drive this agentically (Claude Code, Codex, Cowork)
-Start here:
-- `agentic/README.md`
+| Skill | What it does |
+| --- | --- |
+| `pagekit` | Orchestrator. Runs all 7 steps end-to-end into a fully-logged run. |
+| `pagekit-signal-doc` | Step 01. Turn source briefs into a signal doc. |
+| `pagekit-message-spine` | Step 02. Reduce the signal doc to a message spine. |
+| `pagekit-first-page-decision` | Step 03. Decide which page comes first — without defaulting to homepage. |
+| `pagekit-page-argument-shape` | Step 04. Shape the argument for the chosen page. |
+| `pagekit-proof-map` | Step 05. Map proof to sections. Name what cannot be said. |
+| `pagekit-first-page-draft` | Step 06. Draft the page inside the argument shape and proof map. |
+| `pagekit-claim-check` | Step 07. Adversarial audit at light / normal / hard severity. |
+| `pagekit-new-run` | Scaffold a fully-logged run folder. |
+| `pagekit-run-check` | Validate a run against the logging tiers. |
+| `pagekit-slop-check` | Heuristic anti-slop regression against drafts. |
+| `pagekit-evaluator-pass` | Invoke the evaluator-pass subagent on a completed run. |
 
-### I want the full method
-Start here:
-- `guided-runs/01-build-signal-doc/README.md`
+Two subagents (`pagekit-claim-checker`, `pagekit-evaluator-pass`) do the adversarial reads. The orchestrator dispatches to them automatically.
 
-## The artifact chain
+## A worked example
 
-The canonical PageKit workflow is:
+[`examples/vegan-dog-food-verdel/`](examples/vegan-dog-food-verdel/) is the canonical run. Fully logged, non-homepage first page, claim-checked at `severity: hard`, evaluator pass included. Read `first-page-draft.md` against `proof-map.md` against `claim-check.md` to see how the chain constrains the draft.
 
-**signal doc -> message spine -> first-page decision -> page argument shape -> proof map -> first page draft**
+[`examples/personal-crm-founders/`](examples/personal-crm-founders/) is a second worked example on a different object shape.
 
-An optional durability pass follows:
+## Without Claude Code
 
-**claim check**
-
-That order matters.
-The whole point is to get the upstream structure right before asking AI to write final pages.
+If you use ChatGPT, Perplexity, Grok, Gemini, or another chat window, open [`prompt-paste/`](prompt-paste/) and paste the 7 prompts in order. Your output quality depends on how honest your source briefs are; that constraint does not change.
 
 ## What makes this different
 
-- starts upstream, with signal
-- improves the source materials before chasing better copy
-- preserves audience differences
-- lets the object decide the page shape
-- does not default to homepage
-- maps proof to specific argument moves
-- keeps AI inside a real workflow
-- keeps intermediate artifacts visible and reusable
-- treats AI-slop patterns as hard no-go rules (`frameworks/anti-slop.md`) with a regression script (`scripts/slop-check.sh`)
+- Starts upstream, with signal, not with copy.
+- Does not default to homepage. Step 03 forces you to name rejected candidates.
+- Maps proof to sections. A section that cannot be proven is flagged or removed.
+- Treats AI-slop patterns as hard no-go rules. `pagekit-slop-check` runs the regression; `pagekit-claim-check` catches the rest.
+- Logs the whole run. The draft is not the deliverable; the logged run is.
 
 ## Repo structure
 
-```text
-AGENTS.md         neutral agent contract (Codex, Claude Code, Cowork)
-CLAUDE.md         Claude Code agent contract; full operational manual
-START-HERE.md     first-time entry doc
-README.md         this file
-pagekit.yaml      canonical method manifest (single source of truth)
-Makefile          discoverable wrappers around scripts/
-quickstart/       low-friction prompt-first entry (one step)
-guides/           fully self-contained tool-specific chat paths
-agentic/          third tier: Claude Code, Codex, Cowork agentic paths
-guided-runs/      step-by-step workflows
-frameworks/       the durable method docs
-templates/        copyable artifact templates
-prompts/          canonical prompts (one per step; do not duplicate)
-runs/             logged validation runs
-scripts/          tooling (new-run, run-check, claim-check, slop-check, doctor)
-.claude/          Claude Code skills + subagents + SessionStart hook (also the Cowork plugin body)
-```
-
-## Current scope
-
-PageKit v0.1 is intentionally narrow.
-It focuses on one core workflow:
-
-**signal -> spine -> first-page decision -> argument shape -> proof map -> first page draft**
-
-With an optional claim-check pass on top.
-
-That keeps the system honest and usable.
-
-## Logged runs
-
-The repo includes validation runs so the process can be judged against real objects, not theory alone.
-
-See `frameworks/run-logging.md` for the definition of "fully logged" vs "summary logged."
-
-**Fully logged**
-- `runs/vegan-dog-food-verdel/` — fully-logged run on a fictional plant-based dog food brand. Chose a non-homepage first page (a trust/safety landing page). First run produced on the agentic foundation; its evaluator-pass surfaced the punch list that became the anti-slop and step-03 tightening PRs.
-
-Future runs should reach the fully-logged tier by default. `scripts/new-run.sh` scaffolds the layout; `scripts/run-check.sh` validates it. The `.claude/skills/pagekit/` orchestrator skill drives the entire chain end-to-end on Claude Code.
-
-## What comes later
-
-Later versions can add:
-- more non-homepage real-object runs
-- exhibit packaging
-- agent/skill-powered paths
-- deeper page-family generation
-
-The system should also keep getting better through fully logged runs that expose weak prompts, weak templates and weak process steps.
-
-But the core system needs to hold first.
-
-## Core principle
-
-**Better page copy usually starts with better source materials.**
+- `.claude-plugin/`: plugin and marketplace manifests
+- `skills/`: 12 SKILL.md files, each with a bundled `references/` folder
+- `agents/`: 2 subagents (claim-checker, evaluator-pass)
+- `examples/`: worked runs (vegan-dog-food-verdel, personal-crm-founders)
+- `prompt-paste/`: chat-app path with 7 prompts ready to paste
+- `runs/`: your own runs land here (empty by default)
+- `scripts/`: tooling (new-run, run-check, claim-check, slop-check, doctor)
 
 ## License
 
 MIT
 
-***
-
-Built by [`Hiten`](https://x.com/hnshah)
+Built by [`Hiten`](https://x.com/hnshah).

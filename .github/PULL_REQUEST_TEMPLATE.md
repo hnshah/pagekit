@@ -16,7 +16,7 @@ Delete the comments before submitting.
 - [ ] `bash scripts/doctor.sh` → PASS
 - [ ] `bash scripts/slop-check.sh` → exit 0 clean
 - [ ] (if the PR touches run structure) `bash scripts/run-check.sh runs/<name>` → FULLY LOGGED (or tier you target)
-- [ ] (if the PR touches prompts/frameworks) reviewed against `AGENTS.md` and `CLAUDE.md` for consistency
+- [ ] (if the PR touches skills or their bundled references) reviewed against `AGENTS.md` and `CLAUDE.md` for consistency
 
 ## Notes for the reviewer
 

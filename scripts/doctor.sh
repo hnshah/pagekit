@@ -8,8 +8,8 @@
 #   0  healthy
 #   1  at least one check failed
 #
-# This script is conservative: it reports what exists vs what is
-# expected per pagekit.yaml. It does not fix anything.
+# This script is conservative: it reports what exists vs what the plugin
+# layout expects. It does not fix anything.
 
 set -u
 
@@ -56,56 +56,10 @@ check_exec() {
 echo "PageKit doctor — $REPO_ROOT"
 echo
 
-echo "Manifest and agent contract:"
-check_file "pagekit.yaml"
+echo "Agent contract:"
 check_file "AGENTS.md"
 check_file "CLAUDE.md"
-check_file "START-HERE.md"
 check_file "README.md"
-echo
-
-echo "Frameworks:"
-for f in anti-slop claim-checking first-page-decision message-spine page-argument-shape proof-map run-logging signal-doc; do
-  check_file "frameworks/$f.md"
-done
-echo
-
-echo "Templates:"
-for t in claim-check-template first-page-decision-template message-spine-template output-judgment-template page-argument-shape-template proof-map-template signal-doc-template wedge-definition-template; do
-  check_file "templates/$t.md"
-done
-echo
-
-echo "Canonical prompts:"
-for p in 01-signal-doc 02-message-spine 03-first-page-decision 04-page-argument-shape 05-proof-map 06-first-page-draft 07-claim-check; do
-  check_file "prompts/$p.md"
-done
-check_file "prompts/README.md"
-echo
-
-echo "Guided runs:"
-for g in 01-build-signal-doc 02-reduce-to-message-spine 03-decide-first-page 04-design-page-argument 05-map-proof-to-pages 06-draft-first-page 07-claim-check; do
-  check_file "guided-runs/$g/README.md"
-done
-echo
-
-echo "Guides and quickstarts:"
-check_file "guides/README.md"
-for g in chatgpt claude perplexity grok openai; do
-  check_file "guides/$g-prompt-path.md"
-done
-check_file "quickstart/README.md"
-check_file "quickstart/start-with-prompts.md"
-for q in chatgpt claude perplexity grok openai; do
-  check_file "quickstart/$q.md"
-done
-echo
-
-echo "Agentic tier:"
-check_file "agentic/README.md"
-check_file "agentic/claude-code-agentic-path.md"
-check_file "agentic/codex-agentic-path.md"
-check_file "agentic/claude-cowork-agentic-path.md"
 echo
 
 echo "Scripts:"
@@ -118,14 +72,43 @@ check_exec "scripts/doctor.sh"
 check_file "scripts/README.md"
 echo
 
-echo "Claude Code bundle:"
-check_file ".claude/skills/pagekit/SKILL.md"
-for s in signal-doc message-spine first-page-decision page-argument-shape proof-map first-page-draft claim-check evaluator-pass new-run run-check slop-check; do
-  check_file ".claude/skills/pagekit-$s/SKILL.md"
-done
-check_file ".claude/agents/pagekit-claim-checker.md"
-check_file ".claude/agents/pagekit-evaluator-pass.md"
+echo "Claude Code hook:"
 check_file ".claude/settings.json"
+echo
+
+echo "Plugin manifest:"
+check_file ".claude-plugin/plugin.json"
+check_file ".claude-plugin/marketplace.json"
+echo
+
+echo "Skills (top-level plugin layout):"
+check_file "skills/pagekit/SKILL.md"
+for s in signal-doc message-spine first-page-decision page-argument-shape proof-map first-page-draft claim-check evaluator-pass new-run run-check slop-check; do
+  check_file "skills/pagekit-$s/SKILL.md"
+done
+echo
+
+echo "Shared orchestrator references:"
+for r in anti-slop run-logging method; do
+  check_file "skills/pagekit/references/$r.md"
+done
+echo
+
+echo "Per-skill references (framework, template, prompt):"
+# first-page-draft has its own prompt but inherits framework/template from
+# upstream page-argument-shape and proof-map; it is intentionally lighter.
+for s in signal-doc message-spine first-page-decision page-argument-shape proof-map claim-check; do
+  check_file "skills/pagekit-$s/references/framework.md"
+  check_file "skills/pagekit-$s/references/template.md"
+  check_file "skills/pagekit-$s/references/prompt.md"
+done
+check_file "skills/pagekit-first-page-draft/references/prompt.md"
+check_file "skills/pagekit-signal-doc/references/wedge-definition-template.md"
+echo
+
+echo "Subagents:"
+check_file "agents/pagekit-claim-checker.md"
+check_file "agents/pagekit-evaluator-pass.md"
 echo
 
 echo "Slop regression against tracked drafts:"

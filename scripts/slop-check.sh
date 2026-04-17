@@ -2,7 +2,7 @@
 # slop-check.sh
 #
 # Heuristic regression check for AI-slop patterns in PageKit drafts.
-# Covers the mechanically detectable subset of frameworks/anti-slop.md.
+# Covers the mechanically detectable subset of skills/pagekit/references/anti-slop.md.
 # Not a replacement for the claim-check step; a cheap filter that catches
 # the obvious cases before claim-check looks for the harder ones.
 #
@@ -10,7 +10,8 @@
 #   scripts/slop-check.sh <file-or-dir> [<file-or-dir> ...]
 #
 # If no argument is given, runs against homepage-draft.md /
-# first-page-draft.md / first-page-draft-corrected.md under runs/.
+# first-page-draft.md / first-page-draft-corrected.md under runs/ and
+# examples/.
 #
 # Exit code:
 #   0  no hits
@@ -246,11 +247,16 @@ scan_target() {
 
 main() {
   if [ "$#" -eq 0 ]; then
-    find runs -type f \( -name 'homepage-draft.md' -o -name 'first-page-draft.md' -o -name 'first-page-draft-corrected.md' \) \
-      ! -name '*-original.md' \
-      -print0 | while IFS= read -r -d '' f; do
-        scan_file "$f"
-      done
+    local scan_roots=()
+    [ -d runs ] && scan_roots+=(runs)
+    [ -d examples ] && scan_roots+=(examples)
+    if [ "${#scan_roots[@]}" -gt 0 ]; then
+      find "${scan_roots[@]}" -type f \( -name 'homepage-draft.md' -o -name 'first-page-draft.md' -o -name 'first-page-draft-corrected.md' \) \
+        ! -name '*-original.md' \
+        -print0 | while IFS= read -r -d '' f; do
+          scan_file "$f"
+        done
+    fi
   else
     for t in "$@"; do
       scan_target "$t"

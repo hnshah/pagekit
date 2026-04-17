@@ -4,8 +4,9 @@
 # Usage:
 #   scripts/claim-check.sh <draft-path> <proof-map-path> [--severity hard|normal|light]
 #
-# Reads prompts/07-claim-check.md, substitutes {{SEVERITY}}, {{DRAFT}},
-# and {{PROOF_MAP}}, prints the expanded prompt to stdout.
+# Reads skills/pagekit-claim-check/references/prompt.md, substitutes
+# {{SEVERITY}}, {{DRAFT}}, and {{PROOF_MAP}}, prints the expanded prompt
+# to stdout.
 #
 # This script does not call an LLM. Paste the output into the model of
 # your choice, then save the model's response as claim-check.md and the
@@ -54,8 +55,11 @@ esac
 [ -f "$PROOF" ] || { echo "error: proof map not found: $PROOF" >&2; exit 2; }
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-PROMPT_FILE="$REPO_ROOT/prompts/07-claim-check.md"
-[ -f "$PROMPT_FILE" ] || { echo "error: prompts/07-claim-check.md not found" >&2; exit 1; }
+PROMPT_FILE="$REPO_ROOT/skills/pagekit-claim-check/references/prompt.md"
+if [ ! -f "$PROMPT_FILE" ]; then
+  echo "error: canonical claim-check prompt not found at $PROMPT_FILE" >&2
+  exit 1
+fi
 
 # Extract the body of the ```text fenced block from the prompt file.
 # The canonical prompt has exactly one ```text block.
