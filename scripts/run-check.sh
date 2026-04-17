@@ -155,7 +155,9 @@ check_publishable() {
     fi
   fi
 
-  printf '%s\n' "${missing_pub[@]}"
+  if [ "${#missing_pub[@]}" -gt 0 ]; then
+    printf '%s\n' "${missing_pub[@]}"
+  fi
 }
 
 if [ "${#missing_fully[@]}" -eq 0 ]; then
