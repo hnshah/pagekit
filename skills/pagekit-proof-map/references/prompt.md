@@ -7,8 +7,8 @@ inputs:
   - page-argument-shape.md
 outputs:
   - proof-map.md
-framework: frameworks/proof-map.md
-template: templates/proof-map-template.md
+framework: ./framework.md
+template: ./template.md
 ---
 
 # Prompt: 05 — Proof Map

@@ -1,14 +1,3 @@
----
-step: "04"
-name: page-argument-shape
-title: Design the Page Argument Shape
-inputs:
-  - first-page-decision.md
-outputs:
-  - page-argument-shape.md
-framework: frameworks/page-argument-shape.md
-template: templates/page-argument-shape-template.md
----
 
 # Prompt: 04 — Page Argument Shape
 

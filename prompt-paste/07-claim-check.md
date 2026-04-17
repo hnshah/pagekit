@@ -1,23 +1,3 @@
----
-step: "07"
-name: claim-check
-title: Claim Check (optional durability pass)
-required: false
-inputs:
-  - first-page-draft.md
-  - proof-map.md
-outputs:
-  - claim-check.md
-  - first-page-draft-corrected.md
-framework: frameworks/claim-checking.md
-template: templates/claim-check-template.md
-severity_options: [light, normal, hard]
-default_severity: normal
-notes: |
-  Severity is a required argument. Record the choice and why.
-  scripts/claim-check.sh expands this prompt with a draft, a proof map
-  and a severity setting.
----
 
 # Prompt: 07 — Claim Check
 
@@ -59,7 +39,7 @@ A corrected claim should be more precise, not louder.
 
 The corrected draft must be clean on its own terms: no inline annotation markers (`*[Rewritten: ...]*`, `*[Was: ...]*`) in body copy, and no new em-dashes introduced by the rewrites. The audit is where rewrite provenance lives; the corrected draft is publish-ready copy.
 
-At the end, list any slop pattern that showed up more than once so upstream constraints (frameworks/anti-slop.md or page-argument-shape drafting constraints) can absorb it.
+At the end, list any slop pattern that showed up more than once so upstream constraints (the anti-slop rules or page-argument-shape drafting constraints) can absorb it.
 
 Then produce a corrected draft that resolves every flagged claim.
 

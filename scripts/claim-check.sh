@@ -4,8 +4,9 @@
 # Usage:
 #   scripts/claim-check.sh <draft-path> <proof-map-path> [--severity hard|normal|light]
 #
-# Reads prompts/07-claim-check.md, substitutes {{SEVERITY}}, {{DRAFT}},
-# and {{PROOF_MAP}}, prints the expanded prompt to stdout.
+# Reads skills/pagekit-claim-check/references/prompt.md, substitutes
+# {{SEVERITY}}, {{DRAFT}}, and {{PROOF_MAP}}, prints the expanded prompt
+# to stdout.
 #
 # This script does not call an LLM. Paste the output into the model of
 # your choice, then save the model's response as claim-check.md and the
@@ -54,15 +55,9 @@ esac
 [ -f "$PROOF" ] || { echo "error: proof map not found: $PROOF" >&2; exit 2; }
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-# Prefer the skill-bundled canonical prompt; fall back to legacy prompts/ during migration.
-PROMPT_FILE_NEW="$REPO_ROOT/skills/pagekit-claim-check/references/prompt.md"
-PROMPT_FILE_OLD="$REPO_ROOT/prompts/07-claim-check.md"
-if [ -f "$PROMPT_FILE_NEW" ]; then
-  PROMPT_FILE="$PROMPT_FILE_NEW"
-elif [ -f "$PROMPT_FILE_OLD" ]; then
-  PROMPT_FILE="$PROMPT_FILE_OLD"
-else
-  echo "error: canonical claim-check prompt not found at $PROMPT_FILE_NEW or $PROMPT_FILE_OLD" >&2
+PROMPT_FILE="$REPO_ROOT/skills/pagekit-claim-check/references/prompt.md"
+if [ ! -f "$PROMPT_FILE" ]; then
+  echo "error: canonical claim-check prompt not found at $PROMPT_FILE" >&2
   exit 1
 fi
 

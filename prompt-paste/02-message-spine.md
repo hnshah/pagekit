@@ -1,14 +1,3 @@
----
-step: "02"
-name: message-spine
-title: Reduce to a Message Spine
-inputs:
-  - signal-doc.md
-outputs:
-  - message-spine.md
-framework: frameworks/message-spine.md
-template: templates/message-spine-template.md
----
 
 # Prompt: 02 — Message Spine
 

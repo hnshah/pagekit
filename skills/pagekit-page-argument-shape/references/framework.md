@@ -42,7 +42,7 @@ Do not defer this to drafting. A draft cannot save a shape that is too heavy.
 ## Anti-slop drafting constraints
 
 The shape step produces drafting constraints that the draft must respect.
-These must include the hard anti-slop rules. See `frameworks/anti-slop.md` for the full reference and examples.
+These must include the hard anti-slop rules. See `../../pagekit/references/anti-slop.md` for the full reference and examples.
 
 Minimum constraints every shape must pass to drafting:
 

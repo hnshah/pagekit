@@ -7,7 +7,7 @@ Tooling for the PageKit method. Every script here exits 0 on success, non-zero o
 | Script | Purpose |
 |---|---|
 | `new-run.sh <name>` | Scaffold a fully-logged run folder (`runs/<name>/`). |
-| `run-check.sh <path>` | Validate a run against the logging tiers defined in `frameworks/run-logging.md`. |
+| `run-check.sh <path>` | Validate a run against the logging tiers defined in `skills/pagekit/references/run-logging.md`. |
 | `claim-check.sh <draft> <proof-map> [--severity ...]` | Expand the canonical claim-check prompt for pasting. No LLM call. |
 | `slop-check.sh [paths...]` | Heuristic regression check for AI-slop patterns. |
 | `doctor.sh` | Pre-flight repo health check. Used by the SessionStart hook. |
@@ -18,9 +18,9 @@ All are wrappable through `make` — see the `Makefile` at the repo root.
 
 ## new-run.sh
 
-Scaffolds `runs/<name>/` with the full fully-logged layout: `goal.md`, `models.md`, `working-log.md`, `sources/README.md`, `prompts/01–07-*.md` (copied from canonical `prompts/` with a top-of-file note), `outputs/NN-*-output.md` placeholders, per-step artifact placeholders, `evaluation.md` and `evaluator-pass.md` templates.
+Scaffolds `runs/<name>/` with the full fully-logged layout: `goal.md`, `models.md`, `working-log.md`, `sources/README.md`, `prompts/01–07-*.md` (copied from the canonical per-step prompts at `skills/pagekit-<step>/references/prompt.md` with a top-of-file note), `outputs/NN-*-output.md` placeholders, per-step artifact placeholders, `evaluation.md` and `evaluator-pass.md` templates.
 
-Matches the `fully_logged` tier in `pagekit.yaml`. If the manifest changes, update this script.
+Matches the `fully_logged` tier in `skills/pagekit/references/run-logging.md`. If that tier changes, update this script.
 
 ## run-check.sh
 
@@ -30,18 +30,18 @@ Exit 0 on fully-logged or summary-logged; exit 1 on artifact-only or incomplete.
 
 ## claim-check.sh
 
-Template expansion only. Reads `prompts/07-claim-check.md`, substitutes `{{SEVERITY}}`, `{{DRAFT}}`, `{{PROOF_MAP}}`, writes to stdout. Paste the result into the model of your choice. Save the model's output as `claim-check.md` and the corrected draft as `first-page-draft-corrected.md` inside the run folder.
+Template expansion only. Reads `skills/pagekit-claim-check/references/prompt.md`, substitutes `{{SEVERITY}}`, `{{DRAFT}}`, `{{PROOF_MAP}}`, writes to stdout. Paste the result into the model of your choice. Save the model's output as `claim-check.md` and the corrected draft as `first-page-draft-corrected.md` inside the run folder.
 
 ## doctor.sh
 
-Verifies every file and directory referenced by `pagekit.yaml` exists; every script is executable; the slop-check runs clean against the tracked de-slopped drafts. Called by the SessionStart hook in `.claude/settings.json`.
+Verifies the plugin layout: the top-level `skills/`, `agents/`, `.claude-plugin/` manifests, bundled references, scripts, and SessionStart hook. Runs the slop-check against tracked draft files. Called by the SessionStart hook in `.claude/settings.json`.
 
 ## slop-check.sh
 
 A heuristic grep-level regression check for AI-slop patterns in PageKit drafts.
 
 ### What it checks
-It covers the mechanically detectable subset of `frameworks/anti-slop.md`:
+It covers the mechanically detectable subset of `skills/pagekit/references/anti-slop.md`:
 
 - `not-x-not-y-heading` — two consecutive markdown headings that both begin with "Not "
 - `not-x-not-y-sentence` — a "Not X. Not Y." sentence pair on one line
@@ -66,7 +66,7 @@ The semantic patterns: editorial voice narrating brand restraint, unsourced quan
 scripts/slop-check.sh
 
 # Check specific files or directories
-scripts/slop-check.sh runs/vegan-dog-food-verdel/first-page-draft-corrected.md
+scripts/slop-check.sh examples/vegan-dog-food-verdel/first-page-draft-corrected.md
 scripts/slop-check.sh runs/
 ```
 
@@ -82,7 +82,7 @@ Exit code is 1 if any pattern fires, 0 if the scan is clean. You can wire this i
 
 ### Relation to the rest of PageKit
 
-The script is a cheap pre-filter. It catches the mechanical tells so the claim-check step can focus on the harder semantic issues. See `frameworks/claim-checking.md` for the full claim-check method. See `frameworks/anti-slop.md` for the authoritative list of patterns.
+The script is a cheap pre-filter. It catches the mechanical tells so the claim-check step can focus on the harder semantic issues. See `skills/pagekit-claim-check/references/framework.md` for the full claim-check method. See `skills/pagekit/references/anti-slop.md` for the authoritative list of patterns.
 
 If the script fires on a draft, the fix is usually:
 1. Rewrite the flagged line.

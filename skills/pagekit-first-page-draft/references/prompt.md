@@ -10,11 +10,11 @@ inputs:
   - proof-map.md
 outputs:
   - first-page-draft.md
-framework: frameworks/page-argument-shape.md
-template: templates/page-argument-shape-template.md
+framework: ../pagekit-page-argument-shape/references/framework.md
+template: ../pagekit-page-argument-shape/references/template.md
 notes: |
   The draft must respect the anti-slop constraints in
-  frameworks/anti-slop.md. Unverified product claims get inline
+  ../pagekit/references/anti-slop.md. Unverified product claims get inline
   *[verification flag: ...]* markers.
 ---
 
@@ -43,7 +43,7 @@ Proof and scope constraints:
 - no inflated mechanism claims
 - avoid generic category language
 
-Anti-slop constraints (hard rules — see frameworks/anti-slop.md):
+Anti-slop constraints (hard rules; see ../pagekit/references/anti-slop.md):
 - no "Not X. Not Y." heading or sentence pairs
 - no "Not-X-but-Y" or "X-not-Y" rhetorical pivots unless they carry specific content the affirmation cannot
 - no three parallel short sentences used for cadence (rule-of-three clustering)

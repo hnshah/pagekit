@@ -7,8 +7,8 @@ inputs:
   - message-spine.md
 outputs:
   - first-page-decision.md
-framework: frameworks/first-page-decision.md
-template: templates/first-page-decision-template.md
+framework: ./framework.md
+template: ./template.md
 notes: |
   This step exists to stop the method from quietly defaulting to a
   homepage. The decision must list candidates considered and rejected.

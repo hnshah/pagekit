@@ -73,12 +73,12 @@ make new-run NAME=<run-name>
 make run-check RUN=<run-name>
 ```
 
-`scripts/new-run.sh` matches the fully_logged tier in `pagekit.yaml`. If this framework changes, update both.
+`scripts/new-run.sh` must stay in sync with the fully_logged tier above. If this framework changes, update the script too.
 
 `scripts/run-check.sh` exits 0 if the run is fully-logged or summary-logged, exits 1 if artifact-only or incomplete. Wire it into your end-of-run checklist.
 
 ## Related
-- `frameworks/anti-slop.md` — hard no-go patterns for drafts produced by any run
+- `./anti-slop.md` — hard no-go patterns for drafts produced by any run
 - `scripts/slop-check.sh` — regression check a run's draft should pass
 - `scripts/new-run.sh`, `scripts/run-check.sh` — mechanized scaffold and validation
-- `pagekit.yaml` — the manifest the scripts read from
+- `./method.md` — the canonical method manifest the skills read from

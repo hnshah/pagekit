@@ -5,7 +5,7 @@ Slop is the collection of sentence-level, paragraph-level and structural pattern
 Slop hurts PageKit specifically: a page whose job is to earn trust loses trust the moment the reader notices the rhythm is artificial, even if the proof is real. This is why slop is treated as a proof issue here, not only a voice issue.
 
 This document is the authoritative list of patterns PageKit treats as slop.
-It is referenced by `frameworks/page-argument-shape.md` (drafting constraints), `frameworks/claim-checking.md` (flag type), `templates/page-argument-shape-template.md`, `templates/claim-check-template.md`, the five tool guides, the five quickstarts, `CLAUDE.md` and `scripts/slop-check.sh`.
+It is referenced by the page-argument-shape framework (drafting constraints), the claim-check framework (flag type), the page-argument-shape template, the claim-check template, the first-page-draft prompt, `CLAUDE.md`, and `scripts/slop-check.sh` (the mechanical subset).
 
 ## What this is not
 

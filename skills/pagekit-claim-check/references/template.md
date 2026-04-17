@@ -23,7 +23,7 @@ Quote the exact line from the draft.
 - editorial voice (narrating brand restraint instead of showing the work)
 - unsourced quantitative modifier (`most`, `usually`, `typically`, `often`, `many`)
 - clinical or regulatory drift
-- ai-slop tell (negation stacking, rule-of-three, anaphora, em-dash stacking, intensifier vocabulary, marketing-punchy ender, quoted antithesis, copula avoidance, signposting, filler, significance inflation — see `frameworks/anti-slop.md`)
+- ai-slop tell (negation stacking, rule-of-three, anaphora, em-dash stacking, intensifier vocabulary, marketing-punchy ender, quoted antithesis, copula avoidance, signposting, filler, significance inflation — see `../../pagekit/references/anti-slop.md`)
 
 ### Why this is weak
 What specifically makes this claim brittle, misleading, undefended, or machine-cadenced?
@@ -51,10 +51,10 @@ Do NOT include `*[Rewritten: ...]*` or any other inline annotation markers in th
 - 
 
 ### Recurring patterns on this draft
-Note any pattern that showed up more than once (repeated editorial voice, repeated unsourced modifiers, repeated slop tells of the same type). Recurring patterns are signals that the argument-shape drafting constraints or `frameworks/anti-slop.md` may need to absorb the pattern upstream, not that claim checking should keep catching it.
+Note any pattern that showed up more than once (repeated editorial voice, repeated unsourced modifiers, repeated slop tells of the same type). Recurring patterns are signals that the argument-shape drafting constraints or `../../pagekit/references/anti-slop.md` may need to absorb the pattern upstream, not that claim checking should keep catching it.
 
 ### Recurring slop patterns on this draft
-List the specific slop patterns found more than once, by name from `frameworks/anti-slop.md`.
+List the specific slop patterns found more than once, by name from `../../pagekit/references/anti-slop.md`.
 
 ### Where proof is the real gap
 - 

@@ -1,14 +1,3 @@
----
-step: "01"
-name: signal-doc
-title: Build a Signal Doc
-inputs:
-  - product-brief (or raw product description)
-outputs:
-  - signal-doc.md
-framework: frameworks/signal-doc.md
-template: templates/signal-doc-template.md
----
 
 # Prompt: 01 — Signal Doc
 
@@ -51,4 +40,4 @@ Source material:
 ```
 
 ## If the output is weak
-Stop. Before moving to step 02, create a sharper source artifact (wedge definition, mechanism brief, proof brief, comparison brief). See `templates/wedge-definition-template.md`.
+Stop. Before moving to step 02, create a sharper source artifact (wedge definition, mechanism brief, proof brief, comparison brief). A wedge-definition template lives in the PageKit repo at `skills/pagekit-signal-doc/references/wedge-definition-template.md`.

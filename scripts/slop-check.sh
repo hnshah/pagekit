@@ -2,7 +2,7 @@
 # slop-check.sh
 #
 # Heuristic regression check for AI-slop patterns in PageKit drafts.
-# Covers the mechanically detectable subset of frameworks/anti-slop.md.
+# Covers the mechanically detectable subset of skills/pagekit/references/anti-slop.md.
 # Not a replacement for the claim-check step; a cheap filter that catches
 # the obvious cases before claim-check looks for the harder ones.
 #

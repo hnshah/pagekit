@@ -1,22 +1,3 @@
----
-step: "06"
-name: first-page-draft
-title: Draft the First Page
-inputs:
-  - signal-doc.md
-  - message-spine.md
-  - first-page-decision.md
-  - page-argument-shape.md
-  - proof-map.md
-outputs:
-  - first-page-draft.md
-framework: frameworks/page-argument-shape.md
-template: templates/page-argument-shape-template.md
-notes: |
-  The draft must respect the anti-slop constraints in
-  frameworks/anti-slop.md. Unverified product claims get inline
-  *[verification flag: ...]* markers.
----
 
 # Prompt: 06 — First Page Draft
 
@@ -43,7 +24,7 @@ Proof and scope constraints:
 - no inflated mechanism claims
 - avoid generic category language
 
-Anti-slop constraints (hard rules — see frameworks/anti-slop.md):
+Anti-slop constraints (hard rules):
 - no "Not X. Not Y." heading or sentence pairs
 - no "Not-X-but-Y" or "X-not-Y" rhetorical pivots unless they carry specific content the affirmation cannot
 - no three parallel short sentences used for cadence (rule-of-three clustering)

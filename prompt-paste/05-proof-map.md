@@ -1,15 +1,3 @@
----
-step: "05"
-name: proof-map
-title: Map Proof to the Page
-inputs:
-  - first-page-decision.md
-  - page-argument-shape.md
-outputs:
-  - proof-map.md
-framework: frameworks/proof-map.md
-template: templates/proof-map-template.md
----
 
 # Prompt: 05 — Proof Map
 

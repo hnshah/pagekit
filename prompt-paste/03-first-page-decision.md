@@ -1,18 +1,3 @@
----
-step: "03"
-name: first-page-decision
-title: Decide the First Page
-inputs:
-  - signal-doc.md
-  - message-spine.md
-outputs:
-  - first-page-decision.md
-framework: frameworks/first-page-decision.md
-template: templates/first-page-decision-template.md
-notes: |
-  This step exists to stop the method from quietly defaulting to a
-  homepage. The decision must list candidates considered and rejected.
----
 
 # Prompt: 03 — First-Page Decision
 

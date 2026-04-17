@@ -29,7 +29,7 @@ if [ ! -d "$RUN" ]; then
   exit 2
 fi
 
-# Expected files per tier (kept in sync with pagekit.yaml's run_logging section).
+# Expected files per tier (kept in sync with skills/pagekit/references/run-logging.md).
 FULLY_LOGGED_FILES=(
   "goal.md"
   "working-log.md"

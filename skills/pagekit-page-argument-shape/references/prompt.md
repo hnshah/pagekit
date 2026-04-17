@@ -6,8 +6,8 @@ inputs:
   - first-page-decision.md
 outputs:
   - page-argument-shape.md
-framework: frameworks/page-argument-shape.md
-template: templates/page-argument-shape-template.md
+framework: ./framework.md
+template: ./template.md
 ---
 
 # Prompt: 04 — Page Argument Shape

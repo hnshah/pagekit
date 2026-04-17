@@ -5,11 +5,11 @@
 #   scripts/new-run.sh <run-name>
 #
 # Creates runs/<run-name>/ with the full fully-logged layout per
-# frameworks/run-logging.md. All files start as placeholders and carry
-# instructions on what to fill in.
+# skills/pagekit/references/run-logging.md. All files start as placeholders
+# and carry instructions on what to fill in.
 #
-# The scaffold matches pagekit.yaml's fully_logged tier. If pagekit.yaml
-# changes, update this script.
+# The scaffold matches the fully_logged tier defined in run-logging.md.
+# If that tier changes, update this script.
 
 set -euo pipefail
 
@@ -143,7 +143,6 @@ EOF
 # ----- prompts/ placeholders ----------------------------------------------
 # Copy the canonical prompts into the run with a note at the top.
 # Canonical prompts live under skills/pagekit-<step>/references/prompt.md.
-# During the migration, fall back to the legacy prompts/<file>.md location.
 CANONICAL_PROMPTS=(
   "01-signal-doc.md:signal-doc"
   "02-message-spine.md:message-spine"
@@ -155,15 +154,11 @@ CANONICAL_PROMPTS=(
 )
 resolve_canonical_prompt() {
   local step="$1"
-  local file="$2"
-  local new="$REPO_ROOT/skills/pagekit-$step/references/prompt.md"
-  local old="$REPO_ROOT/prompts/$file"
-  if [ -f "$new" ]; then
-    echo "$new"
-  elif [ -f "$old" ]; then
-    echo "$old"
+  local src="$REPO_ROOT/skills/pagekit-$step/references/prompt.md"
+  if [ -f "$src" ]; then
+    echo "$src"
   else
-    echo "ERROR: canonical prompt not found at $new or $old" >&2
+    echo "ERROR: canonical prompt not found at $src" >&2
     exit 1
   fi
 }
@@ -171,7 +166,7 @@ for entry in "${CANONICAL_PROMPTS[@]}"; do
   p="${entry%%:*}"
   step="${entry##*:}"
   dst="$RUN_DIR/prompts/$p"
-  src="$(resolve_canonical_prompt "$step" "$p")"
+  src="$(resolve_canonical_prompt "$step")"
   cat > "$dst" <<EOF
 <!--
 This file starts as a copy of the canonical prompt for this step

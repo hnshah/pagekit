@@ -6,8 +6,8 @@ inputs:
   - signal-doc.md
 outputs:
   - message-spine.md
-framework: frameworks/message-spine.md
-template: templates/message-spine-template.md
+framework: ./framework.md
+template: ./template.md
 ---
 
 # Prompt: 02 — Message Spine

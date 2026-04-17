@@ -19,7 +19,7 @@ List only the sections this page actually needs.
 
 ## Drafting constraints
 
-Copy this block into the draft step. See `frameworks/anti-slop.md` for the full reference with examples.
+Copy this block into the draft step. See `../../pagekit/references/anti-slop.md` for the full reference with examples.
 
 ### Proof and scope constraints
 - no bare "vet approved" / "expert approved" / "clinically proven" and object-equivalents
