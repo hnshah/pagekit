@@ -10,10 +10,7 @@
   "plugins": [
     {
       "name": "pagekit",
-      "source": {
-        "source": "github",
-        "repo": "hnshah/pagekit"
-      },
+      "source": "./",
       "description": "Skills, subagents, and scripts for the PageKit method: signal doc, message spine, first-page decision, page argument shape, proof map, first-page draft, claim check.",
       "version": "0.3.0",
       "author": {
