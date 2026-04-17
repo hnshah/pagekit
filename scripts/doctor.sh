@@ -60,7 +60,6 @@ echo "Manifest and agent contract:"
 check_file "pagekit.yaml"
 check_file "AGENTS.md"
 check_file "CLAUDE.md"
-check_file "START-HERE.md"
 check_file "README.md"
 echo
 
@@ -81,31 +80,6 @@ for p in 01-signal-doc 02-message-spine 03-first-page-decision 04-page-argument-
   check_file "prompts/$p.md"
 done
 check_file "prompts/README.md"
-echo
-
-echo "Guided runs:"
-for g in 01-build-signal-doc 02-reduce-to-message-spine 03-decide-first-page 04-design-page-argument 05-map-proof-to-pages 06-draft-first-page 07-claim-check; do
-  check_file "guided-runs/$g/README.md"
-done
-echo
-
-echo "Guides and quickstarts:"
-check_file "guides/README.md"
-for g in chatgpt claude perplexity grok openai; do
-  check_file "guides/$g-prompt-path.md"
-done
-check_file "quickstart/README.md"
-check_file "quickstart/start-with-prompts.md"
-for q in chatgpt claude perplexity grok openai; do
-  check_file "quickstart/$q.md"
-done
-echo
-
-echo "Agentic tier:"
-check_file "agentic/README.md"
-check_file "agentic/claude-code-agentic-path.md"
-check_file "agentic/codex-agentic-path.md"
-check_file "agentic/claude-cowork-agentic-path.md"
 echo
 
 echo "Scripts:"

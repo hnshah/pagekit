@@ -38,7 +38,7 @@ The most useful contribution for strengthening the method is a real run.
 ### 4. Docs (README, guides, quickstarts, CLAUDE.md, AGENTS.md)
 
 - Canonical prompts live in `prompts/`. Guides reference them; do not duplicate the prompt text into a guide.
-- Anything in `README.md`, `START-HERE.md`, `CLAUDE.md`, or `AGENTS.md` that describes the method must agree with `pagekit.yaml` and with `frameworks/`. If you change one, grep for the others.
+- Anything in `README.md`, `CLAUDE.md`, or `AGENTS.md` that describes the method must agree with `pagekit.yaml` and with `frameworks/`. If you change one, grep for the others.
 - Anti-slop rules apply to the docs too. See `frameworks/anti-slop.md`. `scripts/slop-check.sh` catches the mechanical tells.
 
 ## Required checks before a PR
