@@ -23,7 +23,7 @@ You are running step 04 of the PageKit method.
 3. Save the substituted prompt to `runs/<run-name>/prompts/04-page-argument-shape.md`.
 4. Prompt the model.
 5. Save the raw response to `runs/<run-name>/outputs/04-page-argument-shape-output.md`.
-6. Distill into `runs/<run-name>/page-argument-shape.md`. **Make sure the drafting-constraints section includes the anti-slop block** from `./references/template.md`.
+6. Distill into `runs/<run-name>/page-argument-shape.md`. The file is a scaffolded placeholder — `Read` it first, then `Edit` the placeholder away. Do not call `Write` on it without a prior `Read`. **Make sure the drafting-constraints section includes the anti-slop block** from `./references/template.md`.
 7. Update `working-log.md`.
 
 ## Quality gate

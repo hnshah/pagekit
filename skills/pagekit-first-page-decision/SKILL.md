@@ -23,7 +23,7 @@ You are running step 03 of the PageKit method. **This step is the one that stops
 3. Save the substituted prompt to `runs/<run-name>/prompts/03-first-page-decision.md`.
 4. Prompt the model.
 5. Save the raw response to `runs/<run-name>/outputs/03-first-page-decision-output.md`.
-6. Distill into `runs/<run-name>/first-page-decision.md`.
+6. Distill into `runs/<run-name>/first-page-decision.md`. The file is a scaffolded placeholder — `Read` it first, then `Edit` the placeholder away. Do not call `Write` on it without a prior `Read`.
 7. Update `working-log.md` with the chosen page and one-sentence-each rationale for rejected candidates.
 
 ## Hard requirement
@@ -41,7 +41,7 @@ Candidates must be peer first-page alternatives (same intent-commitment level as
 If any candidate is dismissed in one sentence, the step has not been done.
 
 ## The Verdel pattern
-The canonical worked example is `runs/vegan-dog-food-verdel/first-page-decision.md`. Four labeled candidates (A: homepage, B: trust/safety landing, C: allergy landing, D: nutrition deep-dive), a paragraph-long case for each, a deliberate non-homepage choice with specific reasoning against the other three, plus a confidence basis. If the output you are producing does not match that shape, go back and rework it.
+The canonical worked example is `examples/vegan-dog-food-verdel/first-page-decision.md`. Four labeled candidates (A: homepage, B: trust/safety landing, C: allergy landing, D: nutrition deep-dive), a paragraph-long case for each, a deliberate non-homepage choice with specific reasoning against the other three, plus a confidence basis. If the output you are producing does not match that shape, go back and rework it.
 
 ## Quality gate
 A strong first-page decision:

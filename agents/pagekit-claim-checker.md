@@ -53,8 +53,8 @@ The orchestrator (or the user) gives you:
    - No inline annotation markers in body copy. `*[Rewritten: ...]*`, `*[Was: ...]*`, `*[Replaced: ...]*`, or any similar provenance marker belongs in the audit (`claim-check.md`), NOT in the corrected draft. The corrected draft is publish-ready copy.
    - No new em-dashes introduced by rewrites. Per the anti-slop reference, body copy has zero em-dashes. Rewrites that need a pause should use a comma, colon, or parentheses. Before saving the corrected draft, scan your own rewrites for em-dashes or double-hyphens and replace.
    - Before saving, mentally run `scripts/slop-check.sh` against the corrected draft. If a rewrite reintroduces any flagged pattern (em-dashes, intensifiers, copula-avoidance, etc.), fix it before saving.
-6. Save the audit to `runs/<run-name>/claim-check.md` per `skills/pagekit-claim-check/references/template.md`.
-7. Save the corrected draft to `runs/<run-name>/first-page-draft-corrected.md` (only if any line was rewritten or removed with "remove pending verification" disposition).
+6. Save the audit to `runs/<run-name>/claim-check.md` per `skills/pagekit-claim-check/references/template.md`. The file is a scaffolded placeholder — `Read` it first, then `Edit` the placeholder away. Do not call `Write` on it without a prior `Read`.
+7. Save the corrected draft to `runs/<run-name>/first-page-draft-corrected.md` (only if any line was rewritten or removed with "remove pending verification" disposition). This file is new — `Write` is appropriate.
 
 ## Severity calibration
 

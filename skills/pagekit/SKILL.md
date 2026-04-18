@@ -42,7 +42,7 @@ For each step:
 2. The per-step skill loads its canonical prompt from its own `references/prompt.md`, substitutes the run's inputs, prompts the model.
 3. Save the prompt actually used (with substitutions) to `runs/<run-name>/prompts/NN-*.md`.
 4. Save the raw output to `runs/<run-name>/outputs/NN-*-output.md`.
-5. Distill the output into the canonical artifact in the run root (`signal-doc.md`, `message-spine.md`, etc.).
+5. Distill the output into the canonical artifact in the run root (`signal-doc.md`, `message-spine.md`, etc.). **These files were seeded by `new-run.sh` with a `*[Filled in by step NN ...]*` placeholder, so they already exist.** Read the existing file first, then use `Edit` to replace the placeholder. Do not use `Write` on a scaffolded artifact without a prior `Read` — the tool will refuse.
 6. Update `runs/<run-name>/working-log.md` with what changed and any decisions made.
 
 **Quality gate at every step:** if the artifact does not meet the quality bar in the corresponding `references/framework.md` for that skill, stop and fix upstream source material before advancing. Do not paper over weakness with downstream effort.

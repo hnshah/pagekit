@@ -27,8 +27,8 @@ Invoke the `pagekit-claim-checker` subagent (`agents/pagekit-claim-checker.md`).
 - the severity
 
 The subagent runs read-only, produces the audit, and writes:
-- `runs/<run-name>/claim-check.md` — the audit (flagged lines, types, rewrites, recurring patterns)
-- `runs/<run-name>/first-page-draft-corrected.md` — the corrected draft (only if any line was rewritten)
+- `runs/<run-name>/claim-check.md` — the audit (flagged lines, types, rewrites, recurring patterns). Seeded as a scaffolded placeholder; `Read` first, then `Edit` the placeholder away.
+- `runs/<run-name>/first-page-draft-corrected.md` — the corrected draft (only if any line was rewritten).
 
 ### Option B — run inline
 Use `scripts/claim-check.sh <draft> <proof-map> --severity <severity>` to expand the canonical prompt for paste. Save outputs to the same paths.

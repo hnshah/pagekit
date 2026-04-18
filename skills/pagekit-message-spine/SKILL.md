@@ -21,7 +21,7 @@ You are running step 02 of the PageKit method.
 3. Save the substituted prompt to `runs/<run-name>/prompts/02-message-spine.md`.
 4. Prompt the model.
 5. Save the raw response to `runs/<run-name>/outputs/02-message-spine-output.md`.
-6. Distill into `runs/<run-name>/message-spine.md`.
+6. Distill into `runs/<run-name>/message-spine.md`. The file is a scaffolded placeholder — `Read` it first, then `Edit` the placeholder away. Do not call `Write` on it without a prior `Read`.
 7. Update `working-log.md`.
 
 ## Quality gate

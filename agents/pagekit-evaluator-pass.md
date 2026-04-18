@@ -42,7 +42,7 @@ Expect these inputs inside the run folder:
 
 ## Output
 
-Write `runs/<name>/evaluator-pass.md` with sections:
+Write `runs/<name>/evaluator-pass.md` with the sections below. The file is a scaffolded placeholder seeded by `new-run.sh` — `Read` it first, then `Edit` the placeholder away. Do not call `Write` on it without a prior `Read`.
 
 ```markdown
 # Evaluator Pass

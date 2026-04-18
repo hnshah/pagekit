@@ -22,7 +22,7 @@ You are running step 01 of the PageKit method.
 3. If invoked inside a fully-logged run, save the substituted prompt to `runs/<run-name>/prompts/01-signal-doc.md`.
 4. Prompt the model with the substituted prompt.
 5. Save the raw response to `runs/<run-name>/outputs/01-signal-doc-output.md`.
-6. Distill the response into `runs/<run-name>/signal-doc.md` per `./references/template.md`.
+6. Distill the response into `runs/<run-name>/signal-doc.md` per `./references/template.md`. The file is a scaffolded placeholder — `Read` it first, then `Edit` the placeholder away. Do not call `Write` on it without a prior `Read`.
 7. Append a short note to `runs/<run-name>/working-log.md`.
 
 ## Quality gate

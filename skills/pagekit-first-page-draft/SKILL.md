@@ -26,7 +26,7 @@ All five upstream artifacts:
 3. Save the substituted prompt to `runs/<run-name>/prompts/06-first-page-draft.md`.
 4. Prompt the model.
 5. Save the raw response to `runs/<run-name>/outputs/06-first-page-draft-output.md`.
-6. Distill into `runs/<run-name>/first-page-draft.md`.
+6. Distill into `runs/<run-name>/first-page-draft.md`. The file is a scaffolded placeholder — `Read` it first, then `Edit` the placeholder away. Do not call `Write` on it without a prior `Read`.
 7. **Run `scripts/slop-check.sh runs/<run-name>/first-page-draft.md` immediately.** Resolve every flagged pattern by rewriting the line. Re-run until clean.
 8. Update `working-log.md`.
 
